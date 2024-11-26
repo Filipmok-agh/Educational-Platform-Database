@@ -60,3 +60,5 @@
 4. Raport dotyczący frekwencji na zakończonych już wydarzeniach.  
 5. Lista obecności dla każdego szkolenia z datą, imieniem, nazwiskiem i informacją, czy uczestnik był obecny, czy nie.  
 6. Raport bilokacji – lista osób, które są zapisane na co najmniej dwa przyszłe szkolenia, które kolidują czasowo.  
+
+<p style="text-align: right; font-size: small;"><br>Mokrzycki Filip,<br> Mateusz Wójcik,<br> Piotr Kacprzak </p>
