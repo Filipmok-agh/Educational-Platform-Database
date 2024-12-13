@@ -66,9 +66,9 @@
 
 ## Schemat bazy danych
 
-<p allign="center">
-<img src="schemat.svg">
-</p>
+<div style="text-align: center;">
+  <img src="Projektowanie/schemat.svg" alt="Opis obrazka">
+</div>
 
 
 ## Kod do generowania bazy danych
