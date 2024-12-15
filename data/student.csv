@@ -1,100 +1,500 @@
-1000,Tola,Gołofit,2004-09-18,Polska,Biłgoraj,al. Towarowa 954,tola.goofit@gmail.com,+48 508 883 037
-1001,Aleks,Znojek,2002-03-10,Polska,Wodzisław Śląski,al. Długosza 90,aleks.znojek@gmail.com,+48 571 407 606
-1002,Maks,Kałwa,2005-10-11,Polska,Oleśnica,ulica Poniatowskiego 341,maks2388kawa@interia.pl,+48 661 504 141
-1003,Dariusz,Majewicz,1977-02-07,Polska,Lublin,ulica Sokola 77/21,dariusz2340majewicz@outlook.com,+48 883 010 262
-1004,Janina,Dunal,2006-04-16,Polska,Krotoszyn,ul. Grzybowa 13/21,janina.dunal@yahoo.com,+48 663 007 805
-1005,Klara,Pacocha,2000-07-20,Polska,Sochaczew,plac Lelewela 35,klara2512pacocha-2512@interia.pl,+48 691 163 731
-1006,Anita,Leśny,2001-01-18,Polska,Zamość,ul. Kazimierza Wielkiego 38/50,anita-lesny@gmail.com,+48 22 976 15 63
-1007,Alex,Burnat,1998-02-10,Polska,Koło,plac Krótka 298,burnat-alex5261@gmail.com,+48 691 081 750
-1008,Lidia,Szyda,1997-12-25,Polska,Goleniów,plac Wschodnia 20/92,szyda.lidia@gmail.com,+48 530 601 869
-1009,Juliusz,Fiutak,2000-11-06,Polska,Jarosław,ulica Jesienna 298,fiutak-juliusz7614@wp.pl,+48 532 814 204
-1010,Cyprian,Gierat,2005-04-27,Polska,Starogard Gdański,al. Wierzbowa 685,cyprian.gierat@wp.pl,+48 665 050 765
-1011,Mikołaj,Łaszczyk,1990-09-21,Polska,Ostrołęka,pl. Wiklinowa 823,mikoaj7681aszczyk@gmail.com,+48 22 718 55 63
-1012,Urszula,Brzęk,2003-03-05,Polska,Częstochowa,ulica Świerczewskiego 56/58,brzek.urszula9842@gmail.com,+48 514 980 660
-1013,Radosław,Prokurat,1986-10-01,Polska,Jarocin,pl. Wiązowa 66/34,radosaw8683prokurat-8683@gmail.com,+48 600 232 288
-1014,Oskar,Raszkiewicz,2000-08-30,Polska,Radomsko,ul. Glówna 84,raszkiewicz-oskar3288@gmail.com,+48 728 283 066
-1015,Rafał,Ellwart,2005-03-12,Polska,Zakopane,pl. Szeroka 12,rafa6585ellwart.6585@gmail.com,+48 32 934 94 61
-1016,Ignacy,Malcherek,2003-11-29,Polska,Ełk,pl. Cedrowa 20/47,ignacy2686malcherek@gmail.com,+48 720 288 797
-1017,Gaja,Smorąg,2005-04-14,Polska,Zabrze,al. Toruńska 95/54,gaja2141smorag@outlook.com,+48 504 533 696
-1018,Eryk,Przewoźna,2005-10-05,Polska,Wągrowiec,aleja Kwiatowa 977,przewozna-eryk6211@gmail.com,+48 888 328 258
-1019,Łukasz,Walusiak,2000-11-08,Polska,Ełk,ulica Działkowa 01,walusiak-ukasz7265@yahoo.com,+48 536 026 402
-1020,Róża,Gwara,2001-10-06,Polska,Kołobrzeg,aleja Bema 74/16,roza2219gwara.2219@outlook.com,+48 889 451 535
-1021,Jacek,Dworczak,2006-09-05,Polska,Starogard Gdański,plac Słowackiego 014,dworczak_jacek@outlook.com,+48 22 002 57 38
-1022,Daniel,Kurant,1994-06-21,Polska,Ostrów Mazowiecka,aleja Wojciecha 38,kurant.daniel8457@gmail.com,+48 539 887 785
-1023,Liwia,Soroko,2001-07-07,Polska,Siemianowice Śląskie,aleja Ptasia 29/71,soroko_liwia@interia.pl,+48 786 823 824
-1024,Juliusz,Witoń,2006-01-13,Polska,Brzeg,al. Asnyka 11/89,witon_juliusz@wp.pl,+48 726 027 330
-1025,Julianna,Chojna,2005-05-27,Polska,Skarżysko-Kamienna,al. Łanowa 49/35,julianna757chojna-757@gmail.com,+48 515 491 955
-1026,Kamil,Groborz,2005-05-21,Polska,Świdnica,al. Leszczynowa 60,groborz.kamil@gmail.com,+48 722 136 866
-1027,Stanisław,Łachacz,1990-11-14,Polska,Krosno,pl. Spacerowa 820,stanisaw.achacz@outlook.com,+48 885 387 028
-1028,Arkadiusz,Malcharek,1998-11-21,Polska,Wyszków,aleja Łabędzia 24/51,arkadiusz4499malcharek@gmail.com,+48 727 768 940
-1029,Melania,Zander,2005-12-20,Polska,Kętrzyn,ulica Narutowicza 42/55,melania-zander@outlook.com,+48 574 280 923
-1030,Gabriel,Kukier,2005-12-05,Polska,Tarnobrzeg,pl. Mickiewicza 506,kukier-gabriel@interia.pl,+48 504 555 133
-1031,Gabriel,Łyś,2001-03-05,Polska,Skarżysko-Kamienna,ul. Agrestowa 27,ys-gabriel7491@interia.pl,+48 538 442 181
-1032,Mariusz,Sałuda,1999-06-26,Polska,Wrocław,pl. Kusocińskiego 35/78,sauda_mariusz@gmail.com,+48 661 165 439
-1033,Daniel,Zadka,1996-07-10,Polska,Nowa Ruda,al. Gdańska 42/76,zadka.daniel508@gmail.com,+48 536 511 914
-1034,Ksawery,Waluk,1970-06-26,Polska,Krotoszyn,aleja Nowa 842,waluk_ksawery7305@outlook.com,+48 881 549 519
-1035,Julita,Kuciak,2001-06-18,Polska,Skarżysko-Kamienna,plac Popiełuszki 36,julita7711kuciak.7711@gmail.com,+48 664 749 849
-1036,Witold,Bartocha,2004-01-14,Polska,Piekary Śląskie,aleja Bałtycka 67/87,witold5110bartocha@interia.pl,+48 690 363 888
-1037,Kaja,Stupak,1981-11-04,Polska,Wałcz,al. Strażacka 05,stupak_kaja@gmail.com,+48 572 964 971
-1038,Malwina,Gasz,1998-07-01,Polska,Tarnowskie Góry,aleja Dębowa 387,gasz.malwina@wp.pl,+48 788 291 654
-1039,Kalina,Hornik,1980-05-26,Polska,Augustów,plac Chabrowa 23,kalina4691hornik@gmail.com,+48 32 219 26 16
-1040,Leon,Nagórka,1976-06-10,Polska,Starogard Gdański,pl. Krucza 57,leon4020nagorka@gmail.com,+48 32 016 01 90
-1041,Ewa,Żymełka,2005-08-05,Polska,Nowy Dwór Mazowiecki,plac Wrzosowa 70/85,ewa6891zymeka@wp.pl,+48 785 448 984
-1042,Marcelina,Solarczyk,1999-06-13,Polska,Konin,pl. Kamienna 25/42,marcelina4276solarczyk_4276@gmail.com,+48 513 699 597
-1043,Robert,Kozłowicz,1982-04-12,Polska,Sieradz,al. Wyzwolenia 13,robert.kozowicz@gmail.com,+48 501 310 788
-1044,Inga,Łabaj,2001-11-15,Polska,Legnica,aleja Bankowa 135,inga_abaj@gmail.com,+48 32 056 69 49
-1045,Alan,Cymer,2000-09-27,Polska,Toruń,pl. Brzoskwiniowa 51,alan540cymer_540@gmail.com,+48 739 912 999
-1046,Grzegorz,Markiel,2001-04-17,Polska,Mława,plac Szewska 62,grzegorz1248markiel@yahoo.com,+48 513 748 508
-1047,Konstanty,Morek,1997-04-19,Polska,Piekary Śląskie,ulica Lawendowa 876,konstanty.morek@gmail.com,+48 666 094 805
-1048,Michał,Bancerz,2005-02-04,Polska,Lubliniec,pl. Listopada 70,micha8096bancerz@wp.pl,+48 22 391 68 60
-1049,Kamila,Wojsa,2004-09-18,Polska,Bochnia,plac Rubinowa 90,wojsa-kamila@gmail.com,+48 721 426 228
-1050,Cyprian,Jodko,1998-12-01,Polska,Bełchatów,plac Kościuszki 166,cyprian8801jodko@gmail.com,+48 575 655 575
-1051,Ida,Paszkowiak,2002-10-20,Polska,Szczytno,ulica Konarskiego 755,ida1122paszkowiak@wp.pl,+48 509 945 561
-1052,Ida,Doroszuk,2005-06-25,Polska,Kalisz,pl. Leszczynowa 66,doroszuk_ida2031@gmail.com,+48 783 949 870
-1053,Fryderyk,Knapek,1995-09-22,Polska,Legionowo,plac Cmentarna 46/46,fryderyk1647knapek.1647@gmail.com,+48 780 316 771
-1054,Sandra,Aleksa,1998-12-19,Polska,Żory,aleja Wierzbowa 50/80,aleksa.sandra9774@gmail.com,+48 534 505 377
-1055,Andrzej,Szpyt,1995-06-29,Polska,Skarżysko-Kamienna,plac Długa 10/93,andrzej8021szpyt-8021@gmail.com,+48 576 194 855
-1056,Nikodem,Pogorzelec,2004-10-17,Polska,Lublin,al. Wiejska 675,pogorzelec-nikodem321@gmail.com,+48 22 559 75 55
-1057,Emil,Szeszko,2003-10-04,Polska,Jelenia Góra,pl. Leśna 91/50,szeszko_emil6755@gmail.com,+48 785 711 658
-1058,Jacek,Szykuła,1999-04-16,Polska,Bielsko-Biała,ulica Warszawska 233,jacek1721szykua@interia.pl,+48 733 993 006
-1059,Fryderyk,Wałdoch,1999-05-03,Polska,Goleniów,pl. Brzechwy 01/84,wadoch-fryderyk9332@interia.pl,+48 515 044 682
-1060,Ernest,Hołota,2002-05-14,Polska,Starachowice,ul. Słowianska 64/78,hoota.ernest@gmail.com,+48 600 045 045
-1061,Klara,Barankiewicz,2006-08-26,Polska,Pruszcz Gdański,aleja Północna 48/22,barankiewicz.klara8610@gmail.com,+48 799 512 086
-1062,Liwia,Osipowicz,1976-03-20,Polska,Dębica,al. Krakowska 35/15,liwia.osipowicz@interia.pl,+48 782 986 696
-1063,Grzegorz,Misztela,1999-01-05,Polska,Śrem,ul. Okrzei 80/37,grzegorz_misztela@interia.pl,+48 605 570 754
-1064,Robert,Dargacz,2000-01-27,Polska,Piaseczno,al. Korfantego 68/88,dargacz-robert2422@yahoo.com,+48 519 930 757
-1065,Nela,Brygoła,1994-04-14,Polska,Myszków,plac Klonowa 367,brygoa.nela@wp.pl,+48 532 559 609
-1066,Liwia,Zieja,1995-01-09,Polska,Nowy Sącz,plac Bociania 73,zieja-liwia2846@wp.pl,+48 887 233 899
-1067,Tadeusz,Tytko,1970-08-27,Polska,Kwidzyn,ulica Ciasna 94,tadeusz.tytko@yahoo.com,+48 503 106 325
-1068,Malwina,Tyczka,2005-01-04,Polska,Biała Podlaska,plac Cedrowa 97,tyczka.malwina416@gmail.com,+48 607 283 673
-1069,Albert,Słysz,1973-02-12,Polska,Piła,pl. Zaciszna 03/07,albert614sysz-614@interia.pl,+48 798 906 379
-1070,Kalina,Obiała,2002-02-25,Polska,Ostróda,aleja Kościelna 56,obiaa_kalina@gmail.com,+48 796 705 506
-1071,Paweł,Hanke,1960-03-05,Polska,Grudziądz,al. Sowia 27,hanke.pawe1252@gmail.com,+48 536 684 756
-1072,Konstanty,Kopciuch,2004-01-22,Polska,Chojnice,plac Wyszyńskiego 60/66,kopciuch.konstanty8443@interia.pl,+48 692 605 744
-1073,Blanka,Salomon,2001-10-05,Polska,Wałcz,ul. Górna 52,blanka3008salomon_3008@gmail.com,+48 735 401 075
-1074,Kaja,Puła,2002-11-11,Polska,Żory,ulica Hutnicza 23,pua.kaja@interia.pl,+48 510 405 596
-1075,Karina,Kostera,1994-08-17,Polska,Łuków,plac Kowalska 32,karina_kostera@gmail.com,+48 570 941 775
-1076,Olga,Łyjak,2000-11-09,Polska,Kłodzko,pl. Zamkowa 48,yjak-olga2844@wp.pl,+48 698 444 275
-1077,Kornelia,Miętus,2003-10-17,Polska,Wejherowo,pl. Wolności 92/33,kornelia_mietus@gmail.com,+48 669 464 133
-1078,Roksana,Sass,2003-04-27,Polska,Krosno,aleja Fiołkowa 06/92,sass_roksana@outlook.com,+48 736 202 162
-1079,Grzegorz,Słowiak,2005-02-14,Polska,Świnoujście,ulica Łabędzia 498,grzegorz.sowiak@outlook.com,+48 788 055 366
-1080,Ernest,Szlaga,1999-10-12,Polska,Żory,pl. Dąbrowskiego 452,ernest-szlaga@interia.pl,+48 791 663 164
-1081,Nikodem,Olszowa,2001-01-06,Polska,Zakopane,al. Akacjowa 90/36,nikodem_olszowa@gmail.com,+48 720 712 473
-1082,Malwina,Oczkowicz,2003-07-24,Polska,Rzeszów,al. Chełmońskiego 509,malwina134oczkowicz@yahoo.com,+48 739 522 324
-1083,Olgierd,Pianka,1999-01-28,Polska,Wałbrzych,al. Dworcowa 13/59,olgierd9480pianka.9480@wp.pl,+48 692 826 284
-1084,Hubert,Rompa,2003-12-20,Polska,Kłodzko,plac Olchowa 742,hubert3094rompa.3094@gmail.com,+48 785 300 078
-1085,Bruno,Gierach,2003-12-09,Polska,Sosnowiec,ulica Niepodległości 050,bruno8362gierach_8362@gmail.com,+48 606 443 960
-1086,Janina,Fraś,1998-02-17,Polska,Nowa Sól,ulica Jarzębinowa 87/60,fras-janina4770@outlook.com,+48 536 118 796
-1087,Blanka,Szara,2001-07-24,Polska,Środa Wielkopolska,pl. Akacjowa 96/19,szara_blanka@interia.pl,+48 605 097 315
-1088,Dagmara,Miodek,1999-03-31,Polska,Wieluń,pl. Młyńska 88/68,dagmara5146miodek-5146@yahoo.com,+48 882 847 757
-1089,Daniel,Guściora,1985-04-21,Polska,Zamość,ul. Rzemieślnicza 047,daniel9934gusciora-9934@gmail.com,+48 692 452 809
-1090,Olga,Roczniak,2005-04-24,Polska,Wrocław,plac Olchowa 85/81,olga-roczniak@yahoo.com,+48 736 710 377
-1091,Gustaw,Kucz,1997-08-24,Polska,Wołomin,ul. Truskawkowa 92,gustaw4723kucz@gmail.com,+48 887 418 877
-1092,Grzegorz,Zastawny,1994-07-29,Polska,Opole,plac Kaliska 63,grzegorz_zastawny@gmail.com,+48 666 967 717
-1093,Marcelina,Andruszko,2001-10-13,Polska,Kwidzyn,ulica Spółdzielcza 958,marcelina6408andruszko-6408@gmail.com,+48 887 118 352
-1094,Ida,Rajtar,2003-07-26,Polska,Zawiercie,ul. Swierkowa 58,ida_rajtar@wp.pl,+48 570 253 001
-1095,Emil,Krzempek,2000-02-12,Polska,Grodzisk Mazowiecki,al. Dworcowa 890,krzempek.emil7820@yahoo.com,+48 664 609 513
-1096,Angelika,Gula,2002-07-08,Polska,Stalowa Wola,ulica Robotnicza 57,angelika8301gula.8301@outlook.com,+48 696 820 308
-1097,Karol,Szymała,1987-01-25,Polska,Białystok,plac Jodłowa 254,karol-szymaa@interia.pl,+48 796 543 629
-1098,Dawid,Sajda,2004-09-08,Polska,Tychy,ul. Piękna 52,dawid.sajda@gmail.com,+48 662 132 554
-1099,Witold,Bodek,2004-03-12,Polska,Biłgoraj,ulica Skłodowskiej-Curie 07/93,bodek_witold3768@yahoo.com,+48 785 202 902
+1000,Patryk,Piszcz,2002-10-22,Polska,Skierniewice,al. Rolnicza 25,patryk2871piszcz.2871@gmail.com,+48 735 038 994
+1001,Natasza,Młocek,2004-06-03,Polska,Mikołów,pl. Rumiankowa 164,natasza5530mocek.5530@yahoo.com,+48 22 736 95 00
+1002,Kornelia,Policht,1995-07-15,Polska,Otwock,ulica Pocztowa 54/33,kornelia9194policht_9194@gmail.com,+48 788 517 149
+1003,Gustaw,Magier,1996-02-10,Polska,Kielce,ul. Storczykowa 82/79,magier.gustaw3291@interia.pl,+48 725 002 093
+1004,Ernest,Piechna,1997-09-05,Polska,Ostróda,pl. Plater 71/17,piechna_ernest@interia.pl,+48 695 092 384
+1005,Marcelina,Kornak,2001-10-25,Polska,Słupsk,al. Konstytucji 3 Maja 709,marcelina3978kornak@wp.pl,+48 666 586 695
+1006,Sara,Stebel,2002-06-18,Polska,Giżycko,ulica Skośna 012,sara7998stebel@gmail.com,+48 531 589 239
+1007,Michał,Lorens,1977-04-03,Polska,Kościan,al. Bolesława Krzywoustego 58,micha6926lorens@gmail.com,+48 795 879 483
+1008,Konrad,Majewicz,1984-01-10,Polska,Łowicz,al. Jana III Sobieskiego 09/91,konrad-majewicz@interia.pl,+48 695 493 785
+1009,Janina,Pszczółka,2004-10-24,Polska,Knurów,aleja Lelewela 070,janina_pszczoka@gmail.com,+48 508 209 729
+1010,Sonia,Kazimierczuk,1996-11-02,Polska,Będzin,al. Ciasna 083,sonia.kazimierczuk@wp.pl,+48 507 168 478
+1011,Marek,Strzała,1991-07-17,Polska,Biała Podlaska,aleja Piaskowa 875,strzaa_marek@gmail.com,+48 22 903 98 40
+1012,Ewa,Wittbrodt,2003-03-13,Polska,Sieradz,al. Zakole 246,ewa.wittbrodt@interia.pl,+48 32 707 26 49
+1013,Oskar,Garbacik,1974-03-27,Polska,Szczecin,al. Krucza 906,garbacik.oskar@gmail.com,+48 533 591 991
+1014,Liwia,Kulon,1999-05-30,Polska,Giżycko,ul. Młynarska 15,liwia5559kulon@wp.pl,+48 795 326 785
+1015,Monika,Kaźmierczyk,2005-03-09,Polska,Kraków,ul. Lawendowa 31/05,kazmierczyk_monika@gmail.com,+48 691 717 692
+1016,Monika,Kucz,1969-04-14,Polska,Czeladź,plac Nałkowskiej 70/35,monika1280kucz-1280@gmail.com,+48 530 530 613
+1017,Jerzy,Mol,1995-01-10,Polska,Bydgoszcz,ulica Gdańska 57,jerzy.mol@wp.pl,+48 660 557 942
+1018,Igor,Ciuła,2005-05-02,Polska,Bielawa,pl. Żeromskiego 760,ciua-igor@wp.pl,+48 504 852 199
+1019,Tadeusz,Zimoląg,2001-02-15,Polska,Nowy Sącz,aleja Lipca 84/15,tadeusz.zimolag@yahoo.com,+48 691 091 979
+1020,Lidia,Majak,2006-10-13,Polska,Legnica,ulica Bydgoska 586,majak-lidia@outlook.com,+48 791 927 469
+1021,Dariusz,Piekart,2001-10-14,Polska,Sopot,ul. Konstytucji 3 Maja 24,dariusz4667piekart.4667@interia.pl,+48 539 837 158
+1022,Krzysztof,Szczesiak,1994-06-02,Polska,Bolesławiec,ul. Północna 17,szczesiak.krzysztof@gmail.com,+48 739 922 375
+1023,Albert,Sołoducha,2005-01-21,Polska,Bolesławiec,ulica Perłowa 17,albert2210sooducha@interia.pl,+48 730 738 911
+1024,Daniel,Patyna,1979-11-13,Polska,Gniezno,aleja Witosa 865,patyna-daniel@wp.pl,+48 726 220 796
+1025,Urszula,Niebudek,2001-02-28,Polska,Kraków,pl. Bema 168,urszula2558niebudek@interia.pl,+48 22 117 36 06
+1026,Maks,Karpiel,1983-04-16,Polska,Starogard Gdański,ul. Turystyczna 63/82,karpiel-maks@wp.pl,+48 603 307 135
+1027,Eryk,Janiuk,1982-04-19,Polska,Ostrów Wielkopolski,aleja Spółdzielcza 25,janiuk-eryk2831@gmail.com,+48 503 890 369
+1028,Oliwier,Droździk,1974-01-28,Polska,Puławy,ul. Okrężna 441,drozdzik-oliwier@yahoo.com,+48 513 324 209
+1029,Maciej,Malcherek,1989-08-05,Polska,Wrocław,pl. Malczewskiego 32,malcherek_maciej6572@yahoo.com,+48 579 315 056
+1030,Klara,Kołata,1999-11-16,Polska,Piaseczno,ul. Kolejowa 71,klara3903koata-3903@interia.pl,+48 780 174 801
+1031,Tomasz,Starek,1994-07-06,Polska,Kluczbork,pl. Staszica 212,tomasz4700starek@wp.pl,+48 698 412 047
+1032,Jakub,Rduch,2002-12-24,Polska,Krosno,ulica Mazowiecka 98/13,rduch-jakub6772@gmail.com,+48 735 199 687
+1033,Marianna,Kupś,2001-02-12,Polska,Dąbrowa Górnicza,ulica Lawendowa 032,kups_marianna@gmail.com,+48 22 916 35 42
+1034,Łukasz,Langa,2004-08-05,Polska,Pszczyna,ulica Harcerska 78,ukasz6374langa-6374@interia.pl,+48 506 972 383
+1035,Kajetan,Bochnak,2001-08-15,Polska,Starogard Gdański,plac Kolonia 330,kajetan.bochnak@wp.pl,+48 786 139 996
+1036,Krzysztof,Wojtczuk,1999-01-12,Polska,Wejherowo,ul. Składowa 726,wojtczuk_krzysztof@wp.pl,+48 668 163 740
+1037,Jędrzej,Kozon,2003-05-05,Polska,Bielsko-Biała,aleja Modrzewiowa 00/64,jedrzej7770kozon@interia.pl,+48 669 425 103
+1038,Andrzej,Piekart,1978-11-10,Polska,Zabrze,pl. Handlowa 20,andrzej8667piekart@wp.pl,+48 739 702 335
+1039,Róża,Pyrz,2002-07-06,Polska,Świdnik,pl. Floriana 342,roza1009pyrz.1009@gmail.com,+48 32 822 28 48
+1040,Kaja,Kuciak,2002-01-25,Polska,Zakopane,ul. Górnicza 387,kuciak_kaja@gmail.com,+48 883 680 141
+1041,Nela,Świerad,2005-10-27,Polska,Piastów,pl. Jagodowa 845,nela8242swierad_8242@wp.pl,+48 690 871 839
+1042,Tomasz,Małyszek,1996-05-16,Polska,Wągrowiec,pl. Jadwigi 64,mayszek.tomasz@interia.pl,+48 570 382 492
+1043,Adrian,Ryndak,1997-07-15,Polska,Wejherowo,pl. Tysiąclecia 96,adrian_ryndak@interia.pl,+48 519 567 478
+1044,Daniel,Toma,2000-02-14,Polska,Dzierżoniów,pl. Wschodnia 41/81,daniel.toma@gmail.com,+48 519 055 432
+1045,Ignacy,Albin,1981-07-18,Polska,Elbląg,plac Jaskółcza 78,ignacy3778albin@outlook.com,+48 503 154 796
+1046,Kacper,Wyroba,2002-01-02,Polska,Głogów,aleja Klonowa 009,kacper4134wyroba_4134@outlook.com,+48 539 659 624
+1047,Natasza,Banak,1997-11-19,Polska,Jaworzno,aleja Dojazdowa 221,banak_natasza@interia.pl,+48 512 210 898
+1048,Kornelia,Mosur,2000-02-02,Polska,Brzeg,aleja Jaskółcza 03/86,kornelia7455mosur@wp.pl,+48 534 776 954
+1049,Artur,Wygoda,1989-04-27,Polska,Tomaszów Mazowiecki,aleja Tuwima 911,artur.wygoda@gmail.com,+48 32 064 55 29
+1050,Tymoteusz,Drobek,2005-02-15,Polska,Suwałki,aleja Kopernika 40/06,tymoteusz4835drobek_4835@gmail.com,+48 605 147 022
+1051,Krystyna,Gabryszak,1995-11-20,Polska,Wołomin,plac Gajowa 842,gabryszak-krystyna@gmail.com,+48 734 429 772
+1052,Ewelina,Frelek,2003-11-01,Polska,Cieszyn,ulica Radosna 50,ewelina9255frelek-9255@wp.pl,+48 537 301 786
+1053,Jędrzej,Wojtak,1981-09-08,Polska,Gdańsk,ulica Orzeszkowej 908,jedrzej7872wojtak-7872@gmail.com,+48 662 869 076
+1054,Wiktor,Rochowiak,2005-10-01,Polska,Kalisz,plac Północna 96/40,rochowiak.wiktor@gmail.com,+48 579 895 313
+1055,Tymon,Rząd,2005-08-13,Polska,Warszawa,plac Daszyńskiego 07/25,tymon.rzad@wp.pl,+48 508 641 156
+1056,Mikołaj,Kleban,1964-01-10,Polska,Rybnik,al. Bociania 13,mikoaj7308kleban-7308@gmail.com,+48 602 917 780
+1057,Piotr,Pupek,2000-03-20,Polska,Legionowo,aleja Krasińskiego 47,piotr-pupek@interia.pl,+48 32 792 62 86
+1058,Hubert,Langa,2006-05-14,Polska,Mińsk Mazowiecki,plac Cmentarna 01/14,langa.hubert4873@interia.pl,+48 693 972 399
+1059,Piotr,Saran,1980-07-14,Polska,Gniezno,plac Mickiewicza 11/35,piotr8181saran@gmail.com,+48 22 608 22 61
+1060,Rozalia,Sypek,2002-06-11,Polska,Chełm,ulica Zakole 38/32,sypek.rozalia3706@wp.pl,+48 509 171 320
+1061,Natan,Ochab,1998-12-29,Polska,Zduńska Wola,plac Władysława Jagiełły 219,natan6048ochab.6048@interia.pl,+48 533 284 912
+1062,Stanisław,Gniewek,1995-12-11,Polska,Oświęcim,pl. Letniskowa 669,stanisaw749gniewek@interia.pl,+48 510 887 562
+1063,Eryk,Szumacher,2001-04-22,Polska,Żyrardów,pl. Plater 08/78,eryk3248szumacher@wp.pl,+48 32 153 49 84
+1064,Maurycy,Kubaczyk,1999-10-01,Polska,Świdnik,ul. Malczewskiego 26/29,maurycy3997kubaczyk@interia.pl,+48 32 220 61 92
+1065,Olgierd,Solnica,1989-12-12,Polska,Turek,aleja Cmentarna 423,olgierd5460solnica@wp.pl,+48 726 044 682
+1066,Błażej,Gasek,2000-06-11,Polska,Mińsk Mazowiecki,al. Wałowa 395,bazej.gasek@wp.pl,+48 887 493 500
+1067,Konrad,Pyrkosz,2005-08-28,Polska,Konin,al. Mazurska 305,konrad415pyrkosz_415@yahoo.com,+48 519 820 518
+1068,Tymon,Supeł,1994-03-25,Polska,Marki,aleja Targowa 174,supe.tymon@gmail.com,+48 574 501 147
+1069,Ewa,Adrian,2004-07-28,Polska,Toruń,plac Dworska 53/33,adrian.ewa@gmail.com,+48 667 442 639
+1070,Radosław,Siemion,1996-03-12,Polska,Otwock,pl. Sadowa 07/80,siemion_radosaw2314@wp.pl,+48 573 454 349
+1071,Maurycy,Antończak,2004-09-19,Polska,Pruszków,ul. Kaliska 98/83,maurycy-antonczak@outlook.com,+48 668 464 118
+1072,Tadeusz,Faruga,2003-10-28,Polska,Nysa,aleja Krańcowa 06/95,faruga-tadeusz@wp.pl,+48 784 932 042
+1073,Arkadiusz,Tylus,2005-08-06,Polska,Gorlice,aleja Dojazdowa 15/29,tylus_arkadiusz9905@outlook.com,+48 722 820 063
+1074,Rafał,Tatarczyk,2001-06-03,Polska,Augustów,al. Ptasia 331,rafa.tatarczyk@gmail.com,+48 511 027 796
+1075,Józef,Gęca,2004-11-09,Polska,Myszków,aleja Przechodnia 88,geca-jozef@interia.pl,+48 573 055 014
+1076,Anna Maria,Bazylewicz,1975-04-09,Polska,Pruszków,ul. Traugutta 992,annamaria536bazylewicz_536@interia.pl,+48 32 775 34 17
+1077,Norbert,Koziatek,1998-10-10,Polska,Łomża,pl. Konarskiego 19/31,koziatek.norbert2842@interia.pl,+48 883 235 973
+1078,Krzysztof,Sieradzan,1961-06-25,Polska,Dzierżoniów,pl. Wybickiego 79/74,krzysztof-sieradzan@wp.pl,+48 514 015 878
+1079,Błażej,Sławik,2005-06-22,Polska,Marki,pl. Radosna 32,bazej6619sawik@gmail.com,+48 600 175 682
+1080,Julian,Klyszcz,1997-09-05,Polska,Gorzów Wielkopolski,ul. Nadbrzeżna 16,julian6728klyszcz_6728@outlook.com,+48 22 171 12 15
+1081,Kornel,Klorek,2000-07-27,Polska,Zduńska Wola,ulica Wiosenna 045,kornel.klorek@gmail.com,+48 731 980 988
+1082,Stefan,Grzesiek,2003-12-09,Polska,Mysłowice,aleja Morcinka 65,grzesiek_stefan6531@wp.pl,+48 664 998 564
+1083,Piotr,Przerwa,2004-02-12,Polska,Bielsk Podlaski,pl. Turystyczna 28/31,przerwa.piotr@gmail.com,+48 32 570 83 47
+1084,Marcin,Błażejewicz,2000-04-30,Polska,Łaziska Górne,pl. Ściegiennego 860,marcin6748bazejewicz@wp.pl,+48 32 797 84 65
+1085,Kalina,Golak,1994-02-24,Polska,Mielec,aleja Podwale 294,kalina8456golak.8456@gmail.com,+48 508 742 549
+1086,Justyna,Machowiak,1999-08-23,Polska,Ostrów Wielkopolski,al. Północna 280,machowiak_justyna348@gmail.com,+48 513 558 267
+1087,Janina,Guzdek,1994-04-05,Polska,Legnica,aleja Strumykowa 562,guzdek-janina9114@interia.pl,+48 570 047 300
+1088,Łukasz,Serzysko,2002-08-03,Polska,Oława,aleja Dobra 97,ukasz5926serzysko@gmail.com,+48 693 745 349
+1089,Artur,Sierżant,1997-04-01,Polska,Goleniów,plac Chopina 29/06,sierzant-artur9315@wp.pl,+48 788 884 767
+1090,Kornelia,Drewnik,2006-10-07,Polska,Toruń,ulica Mokra 41,kornelia6819drewnik.6819@gmail.com,+48 791 079 834
+1091,Julita,Duc,1986-09-16,Polska,Tczew,plac Batalionów Chłopskich 50,duc-julita3890@wp.pl,+48 536 655 682
+1092,Sonia,Jędruszczak,2000-09-04,Polska,Żyrardów,al. Jesienna 53/88,jedruszczak.sonia4338@gmail.com,+48 734 875 319
+1093,Dawid,Wiszowata,2005-12-18,Polska,Tarnobrzeg,ul. Śląska 02/16,dawid123wiszowata-123@wp.pl,+48 603 064 737
+1094,Iwo,Wojak,1994-11-01,Polska,Ostrów Wielkopolski,plac Kamienna 65/47,iwo1980wojak.1980@wp.pl,+48 539 868 006
+1095,Olaf,Materka,1977-10-22,Polska,Skarżysko-Kamienna,ul. Spokojna 727,materka_olaf@interia.pl,+48 782 309 570
+1096,Marianna,Dorawa,2002-04-24,Polska,Lubin,aleja Kasprowicza 87,marianna5286dorawa.5286@wp.pl,+48 603 629 253
+1097,Ada,Słyk,2006-04-07,Polska,Kraków,ul. Słoneczna 84,syk-ada4548@wp.pl,+48 604 510 603
+1098,Natan,Mitera,1993-12-26,Polska,Czechowice-Dziedzice,ul. Floriana 09/67,natan9070mitera_9070@gmail.com,+48 603 498 359
+1099,Mateusz,Sobieszczyk,1999-05-18,Polska,Ostrołęka,pl. Krokusowa 968,sobieszczyk_mateusz@gmail.com,+48 668 440 027
+1100,Janina,Pyzel,1995-10-04,Polska,Świdnik,al. Reja 43,pyzel-janina3669@gmail.com,+48 693 540 250
+1101,Inga,Kusyk,1990-05-26,Polska,Białystok,ul. Skośna 53/62,inga9021kusyk_9021@outlook.com,+48 781 442 161
+1102,Wojciech,Majczyna,2006-08-22,Polska,Tczew,pl. Myśliwska 38,majczyna-wojciech1262@gmail.com,+48 534 591 418
+1103,Artur,Pasierbek,2003-11-18,Polska,Racibórz,plac Rózana 89,artur3278pasierbek.3278@interia.pl,+48 783 233 417
+1104,Piotr,Para,2002-08-26,Polska,Tychy,plac Zacisze 37,piotr.para@interia.pl,+48 22 613 27 08
+1105,Lidia,Chachuła,1994-12-27,Polska,Kielce,plac Konopnickiej 499,chachua_lidia@gmail.com,+48 514 828 343
+1106,Dawid,Zdancewicz,1996-10-11,Polska,Ostróda,al. Kolejowa 826,zdancewicz-dawid@gmail.com,+48 660 806 499
+1107,Gaja,Filus,2000-03-16,Polska,Zabrze,pl. Torowa 58/68,filus.gaja@gmail.com,+48 32 226 26 41
+1108,Gustaw,Janduła,2006-01-14,Polska,Tychy,plac Zbożowa 480,jandua.gustaw@wp.pl,+48 735 222 296
+1109,Tomasz,Golak,2001-05-13,Polska,Racibórz,plac Jaworowa 547,tomasz5890golak@wp.pl,+48 795 081 309
+1110,Olaf,Wawrzynkiewicz,1999-05-24,Polska,Łowicz,al. Dobra 463,wawrzynkiewicz_olaf@interia.pl,+48 501 454 593
+1111,Róża,Herda,2001-03-14,Polska,Jawor,pl. Stroma 92,herda_roza@wp.pl,+48 692 365 156
+1112,Ernest,Salawa,1994-07-27,Polska,Włocławek,al. Skośna 59/86,ernest728salawa@wp.pl,+48 780 830 109
+1113,Mateusz,Giersz,1997-12-08,Polska,Śrem,al. Wojska Polskiego 76/57,mateusz1052giersz_1052@gmail.com,+48 888 730 270
+1114,Dorota,Fołta,1967-11-20,Polska,Luboń,ul. Reja 99/71,dorota2964fota_2964@interia.pl,+48 32 306 58 18
+1115,Filip,Rysz,1997-11-28,Polska,Białystok,ulica Grzybowa 70,filip2441rysz.2441@wp.pl,+48 32 654 51 11
+1116,Witold,Mrózek,1966-07-21,Polska,Piaseczno,plac Kraszewskiego 804,witold8267mrozek-8267@wp.pl,+48 22 907 85 99
+1117,Antoni,Kapuścik,2006-08-17,Polska,Oświęcim,ul. Willowa 94,antoni7217kapuscik@wp.pl,+48 785 901 771
+1118,Natan,Lejk,1993-12-02,Polska,Łaziska Górne,pl. Ludowa 928,natan3395lejk-3395@wp.pl,+48 692 501 374
+1119,Julita,Brojek,1994-07-07,Polska,Tomaszów Mazowiecki,aleja Rolna 77,brojek.julita3134@interia.pl,+48 792 975 089
+1120,Kalina,Ludwik,2003-01-12,Polska,Oława,ul. Daleka 89,kalina37ludwik-37@outlook.com,+48 793 199 806
+1121,Róża,Wiertelak,1999-04-07,Polska,Jawor,al. Willowa 28/53,roza4250wiertelak_4250@gmail.com,+48 789 947 371
+1122,Borys,Kiliszek,1978-05-10,Polska,Cieszyn,al. Srebrna 576,kiliszek.borys@gmail.com,+48 515 320 646
+1123,Łukasz,Garncarz,1994-09-25,Polska,Krotoszyn,al. Sportowa 339,garncarz-ukasz8911@gmail.com,+48 32 537 83 98
+1124,Filip,Kudela,2003-06-23,Polska,Wyszków,ul. Przechodnia 62/11,kudela-filip8131@wp.pl,+48 500 661 295
+1125,Inga,Miodek,1998-03-01,Polska,Malbork,al. Rumiankowa 92/16,miodek.inga@interia.pl,+48 690 766 281
+1126,Justyna,Cieplucha,2002-09-11,Polska,Żyrardów,al. Kazimierza Wielkiego 95,justyna2665cieplucha.2665@gmail.com,+48 735 838 176
+1127,Karina,Szymaniuk,2005-10-25,Polska,Mikołów,pl. Piwna 750,karina2619szymaniuk@wp.pl,+48 667 371 102
+1128,Sara,Mleczak,1984-05-19,Polska,Jaworzno,plac Zwycięstwa 909,sara6452mleczak.6452@yahoo.com,+48 691 991 960
+1129,Konstanty,Dzienniak,1996-04-11,Polska,Stargard Szczeciński,pl. Pocztowa 992,konstanty9055dzienniak@gmail.com,+48 733 912 757
+1130,Agnieszka,Czuj,1995-10-14,Polska,Wągrowiec,aleja Górska 08/52,agnieszka9062czuj_9062@gmail.com,+48 539 932 989
+1131,Janina,Mijas,2003-01-26,Polska,Stargard Szczeciński,ulica Makowa 38/94,janina_mijas@gmail.com,+48 669 142 486
+1132,Mikołaj,Krzempek,2004-08-04,Polska,Nowa Sól,plac Gałczynskiego 55,mikoaj737krzempek@interia.pl,+48 608 808 784
+1133,Stanisław,Sankiewicz,2004-02-16,Polska,Warszawa,plac Bolesława Krzywoustego 70,sankiewicz-stanisaw7044@interia.pl,+48 794 509 006
+1134,Kamila,Lica,1977-08-18,Polska,Malbork,ul. Grzybowa 78/63,kamila.lica@gmail.com,+48 790 387 470
+1135,Kacper,Zasępa,2002-03-01,Polska,Dębica,al. Zamkowa 19/51,zasepa_kacper@gmail.com,+48 512 078 372
+1136,Błażej,Januchta,1998-04-05,Polska,Piaseczno,ul. Krokusowa 300,bazej7437januchta_7437@yahoo.com,+48 662 671 258
+1137,Albert,Troka,1962-08-14,Polska,Gdynia,ul. Wałowa 28,troka_albert3560@wp.pl,+48 576 028 375
+1138,Konrad,Zbróg,2003-03-23,Polska,Mława,plac Widok 96/33,konrad3689zbrog.3689@interia.pl,+48 789 840 662
+1139,Ksawery,Makaruk,2004-09-30,Polska,Słupsk,al. Fiołkowa 27,makaruk_ksawery5404@interia.pl,+48 603 938 307
+1140,Gustaw,Ruszel,1971-01-24,Polska,Wołomin,pl. Nałkowskiej 76/04,gustaw6710ruszel.6710@interia.pl,+48 32 128 47 74
+1141,Angelika,Wojtyś,2005-08-31,Polska,Kętrzyn,al. Młyńska 632,angelika1120wojtys_1120@interia.pl,+48 32 427 04 61
+1142,Krzysztof,Cymbała,2001-07-13,Polska,Gorlice,ul. Brzoskwiniowa 76/91,cymbaa_krzysztof@interia.pl,+48 607 619 284
+1143,Jacek,Grądziel,1959-06-02,Polska,Wrocław,ul. Powstańców Wielkopolskich 115,jacek6438gradziel@gmail.com,+48 503 163 013
+1144,Szymon,Pośnik,1989-05-22,Polska,Goleniów,ulica Majowa 606,szymon9234posnik@gmail.com,+48 32 090 62 85
+1145,Sonia,Ciuba,2002-09-24,Polska,Mielec,ulica Zaułek 860,ciuba-sonia7827@gmail.com,+48 570 140 389
+1146,Justyna,Lipowicz,2002-06-14,Polska,Słupsk,aleja Jałowcowa 340,justyna4521lipowicz@wp.pl,+48 518 242 377
+1147,Tadeusz,Sito,2001-02-16,Polska,Jastrzębie-Zdrój,plac Batalionów Chłopskich 18/44,sito-tadeusz115@outlook.com,+48 518 383 132
+1148,Ryszard,Skoneczna,2005-06-08,Polska,Jasło,al. Powstańców 06/43,ryszard9444skoneczna@wp.pl,+48 888 198 183
+1149,Alan,Sykut,1995-06-19,Polska,Radomsko,ul. Kochanowskiego 03,alan_sykut@wp.pl,+48 799 437 327
+1150,Adam,Szelest,1978-02-13,Polska,Świebodzice,ul. Lotnicza 374,szelest-adam@gmail.com,+48 727 890 781
+1151,Ida,Mikita,2000-08-03,Polska,Tarnobrzeg,pl. Kossaka 45,mikita-ida5329@gmail.com,+48 32 637 58 47
+1152,Natan,Tomalak,2003-11-07,Polska,Mińsk Mazowiecki,al. Skłodowskiej-Curie 70,tomalak_natan5254@yahoo.com,+48 799 608 735
+1153,Fabian,Drygała,1998-05-27,Polska,Wyszków,plac Perłowa 717,fabian-drygaa@interia.pl,+48 536 427 928
+1154,Malwina,Golisz,1980-01-22,Polska,Nowy Targ,al. Kilińskiego 90/47,malwina4026golisz@wp.pl,+48 881 445 289
+1155,Rafał,Łabno,1987-11-07,Polska,Białogard,pl. Czereśniowa 74,abno.rafa5375@yahoo.com,+48 736 673 991
+1156,Józef,Miszta,2003-08-06,Polska,Czechowice-Dziedzice,plac Żeromskiego 750,jozef6804miszta@outlook.com,+48 780 741 144
+1157,Filip,Dumała,2002-06-29,Polska,Płońsk,al. Harcerska 43/97,dumaa_filip1929@gmail.com,+48 787 166 762
+1158,Ksawery,Łyś,2006-06-13,Polska,Cieszyn,aleja Sarnia 37/14,ksawery_ys@wp.pl,+48 533 420 169
+1159,Nataniel,Calik,1993-10-24,Polska,Wałbrzych,aleja Krasickiego 861,nataniel1006calik@gmail.com,+48 790 325 949
+1160,Ewelina,Fabiszak,1971-01-04,Polska,Wołomin,aleja Lawendowa 30,ewelina6714fabiszak_6714@outlook.com,+48 505 017 359
+1161,Maciej,Mielcarz,2006-06-21,Polska,Bielsk Podlaski,ul. Dąbrowskiego 656,mielcarz_maciej@gmail.com,+48 573 461 633
+1162,Klara,Gregorek,2006-03-08,Polska,Kościerzyna,ul. Szczęśliwa 272,gregorek_klara9056@wp.pl,+48 697 999 725
+1163,Przemysław,Michel,1998-01-21,Polska,Grudziądz,pl. Olchowa 74/48,przemysaw3889michel@interia.pl,+48 799 305 302
+1164,Anita,Komsta,2005-09-25,Polska,Kwidzyn,aleja Modrzewiowa 147,anita.komsta@wp.pl,+48 577 281 369
+1165,Karol,Powązka,1995-03-07,Polska,Bielawa,al. Kasprowicza 916,powazka-karol2037@gmail.com,+48 729 263 737
+1166,Franciszek,Karkocha,2003-07-07,Polska,Wrocław,aleja Jeziorna 617,franciszek4807karkocha@interia.pl,+48 736 557 756
+1167,Agnieszka,Burkiewicz,1998-07-29,Polska,Knurów,al. Młynarska 15,agnieszka4501burkiewicz@gmail.com,+48 534 515 672
+1168,Paweł,Majnusz,2001-10-17,Polska,Bielsk Podlaski,pl. Podmiejska 09/64,majnusz.pawe@wp.pl,+48 504 337 627
+1169,Ksawery,Boguś,2004-10-21,Polska,Jarocin,ulica Konwaliowa 11/15,ksawery_bogus@interia.pl,+48 736 879 400
+1170,Anita,Drej,2004-11-25,Polska,Jaworzno,plac Łabędzia 56/02,anita3681drej-3681@wp.pl,+48 789 993 163
+1171,Sebastian,Cetera,2004-04-08,Polska,Chojnice,aleja Szeroka 737,cetera-sebastian3069@wp.pl,+48 513 427 341
+1172,Kamila,Wołkowicz,2003-03-13,Polska,Siemianowice Śląskie,ul. Wrocławska 81,wokowicz.kamila@outlook.com,+48 884 946 277
+1173,Marek,Sorbian,1976-01-23,Polska,Kętrzyn,aleja Przemysłowa 43,marek-sorbian@gmail.com,+48 739 875 393
+1174,Rozalia,Machul,2004-09-29,Polska,Kościan,plac Matejki 333,rozalia3486machul@gmail.com,+48 534 655 983
+1175,Lidia,Putek,2001-09-12,Polska,Oświęcim,aleja Wesoła 778,putek.lidia2332@interia.pl,+48 780 463 753
+1176,Mieszko,Dudziec,2001-12-18,Polska,Dzierżoniów,aleja Żeromskiego 95/50,mieszko2354dudziec.2354@interia.pl,+48 785 127 095
+1177,Ksawery,Doroz,2001-03-21,Polska,Olkusz,ul. Orkana 39,ksawery3581doroz-3581@yahoo.com,+48 603 648 215
+1178,Angelika,Czesak,2000-09-27,Polska,Bielsko-Biała,al. Staffa 46/15,angelika7646czesak@interia.pl,+48 607 050 618
+1179,Adrian,Mirocha,2002-04-26,Polska,Ciechanów,pl. Makuszyńskiego 37,adrian3141mirocha@gmail.com,+48 534 620 758
+1180,Justyna,Mały,2005-05-07,Polska,Kościan,pl. Stefana Batorego 06/21,justyna8161may-8161@gmail.com,+48 730 617 341
+1181,Mikołaj,Tatarek,2005-12-22,Polska,Legionowo,aleja Kościelna 889,mikoaj7962tatarek@gmail.com,+48 795 152 093
+1182,Tymoteusz,Milej,2005-05-25,Polska,Zambrów,ulica Piękna 509,tymoteusz.milej@wp.pl,+48 723 274 965
+1183,Jan,Kuk,2004-11-25,Polska,Świdnik,plac Widokowa 23,jan9775kuk-9775@gmail.com,+48 600 156 752
+1184,Olgierd,Gogol,1988-12-18,Polska,Augustów,al. Słonecznikowa 47,gogol-olgierd9937@outlook.com,+48 500 534 208
+1185,Marek,Dadej,1975-11-16,Polska,Skarżysko-Kamienna,ul. Okulickiego 32/24,dadej.marek@wp.pl,+48 782 982 591
+1186,Fryderyk,Serwach,2003-12-01,Polska,Starachowice,pl. Krótka 24/68,fryderyk8790serwach@wp.pl,+48 796 874 561
+1187,Gustaw,Trochimiuk,1987-05-19,Polska,Siemianowice Śląskie,al. Miła 98/79,gustaw2443trochimiuk.2443@gmail.com,+48 519 805 822
+1188,Konrad,Kanik,1961-07-16,Polska,Reda,al. Podleśna 439,konrad8862kanik@gmail.com,+48 733 365 128
+1189,Kornelia,Damps,2005-02-27,Polska,Białogard,ul. Kołłątaja 95,damps-kornelia@interia.pl,+48 578 187 941
+1190,Malwina,Piksa,1979-08-01,Polska,Nowa Sól,plac Ptasia 66,malwina1213piksa-1213@outlook.com,+48 690 723 701
+1191,Ida,Giża,2005-10-25,Polska,Wągrowiec,aleja Tuwima 43,ida8080giza-8080@gmail.com,+48 32 498 13 33
+1192,Tobiasz,Cydzik,2002-01-26,Polska,Lębork,ulica Krzywa 84,tobiasz2987cydzik-2987@wp.pl,+48 607 686 352
+1193,Bianka,Matacz,2005-05-29,Polska,Goleniów,al. Wolności 51,bianka.matacz@yahoo.com,+48 662 749 953
+1194,Aurelia,Kurnik,1997-01-20,Polska,Wałcz,al. Podleśna 035,aurelia_kurnik@yahoo.com,+48 738 164 849
+1195,Dominik,Dulik,2003-03-30,Polska,Knurów,plac Podleśna 76,dominik1211dulik-1211@gmail.com,+48 519 404 136
+1196,Rozalia,Kieszek,1999-01-02,Polska,Ostrołęka,ul. Hallera 770,rozalia2666kieszek@wp.pl,+48 723 326 203
+1197,Franciszek,Czuryło,2001-10-30,Polska,Elbląg,pl. Działkowa 06,franciszek1810czuryo-1810@interia.pl,+48 502 055 563
+1198,Tobiasz,Morys,1995-04-10,Polska,Mikołów,pl. Olchowa 142,tobiasz8336morys@outlook.com,+48 514 732 876
+1199,Bruno,Herok,1975-04-20,Polska,Środa Wielkopolska,plac Jastrzębia 567,bruno9058herok-9058@gmail.com,+48 799 707 815
+1200,Tymoteusz,Wężyk,2002-06-06,Polska,Malbork,al. Cyprysowa 78,tymoteusz-wezyk@interia.pl,+48 695 824 511
+1201,Oskar,Puc,2001-05-19,Polska,Pruszcz Gdański,plac Żeglarska 740,oskar-puc@wp.pl,+48 32 081 99 01
+1202,Gustaw,Suda,2005-01-16,Polska,Legnica,pl. Bałtycka 139,gustaw_suda@gmail.com,+48 798 126 019
+1203,Liwia,Bareja,2006-09-09,Polska,Kościan,aleja Jana III Sobieskiego 46/27,liwia9267bareja@gmail.com,+48 660 856 723
+1204,Cezary,Knapek,2003-03-10,Polska,Ostrów Wielkopolski,aleja Błękitna 97,cezary-knapek@interia.pl,+48 507 783 638
+1205,Miłosz,Zysk,2004-09-08,Polska,Chełm,ul. Zwycięstwa 451,miosz948zysk.948@wp.pl,+48 538 842 536
+1206,Konstanty,Golda,2004-08-29,Polska,Sandomierz,ulica Floriana 99,konstanty1372golda-1372@outlook.com,+48 536 859 365
+1207,Kaja,Leoniuk,1997-07-06,Polska,Zamość,ul. Zapolskiej 83,kaja.leoniuk@outlook.com,+48 22 328 12 08
+1208,Juliusz,Wojtiuk,2006-09-05,Polska,Ostrołęka,ul. Kielecka 359,juliusz8973wojtiuk@interia.pl,+48 533 521 606
+1209,Nicole,Opyrchał,2005-12-03,Polska,Giżycko,al. Reymonta 06,nicole5768opyrcha-5768@wp.pl,+48 515 435 862
+1210,Natan,Zegar,1997-05-27,Polska,Środa Wielkopolska,pl. Rynek 61/01,natan6227zegar.6227@yahoo.com,+48 531 852 025
+1211,Jeremi,Sych,2001-08-25,Polska,Płońsk,plac Jeżynowa 87/68,jeremi-sych@gmail.com,+48 736 888 832
+1212,Inga,Naglik,1964-01-05,Polska,Grudziądz,aleja Browarna 83/19,inga361naglik_361@wp.pl,+48 883 858 506
+1213,Tadeusz,Jeka,1961-09-01,Polska,Wodzisław Śląski,pl. Sadowa 588,tadeusz.jeka@gmail.com,+48 881 739 257
+1214,Adam,Cal,2000-09-05,Polska,Konin,ulica Cyprysowa 492,adam_cal@gmail.com,+48 780 212 323
+1215,Mieszko,Marcińczyk,1999-07-02,Polska,Łódź,pl. Zakątek 91/07,mieszko4659marcinczyk_4659@wp.pl,+48 606 046 436
+1216,Aleksander,Zach,2005-11-14,Polska,Nowy Sącz,pl. Bolesława Chrobrego 32/31,zach_aleksander@wp.pl,+48 601 469 456
+1217,Alex,Rykała,2000-06-30,Polska,Żory,plac Wysoka 50/07,rykaa_alex531@gmail.com,+48 508 018 034
+1218,Igor,Kukier,2006-03-03,Polska,Radomsko,plac Narutowicza 440,igor8273kukier@gmail.com,+48 880 045 083
+1219,Maurycy,Sajewicz,2001-10-28,Polska,Łomża,aleja Gałczynskiego 60/03,maurycy4681sajewicz@gmail.com,+48 606 289 996
+1220,Mieszko,Pyszka,2001-04-12,Polska,Brodnica,ulica Stroma 70/63,pyszka-mieszko4077@gmail.com,+48 792 824 165
+1221,Nela,Gumuła,2000-02-10,Polska,Nowy Sącz,plac Szarych Szeregów 22/96,gumua-nela@outlook.com,+48 730 286 369
+1222,Antoni,Wasyluk,2004-05-20,Polska,Starachowice,aleja Diamentowa 36/79,antoni-wasyluk@gmail.com,+48 578 948 524
+1223,Fryderyk,Stępka,1996-02-08,Polska,Malbork,pl. Rolnicza 052,stepka.fryderyk2115@gmail.com,+48 731 455 310
+1224,Lidia,Kolanko,2006-06-13,Polska,Zambrów,ulica Mickiewicza 51/80,kolanko-lidia@wp.pl,+48 604 962 875
+1225,Jakub,Milej,2003-11-05,Polska,Gdańsk,ulica Boczna 12,jakub6722milej_6722@interia.pl,+48 788 566 595
+1226,Gustaw,Głownia,1998-05-22,Polska,Kutno,al. Wyspiańskiego 295,gustaw.gownia@gmail.com,+48 698 628 003
+1227,Stanisław,Kieca,1983-06-06,Polska,Brodnica,al. Jesienna 68,stanisaw5537kieca.5537@gmail.com,+48 664 006 530
+1228,Tymoteusz,Łaszczyk,2002-06-11,Polska,Sochaczew,al. Jodłowa 22,tymoteusz_aszczyk@yahoo.com,+48 570 962 049
+1229,Kornel,Hankiewicz,2000-05-29,Polska,Starogard Gdański,al. Spółdzielcza 50/08,hankiewicz.kornel@wp.pl,+48 510 812 578
+1230,Wojciech,Rejmer,2001-07-01,Polska,Bełchatów,aleja Glówna 54/99,wojciech701rejmer@yahoo.com,+48 796 622 145
+1231,Adrianna,Rejmak,1992-02-08,Polska,Bolesławiec,aleja Cedrowa 832,adrianna-rejmak@wp.pl,+48 695 996 832
+1232,Rafał,Stroka,2006-08-28,Polska,Tarnowskie Góry,pl. Szarych Szeregów 113,rafa_stroka@wp.pl,+48 22 800 30 50
+1233,Maciej,Andrzejuk,2004-09-27,Polska,Zgierz,aleja Pomorska 51/17,andrzejuk.maciej@gmail.com,+48 690 931 316
+1234,Adam,Peda,1990-12-05,Polska,Głogów,plac Szeroka 533,peda_adam5690@wp.pl,+48 735 222 830
+1235,Fryderyk,Noculak,1990-08-23,Polska,Czeladź,plac Maczka 56/35,fryderyk3281noculak.3281@outlook.com,+48 669 328 297
+1236,Artur,Tylek,2002-12-09,Polska,Opole,al. Fredry 93,artur2041tylek-2041@yahoo.com,+48 533 955 577
+1237,Apolonia,Teterycz,1978-06-28,Polska,Września,ulica Starowiejska 04,apolonia_teterycz@gmail.com,+48 697 870 879
+1238,Franciszek,Damian,2005-08-04,Polska,Świebodzice,aleja Modrzewiowa 83/56,damian.franciszek8876@wp.pl,+48 889 518 670
+1239,Kazimierz,Kumorek,1994-07-03,Polska,Jawor,ulica Wiejska 59,kazimierz6254kumorek-6254@gmail.com,+48 796 189 165
+1240,Paweł,Kultys,2003-09-21,Polska,Szczecin,plac Bursztynowa 56,pawe5310kultys@gmail.com,+48 792 716 530
+1241,Marcel,John,1999-04-01,Polska,Tarnów,plac Osiedlowa 59/65,marcel6275john_6275@yahoo.com,+48 600 428 834
+1242,Gustaw,Mędrala,1992-08-07,Polska,Sosnowiec,al. Leśna 931,gustaw5334medrala@wp.pl,+48 534 591 166
+1243,Mikołaj,Plona,1999-09-19,Polska,Ciechanów,plac Jesienna 10,plona_mikoaj9738@wp.pl,+48 666 617 237
+1244,Julita,Reich,1997-07-17,Polska,Szczecin,plac Sportowa 084,reich-julita2684@interia.pl,+48 606 471 999
+1245,Natasza,Klekot,1999-08-28,Polska,Mysłowice,ul. Parkowa 02/60,natasza487klekot@outlook.com,+48 501 182 476
+1246,Julian,Kozieja,2001-11-19,Polska,Biała Podlaska,aleja Częstochowska 02/70,julian.kozieja@interia.pl,+48 22 006 86 88
+1247,Ryszard,Mizak,2002-08-14,Polska,Stalowa Wola,pl. Gałczynskiego 62/25,ryszard5700mizak@outlook.com,+48 889 071 820
+1248,Anita,Kuśka,2005-09-18,Polska,Koszalin,ul. Parkowa 12/05,anita-kuska@yahoo.com,+48 534 446 871
+1249,Juliusz,Białczyk,2003-05-15,Polska,Piła,aleja Przemysłowa 67/61,biaczyk_juliusz@interia.pl,+48 607 914 482
+1250,Marianna,Szczap,1998-07-17,Polska,Nowy Targ,al. Mieszka I 94,szczap-marianna@outlook.com,+48 510 011 015
+1251,Dorota,Wąsala,2006-01-03,Polska,Gorzów Wielkopolski,plac Poznańska 791,wasala.dorota1655@outlook.com,+48 731 021 105
+1252,Tymon,Pelka,2001-09-23,Polska,Oława,pl. Władysława Łokietka 41,tymon3762pelka.3762@wp.pl,+48 32 445 87 49
+1253,Konrad,Antoń,2005-12-19,Polska,Zamość,ulica Towarowa 52/97,konrad2378anton-2378@yahoo.com,+48 799 914 469
+1254,Jerzy,Szymała,2000-07-21,Polska,Kościerzyna,aleja Graniczna 78,jerzy3449szymaa@interia.pl,+48 508 022 939
+1255,Dorota,Drela,1979-05-22,Polska,Wejherowo,aleja Agrestowa 22,dorota-drela@gmail.com,+48 600 298 249
+1256,Agnieszka,Ziemak,2000-09-27,Polska,Świdnica,plac Prosta 41/19,ziemak-agnieszka@wp.pl,+48 661 910 992
+1257,Kalina,Osik,2005-10-26,Polska,Łaziska Górne,al. Batalionów Chłopskich 577,osik.kalina4916@outlook.com,+48 22 777 87 68
+1258,Sara,Parkitna,1984-05-01,Polska,Szczecin,aleja Złota 00/65,sara8035parkitna@gmail.com,+48 784 678 445
+1259,Dagmara,Hak,1994-08-14,Polska,Olkusz,al. Kielecka 50/17,dagmara-hak@gmail.com,+48 578 054 725
+1260,Sara,Mytych,2002-08-07,Polska,Malbork,plac Konarskiego 15,mytych.sara9080@gmail.com,+48 720 732 183
+1261,Leon,Stąpór,2005-01-13,Polska,Bełchatów,plac Częstochowska 661,leon-stapor@gmail.com,+48 22 142 73 42
+1262,Julianna,Damian,2004-04-28,Polska,Nowy Targ,al. Promienna 693,julianna_damian@wp.pl,+48 32 567 18 72
+1263,Dorota,Miśkowiec,2001-06-22,Polska,Dąbrowa Górnicza,ulica Władysława Jagiełły 84/39,dorota8571miskowiec_8571@yahoo.com,+48 732 987 214
+1264,Angelika,Kohnke,1999-08-04,Polska,Brzeg,pl. Borowa 613,angelika_kohnke@gmail.com,+48 510 847 079
+1265,Emil,Peszko,2001-05-12,Polska,Puławy,aleja Czereśniowa 85/07,emil.peszko@gmail.com,+48 694 450 540
+1266,Bartek,Ratka,1999-10-19,Polska,Katowice,aleja Koralowa 19,bartek1287ratka@yahoo.com,+48 22 191 05 05
+1267,Agnieszka,Oleksa,1995-10-13,Polska,Tarnowskie Góry,al. Zielona 13,agnieszka1543oleksa_1543@yahoo.com,+48 785 337 173
+1268,Natasza,Stróż,1996-04-30,Polska,Brzeg,ulica Jasna 274,natasza-stroz@interia.pl,+48 572 610 974
+1269,Sylwia,Pietrus,1996-03-11,Polska,Środa Wielkopolska,ul. Poniatowskiego 112,sylwia785pietrus@interia.pl,+48 734 422 791
+1270,Jerzy,Leszkiewicz,1991-04-26,Polska,Bydgoszcz,ulica Jaworowa 67,leszkiewicz_jerzy3001@wp.pl,+48 720 758 550
+1271,Julita,Engler,1992-01-24,Polska,Chrzanów,al. Łabędzia 20/71,julita8252engler@gmail.com,+48 605 125 376
+1272,Eliza,Pazera,2001-05-30,Polska,Chełm,pl. Tylna 37/45,pazera_eliza506@interia.pl,+48 797 422 528
+1273,Antoni,Durlik,1996-01-26,Polska,Marki,plac Stycznia 90/75,durlik.antoni@gmail.com,+48 22 158 61 38
+1274,Klara,Jaje,1992-03-28,Polska,Piastów,ul. Targowa 40/43,klara_jaje@gmail.com,+48 507 059 485
+1275,Gabriel,Ptok,1999-05-07,Polska,Gorzów Wielkopolski,ulica Akacjowa 589,gabriel1054ptok_1054@wp.pl,+48 575 217 730
+1276,Olga,Rymarz,2000-12-27,Polska,Białogard,ul. Pszenna 41/26,olga2029rymarz@interia.pl,+48 795 047 309
+1277,Emil,Cydzik,1962-04-26,Polska,Rzeszów,plac Wiosenna 35/25,cydzik-emil@gmail.com,+48 664 031 129
+1278,Konrad,Mysiak,1985-05-31,Polska,Mińsk Mazowiecki,ulica Jana Pawła II 179,mysiak.konrad@yahoo.com,+48 735 732 258
+1279,Kacper,Gabryel,1997-05-17,Polska,Sosnowiec,plac Bema 35,kacper.gabryel@gmail.com,+48 790 047 569
+1280,Jeremi,Bryzek,2001-05-23,Polska,Pabianice,ul. Sosnowa 12,jeremi-bryzek@yahoo.com,+48 790 338 783
+1281,Gabriel,Koman,1991-02-26,Polska,Piekary Śląskie,ul. Brzoskwiniowa 09/65,gabriel6554koman-6554@gmail.com,+48 513 954 173
+1282,Łukasz,Biernacik,1969-11-23,Polska,Ostróda,ulica Wiatraczna 46/18,biernacik.ukasz@interia.pl,+48 720 690 960
+1283,Olga,Zbylut,1985-12-27,Polska,Szczytno,plac Grabowa 38,olga8907zbylut@wp.pl,+48 531 688 391
+1284,Cezary,Glaza,2000-03-18,Polska,Gliwice,al. Spacerowa 82/15,cezary4272glaza.4272@wp.pl,+48 736 903 665
+1285,Iwo,Pielka,1994-03-24,Polska,Malbork,al. Wesoła 22/98,pielka_iwo7069@wp.pl,+48 530 963 119
+1286,Marcin,Hennig,1999-03-17,Polska,Skarżysko-Kamienna,ul. Strażacka 029,hennig_marcin4816@gmail.com,+48 665 265 197
+1287,Sylwia,Ledzion,2004-09-20,Polska,Kętrzyn,ulica Kwiatowa 207,ledzion.sylwia2794@gmail.com,+48 888 198 639
+1288,Adam,Apanowicz,2004-03-15,Polska,Bielawa,aleja Nadrzeczna 61/15,adam5579apanowicz@gmail.com,+48 537 889 800
+1289,Kaja,Kamyk,1998-12-22,Polska,Wodzisław Śląski,aleja Kazimierza Wielkiego 27,kamyk.kaja@interia.pl,+48 531 952 402
+1290,Szymon,Leśny,1997-12-30,Polska,Będzin,al. Majowa 623,szymon2000lesny@interia.pl,+48 722 886 088
+1291,Kornelia,Kamieniarz,2004-10-19,Polska,Mława,al. Północna 99,kornelia.kamieniarz@wp.pl,+48 22 871 02 69
+1292,Tymoteusz,Kursa,1985-05-22,Polska,Koszalin,ul. Hallera 594,kursa_tymoteusz9355@outlook.com,+48 609 931 738
+1293,Nicole,Kierat,2006-02-24,Polska,Sochaczew,ulica Bolesława Chrobrego 63,nicole4089kierat_4089@interia.pl,+48 576 033 558
+1294,Robert,Witkowicz,1969-03-24,Polska,Wodzisław Śląski,aleja Morcinka 82/25,robert.witkowicz@interia.pl,+48 32 380 42 75
+1295,Kornelia,Karwan,1994-02-24,Polska,Olkusz,al. Gołębia 943,kornelia.karwan@interia.pl,+48 603 839 266
+1296,Krystyna,Hajdukiewicz,1997-11-16,Polska,Włocławek,pl. Krokusowa 33,hajdukiewicz.krystyna6950@gmail.com,+48 575 781 482
+1297,Melania,Szyma,1999-11-23,Polska,Wągrowiec,al. Staszica 779,szyma.melania4983@gmail.com,+48 577 358 396
+1298,Mieszko,Gomuła,2004-12-21,Polska,Malbork,aleja Śląska 032,mieszko8282gomua.8282@wp.pl,+48 663 899 375
+1299,Agnieszka,Bździuch,2003-12-22,Polska,Iława,pl. Norwida 23,agnieszka1004bzdziuch.1004@wp.pl,+48 739 707 881
+1300,Cezary,Giedrojć,1999-11-20,Polska,Biała Podlaska,plac Harcerska 67,cezary2785giedrojc-2785@interia.pl,+48 507 393 311
+1301,Elżbieta,Anders,1969-05-14,Polska,Brzeg,aleja Ptasia 302,anders.elzbieta@gmail.com,+48 731 997 535
+1302,Dawid,Wywiał,1996-09-29,Polska,Szczecinek,aleja Agrestowa 81,wywia-dawid2620@wp.pl,+48 22 694 29 37
+1303,Róża,Botor,2003-11-28,Polska,Siemianowice Śląskie,ulica Szarych Szeregów 575,botor.roza@yahoo.com,+48 22 931 89 89
+1304,Łukasz,Majnusz,2003-04-14,Polska,Kraków,plac Złota 509,ukasz7189majnusz@yahoo.com,+48 786 083 875
+1305,Jędrzej,Żyto,2004-11-25,Polska,Nowy Dwór Mazowiecki,ul. Kossaka 44,jedrzej3980zyto@wp.pl,+48 723 823 594
+1306,Kornelia,Wyłupek,1987-07-15,Polska,Augustów,ulica Wieniawskiego 894,kornelia3403wyupek-3403@interia.pl,+48 602 439 996
+1307,Arkadiusz,Kościesza,2005-07-27,Polska,Piastów,ul. Pułaskiego 99,arkadiusz1432kosciesza-1432@outlook.com,+48 22 151 04 00
+1308,Ksawery,Rup,2006-11-27,Polska,Toruń,aleja Mieszka I 99,rup_ksawery5620@yahoo.com,+48 785 817 634
+1309,Apolonia,Grzelec,1976-11-06,Polska,Jawor,pl. Jagodowa 57,apolonia.grzelec@gmail.com,+48 691 836 516
+1310,Karina,Śleziak,2006-10-07,Polska,Zgorzelec,ul. Willowa 49/47,sleziak-karina3486@wp.pl,+48 22 619 05 57
+1311,Olga,Sommerfeld,1999-09-26,Polska,Bydgoszcz,aleja Zapolskiej 75,olga_sommerfeld@wp.pl,+48 572 481 534
+1312,Julianna,Dziopa,2004-03-17,Polska,Żagań,ulica Dworcowa 31,julianna5714dziopa@gmail.com,+48 792 504 155
+1313,Olgierd,Oleksa,2005-05-12,Polska,Oświęcim,pl. Armii Krajowej 196,oleksa.olgierd@wp.pl,+48 739 931 038
+1314,Antoni,Kupaj,1995-01-05,Polska,Pszczyna,pl. Jaskółcza 52,antoni8622kupaj-8622@interia.pl,+48 697 849 068
+1315,Ida,Langa,2003-09-30,Polska,Dąbrowa Górnicza,al. Łąkowa 21/30,langa_ida3569@interia.pl,+48 735 095 659
+1316,Rafał,Popielarczyk,2000-03-19,Polska,Płońsk,ul. Turkusowa 967,popielarczyk_rafa@gmail.com,+48 600 662 852
+1317,Mateusz,Straszak,1991-04-04,Polska,Warszawa,ulica Lubelska 94/22,mateusz.straszak@gmail.com,+48 32 799 62 44
+1318,Jędrzej,Zbiciak,1978-01-06,Polska,Krosno,pl. Truskawkowa 24/05,zbiciak.jedrzej@gmail.com,+48 730 228 013
+1319,Ewa,Ziółko,1991-11-08,Polska,Legnica,aleja Myśliwska 27/52,ewa7837zioko@gmail.com,+48 510 720 103
+1320,Maksymilian,Święs,2006-04-02,Polska,Sochaczew,aleja Spacerowa 35/41,maksymilian-swies@interia.pl,+48 532 436 727
+1321,Mateusz,Maziarczyk,2004-03-27,Polska,Czeladź,pl. Czereśniowa 063,mateusz6408maziarczyk.6408@interia.pl,+48 726 577 058
+1322,Maksymilian,Nogieć,1999-09-10,Polska,Ostrów Mazowiecka,ul. Wiązowa 41/43,maksymilian_nogiec@interia.pl,+48 886 735 362
+1323,Bartek,Ciaś,1994-09-23,Polska,Siedlce,ulica Spokojna 65,cias_bartek@gmail.com,+48 799 716 560
+1324,Eliza,Mytnik,2002-09-10,Polska,Bytom,ul. Lwowska 37/25,mytnik_eliza6475@gmail.com,+48 504 200 003
+1325,Nicole,Hallmann,1980-12-25,Polska,Żywiec,al. Okrężna 04,hallmann-nicole5646@interia.pl,+48 784 187 224
+1326,Bianka,Zwara,1994-07-23,Polska,Sandomierz,ulica Piastowska 387,bianka-zwara@yahoo.com,+48 513 478 647
+1327,Alex,Grabczak,2004-11-08,Polska,Łódź,aleja Słowianska 99,grabczak.alex@gmail.com,+48 883 860 647
+1328,Rozalia,Doruch,2000-03-19,Polska,Toruń,plac Traugutta 450,doruch-rozalia3875@outlook.com,+48 22 907 03 41
+1329,Paweł,Kostera,1977-05-15,Polska,Zawiercie,al. Sucharskiego 21,pawe2797kostera_2797@wp.pl,+48 533 811 959
+1330,Ewa,Jarczak,2001-01-29,Polska,Słupsk,pl. Królewska 98,jarczak-ewa@gmail.com,+48 734 878 550
+1331,Aniela,Palej,1999-01-13,Polska,Świebodzice,ul. Rejtana 507,aniela_palej@gmail.com,+48 783 740 100
+1332,Iwo,Capiga,2003-01-28,Polska,Wrocław,plac Willowa 18,iwo1451capiga@wp.pl,+48 22 747 98 52
+1333,Nela,Sporek,2001-03-31,Polska,Nowa Sól,aleja Rybacka 44/35,nela-sporek@yahoo.com,+48 886 267 738
+1334,Karina,Buszta,2002-10-20,Polska,Szczecinek,ul. Wyszyńskiego 524,karina8315buszta@wp.pl,+48 22 391 91 77
+1335,Blanka,Hołubowicz,1965-05-19,Polska,Sopot,al. Młyńska 84,blanka841houbowicz.841@gmail.com,+48 734 696 918
+1336,Łukasz,Kochman,1992-02-27,Polska,Poznań,ul. Konarskiego 279,ukasz1461kochman@interia.pl,+48 796 822 593
+1337,Kazimierz,Mol,2006-05-22,Polska,Wyszków,aleja Szeroka 389,kazimierz.mol@outlook.com,+48 725 581 127
+1338,Róża,Terka,2001-10-19,Polska,Bielsko-Biała,ulica Śląska 44/46,roza6460terka@interia.pl,+48 787 959 433
+1339,Tobiasz,Maksimowicz,1997-03-04,Polska,Bolesławiec,aleja Powstańców Wielkopolskich 478,maksimowicz.tobiasz@gmail.com,+48 32 201 53 79
+1340,Sandra,Chachuła,2005-05-05,Polska,Goleniów,ulica Sowia 51/20,sandra.chachua@wp.pl,+48 792 244 151
+1341,Natasza,Szymaniuk,2003-02-06,Polska,Chojnice,ulica Staszica 10/10,natasza2516szymaniuk.2516@gmail.com,+48 730 469 328
+1342,Tadeusz,Rosłon,2003-08-05,Polska,Kętrzyn,ulica Łabędzia 90/45,tadeusz5551roson-5551@gmail.com,+48 32 110 94 63
+1343,Stefan,Dumin,2004-07-23,Polska,Mysłowice,aleja Batalionów Chłopskich 549,dumin.stefan@outlook.com,+48 536 448 008
+1344,Bianka,Jarkiewicz,1999-12-08,Polska,Zabrze,plac Dojazdowa 081,jarkiewicz_bianka2611@wp.pl,+48 603 150 696
+1345,Maksymilian,Sajda,2005-03-20,Polska,Zakopane,aleja Matejki 72,sajda_maksymilian3411@gmail.com,+48 691 954 245
+1346,Wojciech,Solarczyk,1997-05-11,Polska,Mińsk Mazowiecki,ulica Gałczynskiego 81,wojciech-solarczyk@gmail.com,+48 780 685 078
+1347,Malwina,Wiertelak,1995-12-25,Polska,Brzeg,pl. Krokusowa 597,malwina1958wiertelak.1958@wp.pl,+48 667 638 450
+1348,Olaf,Zdancewicz,2004-02-01,Polska,Leszno,ul. Rybacka 22,olaf-zdancewicz@gmail.com,+48 782 145 385
+1349,Sonia,Ćwierz,2006-11-15,Polska,Zgierz,pl. Sikorskiego 80,sonia5669cwierz.5669@wp.pl,+48 607 225 407
+1350,Marcel,Kempka,2004-02-26,Polska,Katowice,pl. Górnicza 486,marcel7268kempka@interia.pl,+48 788 801 634
+1351,Kornel,Niemczuk,1983-05-05,Polska,Czerwionka-Leszczyny,plac Górna 17,kornel1268niemczuk@interia.pl,+48 607 188 333
+1352,Urszula,Swacha,2006-06-11,Polska,Kłodzko,pl. Głogowa 120,urszula2667swacha_2667@wp.pl,+48 503 432 143
+1353,Ada,Spólnik,2005-08-14,Polska,Mikołów,al. Młyńska 70/65,spolnik-ada6184@gmail.com,+48 696 095 169
+1354,Konrad,Maligłówka,1989-06-13,Polska,Gdynia,pl. Kopernika 09,maligowka.konrad@interia.pl,+48 22 273 49 16
+1355,Tymon,Żołna,2002-10-16,Polska,Żagań,ul. Graniczna 53,tymon_zona@gmail.com,+48 731 420 472
+1356,Sara,Krauz,1977-12-02,Polska,Płock,aleja Cmentarna 85,sara360krauz@wp.pl,+48 600 332 468
+1357,Cyprian,Czenczek,1997-11-07,Polska,Wołomin,al. Częstochowska 59/34,cyprian3719czenczek@wp.pl,+48 574 938 520
+1358,Sandra,Sztuba,2001-06-13,Polska,Ząbki,ulica Armii Krajowej 18/15,sztuba_sandra@wp.pl,+48 519 357 594
+1359,Robert,Deryło,1997-09-12,Polska,Zielona Góra,pl. Fredry 10/33,robert-deryo@interia.pl,+48 699 473 043
+1360,Aniela,Żok,2005-05-25,Polska,Wieluń,al. Długosza 94/19,aniela7772zok-7772@gmail.com,+48 723 119 752
+1361,Olaf,Burczak,2005-06-21,Polska,Myszków,aleja Gajowa 72/66,burczak-olaf5471@interia.pl,+48 516 123 221
+1362,Lidia,Tuzimek,1999-04-24,Polska,Oława,ulica Orla 120,lidia1709tuzimek-1709@gmail.com,+48 539 298 880
+1363,Krystian,Malarczyk,2006-03-24,Polska,Olsztyn,pl. Starowiejska 16,malarczyk-krystian3834@yahoo.com,+48 504 137 411
+1364,Gabriel,Zagrajek,2006-06-03,Polska,Włocławek,ulica Jesionowa 346,zagrajek_gabriel@yahoo.com,+48 793 637 098
+1365,Ewelina,Sabała,2002-05-27,Polska,Kołobrzeg,ul. Lelewela 329,sabaa.ewelina@outlook.com,+48 887 414 060
+1366,Nicole,Rezmer,1999-07-26,Polska,Gorzów Wielkopolski,plac Lubelska 74/41,nicole9890rezmer-9890@yahoo.com,+48 600 253 663
+1367,Maurycy,Zimoń,2003-12-02,Polska,Jastrzębie-Zdrój,aleja Glówna 322,zimon-maurycy@gmail.com,+48 886 996 340
+1368,Franciszek,Śledzik,2002-07-29,Polska,Starogard Gdański,aleja Okrzei 236,franciszek.sledzik@gmail.com,+48 782 930 055
+1369,Franciszek,Szkatuła,2000-06-12,Polska,Wołomin,ul. Lubelska 96/74,franciszek4189szkatua_4189@gmail.com,+48 608 359 897
+1370,Albert,Preuss,1998-12-26,Polska,Stargard Szczeciński,plac Koralowa 57,albert.preuss@gmail.com,+48 32 518 61 73
+1371,Julian,Kasiak,2000-09-05,Polska,Kętrzyn,ulica Słonecznikowa 777,kasiak.julian@wp.pl,+48 602 770 023
+1372,Kajetan,Putek,2000-10-27,Polska,Leszno,aleja Rumiankowa 66,putek-kajetan@gmail.com,+48 730 618 843
+1373,Igor,Kajak,2005-09-22,Polska,Legnica,ul. Piłsudskiego 131,igor2927kajak@gmail.com,+48 574 576 344
+1374,Aniela,Klejna,2004-09-09,Polska,Jaworzno,ul. Harcerska 292,klejna.aniela@gmail.com,+48 888 456 312
+1375,Szymon,Symonowicz,1995-05-14,Polska,Toruń,ul. Kościuszki 303,szymon_symonowicz@gmail.com,+48 667 672 700
+1376,Maksymilian,Kołsut,1999-01-06,Polska,Kielce,pl. Koralowa 352,kosut.maksymilian@gmail.com,+48 609 669 000
+1377,Mariusz,Balawender,2004-03-29,Polska,Ciechanów,aleja Grunwaldzka 25/08,balawender.mariusz@outlook.com,+48 799 851 285
+1378,Anna Maria,Wojtak,1999-01-28,Polska,Sosnowiec,aleja Wschodnia 965,annamaria3527wojtak.3527@interia.pl,+48 736 946 611
+1379,Marika,Latacz,1995-04-21,Polska,Toruń,aleja Strzelecka 668,marika9506latacz@wp.pl,+48 32 918 62 45
+1380,Artur,Smagacz,1985-10-17,Polska,Oleśnica,ul. Młynarska 97/72,artur_smagacz@gmail.com,+48 799 578 916
+1381,Damian,Bernatowicz,2005-01-20,Polska,Starogard Gdański,ul. Glówna 34,bernatowicz_damian2712@outlook.com,+48 571 907 750
+1382,Nicole,Kozica,1982-02-07,Polska,Gorzów Wielkopolski,ul. Jagodowa 815,nicole8425kozica_8425@interia.pl,+48 725 881 484
+1383,Ewa,Sieczko,2001-06-03,Polska,Jawor,pl. Dąbrowskiego 58,ewa_sieczko@wp.pl,+48 781 818 568
+1384,Konstanty,Joniak,2000-08-11,Polska,Racibórz,al. Piwna 53,konstanty.joniak@gmail.com,+48 519 799 565
+1385,Radosław,Strycharz,2004-01-29,Polska,Zamość,ul. Toruńska 34,radosaw.strycharz@yahoo.com,+48 32 357 61 63
+1386,Kalina,Jarmuła,2003-04-19,Polska,Opole,pl. Handlowa 12/36,jarmua.kalina9336@outlook.com,+48 883 401 569
+1387,Mariusz,Głowiak,1988-02-07,Polska,Puławy,aleja Kamienna 24/38,gowiak.mariusz3518@interia.pl,+48 502 850 680
+1388,Piotr,Kleina,1999-03-23,Polska,Otwock,ul. Bema 291,piotr2288kleina.2288@gmail.com,+48 796 205 286
+1389,Angelika,Litwiniuk,1994-08-05,Polska,Starachowice,ul. Tylna 00,angelika8001litwiniuk@interia.pl,+48 696 168 630
+1390,Kalina,Musiolik,2004-11-09,Polska,Zamość,al. Wspólna 213,kalina.musiolik@wp.pl,+48 22 039 26 80
+1391,Stefan,Migoń,1995-12-20,Polska,Augustów,ulica Kalinowa 280,stefan7236migon.7236@wp.pl,+48 538 872 751
+1392,Kalina,Drywa,1993-08-06,Polska,Biała Podlaska,pl. Ptasia 72/26,drywa.kalina5329@interia.pl,+48 602 897 550
+1393,Anna Maria,Dudkowiak,2006-06-07,Polska,Zamość,ulica Powstańców 913,dudkowiak.annamaria@wp.pl,+48 660 191 806
+1394,Dagmara,Siarkiewicz,1996-10-25,Polska,Świdnica,aleja Wierzbowa 15/62,siarkiewicz.dagmara8468@interia.pl,+48 694 707 333
+1395,Fryderyk,Kozica,2002-11-03,Polska,Łomża,ul. Ciasna 24,kozica.fryderyk@wp.pl,+48 22 484 46 83
+1396,Nela,Kwinta,2006-12-02,Polska,Tarnowskie Góry,al. Wałowa 083,nela9999kwinta@gmail.com,+48 737 291 259
+1397,Juliusz,Warwas,2005-04-01,Polska,Bydgoszcz,aleja Zacisze 08/90,juliusz-warwas@yahoo.com,+48 721 960 762
+1398,Melania,Sobstyl,1982-09-26,Polska,Ruda Śląska,al. Środkowa 90,melania.sobstyl@gmail.com,+48 794 108 407
+1399,Albert,Kozdrój,2001-02-23,Polska,Czerwionka-Leszczyny,pl. Bydgoska 73,kozdroj.albert@gmail.com,+48 731 021 500
+1400,Anita,Makieła,1999-06-19,Polska,Mława,al. Wilcza 16/29,makiea-anita9920@gmail.com,+48 32 561 02 96
+1401,Olga,Chuchla,1973-05-15,Polska,Skierniewice,aleja Wiślana 34,chuchla-olga9447@gmail.com,+48 22 824 51 84
+1402,Jakub,Mieloch,2006-06-17,Polska,Jelenia Góra,ul. Jesienna 04/45,mieloch_jakub4932@wp.pl,+48 790 592 815
+1403,Krzysztof,Lichoń,2002-11-11,Polska,Grodzisk Mazowiecki,al. Promienna 648,krzysztof.lichon@outlook.com,+48 721 116 907
+1404,Liwia,Frankowicz,1994-01-18,Polska,Bielsk Podlaski,pl. Wyspiańskiego 965,liwia_frankowicz@gmail.com,+48 724 354 650
+1405,Ida,Wnuczek,1996-12-24,Polska,Nowy Sącz,aleja Popiełuszki 66,ida5792wnuczek_5792@gmail.com,+48 790 122 623
+1406,Natan,Żelazo,2003-09-27,Polska,Leszno,ulica Kosynierów 19,zelazo-natan@gmail.com,+48 662 304 476
+1407,Igor,Drej,1974-09-14,Polska,Swarzędz,ulica Powstańców Śląskich 59,drej.igor@interia.pl,+48 797 265 094
+1408,Gabriel,Chowaniak,1999-06-25,Polska,Jawor,ulica Królewska 52,gabriel3352chowaniak@gmail.com,+48 514 253 042
+1409,Melania,Bartocha,1996-06-06,Polska,Grudziądz,plac Bankowa 722,melania9027bartocha_9027@interia.pl,+48 694 315 265
+1410,Jakub,Mętel,1982-02-19,Polska,Zabrze,ul. Robotnicza 68/25,metel.jakub3139@wp.pl,+48 694 028 763
+1411,Urszula,Trzepizur,2002-10-11,Polska,Gliwice,pl. Bankowa 473,trzepizur-urszula8601@wp.pl,+48 32 072 72 24
+1412,Szymon,Zaraś,2006-04-16,Polska,Sosnowiec,ul. Mieszka I 118,szymon_zaras@yahoo.com,+48 784 028 307
+1413,Aleksander,Nowotka,2002-08-28,Polska,Swarzędz,al. Rolna 23/31,nowotka-aleksander9884@gmail.com,+48 663 360 346
+1414,Melania,Kierat,1985-02-22,Polska,Marki,pl. Szczęśliwa 85,kierat.melania1069@gmail.com,+48 22 975 93 67
+1415,Gaja,Witas,1998-10-28,Polska,Tychy,ulica Agrestowa 78/26,gaja_witas@yahoo.com,+48 507 316 493
+1416,Piotr,Wydmuch,2006-06-12,Polska,Turek,al. Krucza 453,wydmuch.piotr@outlook.com,+48 505 464 793
+1417,Michał,Samol,2001-06-17,Polska,Biała Podlaska,ul. Kasztanowa 610,samol-micha@gmail.com,+48 796 160 559
+1418,Maksymilian,Cierpka,2001-10-24,Polska,Nowa Sól,al. Kraszewskiego 90,maksymilian_cierpka@gmail.com,+48 881 524 722
+1419,Marcelina,Fitrzyk,2004-04-24,Polska,Augustów,pl. Rybacka 585,marcelina6865fitrzyk.6865@interia.pl,+48 32 468 29 80
+1420,Kamila,Konat,1998-10-26,Polska,Ciechanów,aleja Daszyńskiego 28/69,kamila.konat@gmail.com,+48 661 904 343
+1421,Kajetan,Tyma,2000-07-14,Polska,Czechowice-Dziedzice,aleja Mazurska 68/48,kajetan.tyma@gmail.com,+48 733 684 259
+1422,Justyna,Matyjasek,1988-03-23,Polska,Łowicz,aleja Leśna 92,matyjasek_justyna1344@gmail.com,+48 791 824 451
+1423,Sebastian,Przybycień,2006-08-24,Polska,Puławy,pl. Tulipanowa 12,sebastian7611przybycien_7611@outlook.com,+48 608 885 227
+1424,Norbert,Neska,1994-05-10,Polska,Września,ul. Mała 38/21,norbert2945neska@interia.pl,+48 885 059 855
+1425,Borys,Olbrych,1981-06-27,Polska,Łódź,ul. Reymonta 81/28,olbrych-borys@outlook.com,+48 22 011 95 64
+1426,Stefan,Cymbała,2003-12-15,Polska,Tarnobrzeg,aleja Plażowa 84,stefan155cymbaa@gmail.com,+48 723 455 310
+1427,Nikodem,Dzierwa,2000-08-14,Polska,Czechowice-Dziedzice,al. Cisowa 209,nikodem-dzierwa@gmail.com,+48 887 334 642
+1428,Leon,Lizoń,2005-10-13,Polska,Piaseczno,al. Cisowa 63,lizon_leon2168@interia.pl,+48 783 653 238
+1429,Wiktor,Trzyna,2005-06-10,Polska,Dzierżoniów,plac Spacerowa 91,wiktor6235trzyna@wp.pl,+48 512 411 338
+1430,Ewa,Pieczyrak,2006-11-16,Polska,Chojnice,plac Stycznia 175,pieczyrak-ewa5433@yahoo.com,+48 533 787 576
+1431,Konrad,Solis,2002-10-15,Polska,Żywiec,ul. Brzoskwiniowa 843,solis-konrad9893@gmail.com,+48 501 579 162
+1432,Rafał,Kwinta,2003-03-23,Polska,Brzeg,aleja Korczaka 03,rafa_kwinta@wp.pl,+48 519 912 573
+1433,Karina,Naglik,2006-06-18,Polska,Olkusz,pl. Wyspiańskiego 858,karina6838naglik.6838@interia.pl,+48 734 918 583
+1434,Justyna,Ludwin,1995-09-21,Polska,Goleniów,pl. Rolnicza 876,justyna7224ludwin@interia.pl,+48 791 186 438
+1435,Aniela,Rybus,1999-04-24,Polska,Jarosław,ul. Stefana Batorego 65,aniela.rybus@gmail.com,+48 883 225 619
+1436,Ernest,Jasina,1992-02-26,Polska,Bytom,ul. Krokusowa 744,jasina-ernest@interia.pl,+48 573 726 000
+1437,Tadeusz,Szajek,2002-08-23,Polska,Swarzędz,aleja Władysława Jagiełły 13,tadeusz9136szajek@yahoo.com,+48 785 566 893
+1438,Kazimierz,Beśka,1998-12-17,Polska,Nowa Ruda,aleja Słowicza 904,beska.kazimierz3198@interia.pl,+48 660 104 210
+1439,Fryderyk,Szkatuła,2005-05-11,Polska,Ciechanów,ulica Cyprysowa 708,szkatua_fryderyk1984@interia.pl,+48 723 823 384
+1440,Sylwia,Laszuk,2004-11-15,Polska,Grodzisk Mazowiecki,al. Kolorowa 01/47,sylwia9586laszuk-9586@gmail.com,+48 515 573 550
+1441,Adrianna,Kycia,1998-07-29,Polska,Bielsko-Biała,aleja Mazurska 58/17,kycia_adrianna4175@wp.pl,+48 728 203 578
+1442,Kazimierz,Liedtke,2000-11-17,Polska,Bielsko-Biała,ul. Plater 50/20,kazimierz9788liedtke@interia.pl,+48 505 140 112
+1443,Maks,Szkup,2006-04-19,Polska,Płock,ulica Leśna 51/34,szkup-maks@outlook.com,+48 691 647 286
+1444,Kamila,Plona,1996-11-17,Polska,Kędzierzyn-Koźle,al. Kopernika 12,plona_kamila@gmail.com,+48 531 605 639
+1445,Nataniel,Ciaś,1996-02-09,Polska,Grodzisk Mazowiecki,al. Żytnia 91,cias.nataniel@wp.pl,+48 725 669 261
+1446,Angelika,Pacewicz,1996-11-26,Polska,Grudziądz,al. Broniewskiego 72,angelika2111pacewicz_2111@gmail.com,+48 570 746 754
+1447,Anna Maria,Zbiciak,2000-11-15,Polska,Stalowa Wola,plac Ptasia 410,zbiciak-annamaria@gmail.com,+48 796 996 972
+1448,Ewelina,Sołtan,2004-01-23,Polska,Legionowo,ul. Wysoka 41,sotan_ewelina5186@yahoo.com,+48 692 781 377
+1449,Patryk,Bandyk,1999-04-03,Polska,Biłgoraj,plac Toruńska 759,bandyk.patryk@yahoo.com,+48 722 262 887
+1450,Jerzy,Zagrodnik,1995-03-01,Polska,Białogard,al. Zamkowa 00/94,zagrodnik_jerzy1046@gmail.com,+48 889 558 307
+1451,Agnieszka,Kalota,2005-04-12,Polska,Włocławek,pl. Grunwaldzka 633,agnieszka_kalota@wp.pl,+48 601 678 598
+1452,Natasza,Szymonik,1996-04-16,Polska,Toruń,aleja Grottgera 90,szymonik-natasza3417@yahoo.com,+48 887 666 456
+1453,Janina,Widłak,2003-05-05,Polska,Jelenia Góra,ulica Kamienna 28,widak-janina3287@yahoo.com,+48 570 621 536
+1454,Mariusz,Capiga,2005-04-18,Polska,Wołomin,plac Piaskowa 053,capiga_mariusz2264@gmail.com,+48 22 395 19 77
+1455,Mieszko,Wiaderek,1999-08-18,Polska,Wałbrzych,ulica Makowa 28,mieszko7721wiaderek_7721@yahoo.com,+48 690 076 993
+1456,Radosław,Kozon,2005-03-01,Polska,Chełm,ul. Korczaka 70,kozon-radosaw@wp.pl,+48 609 931 936
+1457,Adrian,Frelich,2006-03-11,Polska,Rzeszów,al. Brzozowa 33,adrian3864frelich.3864@wp.pl,+48 789 986 168
+1458,Nikodem,Góraj,2000-12-03,Polska,Zduńska Wola,plac Ludowa 06/30,nikodem7565goraj@wp.pl,+48 737 716 755
+1459,Alan,Pabis,1998-04-04,Polska,Gorzów Wielkopolski,pl. Kruczkowskiego 08/63,pabis-alan4239@gmail.com,+48 501 333 080
+1460,Sonia,Frelich,1978-01-04,Polska,Krosno,pl. Jaśminowa 92/27,sonia8209frelich@interia.pl,+48 22 862 10 81
+1461,Adam,Joniak,2000-10-09,Polska,Dąbrowa Górnicza,aleja Wrzosowa 98,joniak_adam@interia.pl,+48 575 784 679
+1462,Maksymilian,Wawszczak,2006-06-11,Polska,Radom,plac Pomorska 98/11,maksymilian326wawszczak@gmail.com,+48 787 752 167
+1463,Kacper,Lula,2005-11-27,Polska,Nowa Ruda,al. Słoneczna 74,kacper.lula@interia.pl,+48 667 493 364
+1464,Sebastian,Bazylewicz,1972-03-22,Polska,Puławy,al. Zdrojowa 188,sebastian2447bazylewicz-2447@interia.pl,+48 788 379 742
+1465,Róża,Pryszcz,2002-10-16,Polska,Jastrzębie-Zdrój,ulica Spółdzielcza 723,roza-pryszcz@outlook.com,+48 799 346 216
+1466,Mateusz,Sosnówka,2003-01-18,Polska,Swarzędz,plac Truskawkowa 13,mateusz.sosnowka@outlook.com,+48 738 684 871
+1467,Adrianna,Włodyka,2001-09-25,Polska,Brodnica,ul. Partyzantów 06/02,wodyka_adrianna6755@outlook.com,+48 579 635 094
+1468,Alan,Pioch,1994-08-27,Polska,Kielce,ulica Wierzbowa 94,pioch_alan@wp.pl,+48 696 076 533
+1469,Łukasz,Kozubal,2001-10-24,Polska,Racibórz,ulica Owocowa 63,ukasz3235kozubal.3235@wp.pl,+48 538 655 233
+1470,Nataniel,Zubowicz,2005-01-26,Polska,Rumia,ulica Wieniawskiego 95,nataniel527zubowicz.527@gmail.com,+48 734 296 008
+1471,Leonard,Strojna,2005-02-19,Polska,Oleśnica,ulica Jagiellońska 57/18,strojna.leonard5334@gmail.com,+48 661 147 743
+1472,Ignacy,Kwasek,2002-06-09,Polska,Płońsk,aleja Jeziorna 283,ignacy-kwasek@gmail.com,+48 531 871 183
+1473,Adam,Block,2001-01-24,Polska,Ełk,ul. Wczasowa 29/01,block-adam@wp.pl,+48 793 148 925
+1474,Adrianna,Szpyra,2002-04-09,Polska,Luboń,pl. Jesienna 45/25,adrianna7603szpyra@gmail.com,+48 883 466 335
+1475,Marcelina,Golan,2005-10-14,Polska,Przemyśl,ulica Letniskowa 417,marcelina301golan@yahoo.com,+48 534 710 295
+1476,Alex,Surdyk,1999-02-22,Polska,Bolesławiec,plac Słoneczna 645,surdyk-alex1240@gmail.com,+48 735 293 951
+1477,Przemysław,Andrearczyk,2001-05-09,Polska,Ostróda,al. Ptasia 57/00,andrearczyk.przemysaw2301@gmail.com,+48 880 846 581
+1478,Kazimierz,Skrzecz,2004-02-22,Polska,Jasło,plac Wiklinowa 04,kazimierz_skrzecz@interia.pl,+48 791 884 712
+1479,Arkadiusz,Teter,1981-07-31,Polska,Kalisz,pl. Krótka 782,arkadiusz.teter@yahoo.com,+48 608 360 822
+1480,Marianna,Sych,2002-06-28,Polska,Mielec,pl. Łąkowa 48,sych-marianna@gmail.com,+48 505 788 267
+1481,Jakub,Jas,2003-07-18,Polska,Iława,aleja Jałowcowa 14/33,jakub7095jas_7095@outlook.com,+48 507 412 980
+1482,Mateusz,Pompa,2001-03-18,Polska,Świebodzice,al. Piaskowa 27,mateusz_pompa@gmail.com,+48 609 987 001
+1483,Angelika,Bortkiewicz,1978-07-13,Polska,Świdnik,al. Narutowicza 67/77,angelika8753bortkiewicz-8753@wp.pl,+48 668 938 225
+1484,Klara,Foremniak,2002-03-17,Polska,Warszawa,plac Kościelna 87/64,klara2772foremniak-2772@outlook.com,+48 885 315 821
+1485,Daniel,Oleszko,1994-10-17,Polska,Stargard Szczeciński,ulica Pomorska 321,oleszko_daniel4581@gmail.com,+48 519 304 323
+1486,Kalina,Woszczyna,2003-10-25,Polska,Tarnów,pl. Jaśminowa 85/66,woszczyna_kalina@gmail.com,+48 661 983 244
+1487,Melania,Bek,1997-10-16,Polska,Kraśnik,ul. Śląska 976,bek-melania6391@outlook.com,+48 507 875 767
+1488,Nicole,Larysz,2005-09-13,Polska,Zgierz,ulica Matejki 377,larysz.nicole@wp.pl,+48 22 906 50 28
+1489,Sylwia,Dudała,1999-10-13,Polska,Kielce,pl. Turystyczna 323,sylwia9816dudaa@gmail.com,+48 731 198 415
+1490,Błażej,Klyszcz,2005-12-09,Polska,Nowa Ruda,al. Kasprowicza 54,klyszcz-bazej7205@interia.pl,+48 507 588 720
+1491,Kazimierz,Botor,2001-08-29,Polska,Zgorzelec,pl. Częstochowska 208,botor_kazimierz@outlook.com,+48 785 186 788
+1492,Krystian,Nawrotek,1976-07-11,Polska,Otwock,pl. Makuszyńskiego 79,krystian9947nawrotek.9947@yahoo.com,+48 889 046 439
+1493,Igor,Śmieszek,2004-11-15,Polska,Żory,ulica Południowa 14,smieszek-igor@wp.pl,+48 780 790 470
+1494,Natan,Łapot,1996-02-13,Polska,Bielawa,ulica Dojazdowa 25,apot-natan3779@gmail.com,+48 699 353 707
+1495,Monika,Choina,2005-05-20,Polska,Jarocin,ulica Tęczowa 33/15,choina.monika@outlook.com,+48 669 781 404
+1496,Stefan,Kuffel,1999-06-02,Polska,Sochaczew,ulica Norwida 06,kuffel_stefan@wp.pl,+48 32 324 87 88
+1497,Ryszard,Wacławczyk,2003-05-24,Polska,Wodzisław Śląski,ul. Wałowa 96,ryszard5174wacawczyk@interia.pl,+48 727 870 637
+1498,Witold,Gryka,1999-11-16,Polska,Leszno,al. Skłodowskiej-Curie 316,gryka-witold@wp.pl,+48 539 203 467
+1499,Juliusz,Wichłacz,1999-11-09,Polska,Turek,ul. Jastrzębia 756,juliusz1537wichacz.1537@interia.pl,+48 517 208 254
