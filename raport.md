@@ -74,126 +74,61 @@
 ## Kod do generowania bazy danych
 
 ```sql
--- tables
+---Tables
 
--- Table: CourseModulesPassed
-CREATE TABLE CourseModulesPassed (
-    CourseID int  NOT NULL,
-    StudentID int  NOT NULL,
-    ModuleID int  NOT NULL,
-    CONSTRAINT CourseModulesPassed_pk PRIMARY KEY  (CourseID)
-);
-
--- Table: CourseSchedule
-CREATE TABLE CourseSchedule (
-    ModuleID int  NOT NULL,
-    RoomID int  NOT NULL,
-    LiveLink varchar(max)  NOT NULL,
-    VideoLink varchar(max)  NOT NULL,
-    Date datetime  NOT NULL,
-    CONSTRAINT CourseSchedule_pk PRIMARY KEY  (ModuleID)
-);
-
--- Table: Courses
-CREATE TABLE Courses (
-    CourseID int  NOT NULL IDENTITY(1,1),
-    EmployeeID int  NOT NULL,
-    Price money  NOT NULL,
-    CourseType varchar(50)  NOT NULL,
-    Limit int  NULL,
-    TranslatorID int  NULL,
-    LanguageID int  NOT NULL,
-    ModulesQuantity int  NOT NULL,
-    CONSTRAINT Courses_pk PRIMARY KEY  (CourseID)
-);
-
--- Table: EmloyeeType
-CREATE TABLE EmployeeType (
-    EmployeeID int  NOT NULL,
-    HeldPosition varchar(50)  NOT NULL,
-    CONSTRAINT EmloyeeType_pk PRIMARY KEY  (EmployeeID)
-);
-
--- Table: Employees
-CREATE TABLE Employees (
-    EmployeeID int  NOT NULL  IDENTITY(1,1),
-    FirstName varchar(50)  NOT NULL,
-    LastName varchar(50)  NOT NULL,
-    Country varchar(50)  NOT NULL,
-    Region varchar(50)  NOT NULL,
-    City varchar(50)  NOT NULL,
-    Address varchar(50)  NOT NULL,
-    DateOfBirth date  NOT NULL,
-    Mail varchar(50)  NOT NULL,
-    Phone varchar(15)  NOT NULL,
-    CONSTRAINT Employees_pk PRIMARY KEY  (EmployeeID)
-);
-
--- Table: FacultyStudentList
-CREATE TABLE FacultyStudentList (
-    FieldOfStudyID int  NOT NULL,
-    StudentID int  NOT NULL,
-    Semester int  NOT NULL,
-    CONSTRAINT FacultyStudentList_pk PRIMARY KEY  (StudentID)
-);
-
--- Table: FieldOfStudy
+--- Table: FieldOfStudy
 CREATE TABLE FieldOfStudy (
-    FieldOfStudyID int  NOT NULL IDENTITY(1,1),
-    Name text  NOT NULL,
-    Description text  NOT NULL,
+    FieldOfStudyID int  NOT NULL,
+    Name varchar(50)  NOT NULL,
+    Description varchar(50)   NOT NULL,
     Limit int  NOT NULL,
-    EntryFee int  NOT NULL,
+    EntryFee money  NOT NULL,
     CONSTRAINT FieldOfStudy_pk PRIMARY KEY  (FieldOfStudyID)
 );
 
--- Table: Interships
-CREATE TABLE Interships (
-    IntershipID int  NOT NULL IDENTITY(1,1),
+-- Table: FieldOfStudyStudentList
+CREATE TABLE FieldOfStudyStudentList (
     FieldOfStudyID int  NOT NULL,
-    StartDate date  NOT NULL,
-    EndDate date  NOT NULL,
-    CONSTRAINT Interships_pk PRIMARY KEY  (IntershipID)
-);
-
--- Table: IntershipsAbsence
-CREATE TABLE IntershipsAbsence (
-    IntershipID int  NOT NULL,
-    Absence datetime  NOT NULL,
     StudentID int  NOT NULL,
-    CONSTRAINT IntershipsAbsence_pk PRIMARY KEY  (IntershipID)
+    semester int  NOT NULL,
+    CONSTRAINT FieldOfStudyStudentList_pk PRIMARY KEY  (StudentID,FieldOfStudyID)
 );
 
--- Table: Languages
-CREATE TABLE Languages (
-    LanguageID int  NOT NULL IDENTITY(1,1),
-    Language varchar(50)  NOT NULL,
-    TranslatorID int  NOT NULL,
-    CONSTRAINT LanguageID PRIMARY KEY  (LanguageID)
+-- Table: Subjects
+CREATE TABLE Subjects (
+    SubjectID int  NOT NULL,
+    FieldOfStudyID int  NOT NULL,
+    SubjectName varchar(50)  NOT NULL,
+    Description varchar(50) NOT NULL,
+    MeetingsQuantity int  NOT NULL,
+    EmployeeID int  NOT NULL,
+    semester int  NOT NULL,
+    CONSTRAINT Subjects_pk PRIMARY KEY  (SubjectID)
 );
 
--- Table: LectureRoomDetails
-CREATE TABLE LectureRoomDetails (
-    RoomID int  NOT NULL IDENTITY(1,1),
-    BuildingNr int  NOT NULL,
-    Floor int  NOT NULL,
-    ClassNumber int  NOT NULL,
-    CONSTRAINT LectureRoomDetails_pk PRIMARY KEY  (RoomID)
+-- Table: SubjectGrades
+CREATE TABLE SubjectGrades (
+    SubjectID int  NOT NULL,
+    StudentID int  NOT NULL,
+    Grade int  NOT NULL,
+    CONSTRAINT SubjectGrades_pk PRIMARY KEY  (SubjectID,StudentID)
 );
 
 -- Table: Meeting
 CREATE TABLE Meeting (
-    MeetingID int  NOT NULL IDENTITY(1,1),
+    MeetingID int  NOT NULL,
     MeetingTypeID int  NOT NULL,
     SubjectID int  NOT NULL,
-    Date datetime  NOT NULL,
-    Link varchar(max)  NOT NULL,
-    RoomID int  NOT NULL,
+    Meeting_date datetime  NOT NULL,
+    Link varchar(max)  NULL,
+    RoomID int  NULL,
     LanguageID int  NOT NULL,
     TranslatorID int  NULL,
-    EmployeeID int  NOT NULL ,
+    price money  NOT NULL,
+    semester int  NOT NULL,
     CONSTRAINT Meeting_pk PRIMARY KEY  (MeetingID)
 );
+
 
 -- Table: MeetingType
 CREATE TABLE MeetingType (
@@ -202,28 +137,20 @@ CREATE TABLE MeetingType (
     CONSTRAINT MeetingType_pk PRIMARY KEY  (MeetingTypeID)
 );
 
--- Table: ModuleAbsence
-CREATE TABLE ModuleAbsence (
-    ModuleID int  NOT NULL,
+-- Table: Interships
+CREATE TABLE Interships (
+    IntershipID int  NOT NULL,
+    FieldOfStudyID int  NOT NULL,
+    StartDate date  NOT NULL,
+    EndDate date  NOT NULL,
+    CONSTRAINT Interships_pk PRIMARY KEY  (IntershipID)
+);
+
+-- Table: StudentAbsence
+CREATE TABLE StudentAbsence (
+    MeetingID int  NOT NULL,
     StudentID int  NOT NULL,
-    Absence datetime  NOT NULL,
-    CONSTRAINT ModuleAbsence_pk PRIMARY KEY  (ModuleID)
-);
-
--- Table: ModuleType
-CREATE TABLE ModuleType (
-    ModuleTypeID int  NOT NULL,
-    Description varchar(50)  NOT NULL,
-    CONSTRAINT ModuleType_pk PRIMARY KEY  (ModuleTypeID)
-);
-
--- Table: Modules
-CREATE TABLE Modules (
-    ModuleID int  NOT NULL IDENTITY(1,1),
-    CourseID int  NOT NULL,
-    ModuleTypeID int  NOT NULL,
-    MettingsQuantity int  NOT NULL,
-    CONSTRAINT Modules_pk PRIMARY KEY  (ModuleID)
+    CONSTRAINT StudentAbsence_pk PRIMARY KEY  (MeetingID,StudentID)
 );
 
 -- Table: OrderCourse
@@ -235,7 +162,7 @@ CREATE TABLE OrderCourse (
 
 -- Table: OrderDetails
 CREATE TABLE OrderDetails (
-    OrderDetailsID int  NOT NULL IDENTITY(1,1),
+    OrderDetailsID int  NOT NULL,
     PaidDate datetime  NOT NULL,
     OrderID int  NOT NULL,
     CONSTRAINT OrderDetails_pk PRIMARY KEY  (OrderDetailsID)
@@ -250,9 +177,9 @@ CREATE TABLE OrderMeeting (
 
 -- Table: OrderStudies
 CREATE TABLE OrderStudies (
-    DetailsID int  NOT NULL,
+    OrderDetailsID int  NOT NULL,
     FieldOfStudyID int  NOT NULL,
-    CONSTRAINT OrderStudies_pk PRIMARY KEY  (DetailsID)
+    CONSTRAINT OrderStudies_pk PRIMARY KEY  (OrderDetailsID)
 );
 
 -- Table: OrderWebinar
@@ -264,83 +191,23 @@ CREATE TABLE OrderWebinar (
 
 -- Table: Orders
 CREATE TABLE Orders (
-    OrderID int  NOT NULL IDENTITY(1,1),
-    Price money  NOT NULL,
+    OrderID int  NOT NULL,
     Paid money  NULL,
     OrderDate datetime  NOT NULL,
     StudentID int  NOT NULL,
     CONSTRAINT OrderID PRIMARY KEY  (OrderID)
 );
 
--- Table: StudentAbsence
-CREATE TABLE StudentAbsence (
-    Absence datetime  NOT NULL,
-    FieldOfStudyID int  NOT NULL,
-    SubjectID int  NOT NULL,
-    StudentID int  NOT NULL,
-    CONSTRAINT StudentAbsence_pk PRIMARY KEY  (StudentID)
-);
-
--- Table: Students
-CREATE TABLE Students (
-    StudentID int  NOT NULL IDENTITY(1,1),
-    FirstName varchar(50)  NOT NULL,
-    LastName varchar(50)  NOT NULL,
-    Country varchar(50)  NOT NULL,
-    Region varchar(50)  NOT NULL,
-    City varchar(50)  NOT NULL,
-    Address varchar(50)  NOT NULL,
-    DateOfBirth date  NOT NULL,
-    Mail varchar(50)  NOT NULL,
-    Phone varchar(15)  NOT NULL,
-    CONSTRAINT Students_pk PRIMARY KEY  (StudentID)
-);
-
--- Table: SubjectGrades
-CREATE TABLE SubjectGrades (
-    SubjectID int  NOT NULL,
-    Grade datetime  NOT NULL,
-    StudentID int  NOT NULL,
-    CONSTRAINT SubjectGrades_pk PRIMARY KEY  (SubjectID)
-);
-
--- Table: Subjects
-CREATE TABLE Subjects (
-    SubjectID int  NOT NULL IDENTITY(1,1),
-    FieldOfStudyID int  NOT NULL,
-    SubjectName text  NOT NULL,
-    Description text  NOT NULL,
-    MeetingTypeID int  NOT NULL,
-    MeetingsQuantity int  NOT NULL,
-    EmployeeID int  NOT NULL,
-    CONSTRAINT Subjects_pk PRIMARY KEY  (SubjectID)
-);
-
--- Table: Translator
-CREATE TABLE Translator (
-    TranslatorID int  NOT NULL IDENTITY(1,1),
-    FirstName varchar(50)  NOT NULL,
-    LastName varchar(50)  NOT NULL,
-    DateOfBirth date  NOT NULL,
-    Country varchar(50)  NOT NULL,
-    Region varchar(50)  NOT NULL,
-    City varchar(50)  NOT NULL,
-    Address varchar(50)  NOT NULL,
-    Mail varchar(50)  NOT NULL,
-    Phone varchar(15)  NOT NULL,
-    CONSTRAINT Translator_pk PRIMARY KEY  (TranslatorID)
-);
-
 -- Table: Webinar
 CREATE TABLE Webinar (
-    WebinarID int  NOT NULL IDENTITY(1,1),
+    WebinarID int  NOT NULL,
     Price money  NOT NULL,
-    Date datetime  NOT NULL,
+    Webinar_date datetime  NOT NULL,
     LanguageID int  NOT NULL,
     TranslatorID int  NULL,
     EmployeeID int  NOT NULL,
-    OnlineLink varchar(max)  NOT NULL,
-    VideoLink varchar(max)  NOT NULL,
+    OnlineLink varchar(max)  NULL,
+    VideoLink varchar(max)  NULL,
     CONSTRAINT Webinar_pk PRIMARY KEY  (WebinarID)
 );
 
@@ -349,10 +216,64 @@ CREATE TABLE WebinarExpirationDate (
     WebinarID int  NOT NULL,
     StudentID int  NOT NULL,
     expr_date date  NULL,
-    CONSTRAINT WebinarExpirationDate_pk PRIMARY KEY  (WebinarID)
+    CONSTRAINT WebinarExpirationDate_pk PRIMARY KEY  (WebinarID,StudentID)
 );
 
--- foreign keys
+
+-- Table: Courses
+CREATE TABLE Courses (
+    CourseID int  NOT NULL,
+    EmployeeID int  NOT NULL,
+    Price money  NOT NULL,
+    CourseType varchar(50)  NOT NULL,
+    Limit int  NULL,
+    LanguageID int  NOT NULL,
+    TranslatorID int  NULL,
+    ModulesQuantity int  NOT NULL,
+    CONSTRAINT Courses_pk PRIMARY KEY  (CourseID)
+);
+
+
+-- Table: Modules
+CREATE TABLE Modules (
+    ModuleID int  NOT NULL,
+    CourseID int  NOT NULL,
+    ModuleTypeID int  NOT NULL,
+    MettingsQuantity int  NOT NULL,
+    CONSTRAINT Modules_pk PRIMARY KEY  (ModuleID)
+);
+
+-- Table: CourseSchedule
+CREATE TABLE CourseSchedule (
+    ModuleID int  NOT NULL,
+    RoomID int  NULL,
+    LiveLink varchar(max)  NULL,
+    VideoLink varchar(max)  NULL,
+    Course_date datetime  NOT NULL,
+    CONSTRAINT CourseSchedule_pk PRIMARY KEY  (ModuleID)
+);
+
+-- Table: CourseModulesPassed
+CREATE TABLE CourseModulesPassed (
+    CourseID int  NOT NULL,
+    ModuleID int  NOT NULL,
+    StudentID int  NOT NULL,
+    CONSTRAINT CourseModulesPassed_pk PRIMARY KEY  (CourseID,ModuleID,StudentID)
+);
+
+-- Table: ModuleAbsence
+CREATE TABLE ModuleAbsence (
+    ModuleID int  NOT NULL,
+    StudentID int  NOT NULL,
+    CONSTRAINT ModuleAbsence_pk PRIMARY KEY  (ModuleID,StudentID)
+);
+
+-- Table: ModuleType
+CREATE TABLE ModuleType (
+    ModuleTypeID int  NOT NULL,
+    Description varchar(50)  NOT NULL,
+    CONSTRAINT ModuleType_pk PRIMARY KEY  (ModuleTypeID)
+);
 -- Reference: CourseDetails_Courses (table: CourseModulesPassed)
 ALTER TABLE CourseModulesPassed ADD CONSTRAINT CourseDetails_Courses
     FOREIGN KEY (CourseID)
@@ -378,33 +299,33 @@ ALTER TABLE CourseSchedule ADD CONSTRAINT CourseSchedule_Modules
     FOREIGN KEY (ModuleID)
     REFERENCES Modules (ModuleID);
 
+-- Reference: Courses_AvalibleLanguages (table: Courses)
+ALTER TABLE Courses ADD CONSTRAINT Courses_AvalibleLanguages
+    FOREIGN KEY (LanguageID)
+    REFERENCES AvalibleLanguages (LanguageID);
+
 -- Reference: Courses_Employees (table: Courses)
 ALTER TABLE Courses ADD CONSTRAINT Courses_Employees
     FOREIGN KEY (EmployeeID)
     REFERENCES Employees (EmployeeID);
-
--- Reference: Courses_Languages (table: Courses)
-ALTER TABLE Courses ADD CONSTRAINT Courses_Languages
-    FOREIGN KEY (LanguageID)
-    REFERENCES Languages (LanguageID);
 
 -- Reference: Courses_Translator (table: Courses)
 ALTER TABLE Courses ADD CONSTRAINT Courses_Translator
     FOREIGN KEY (TranslatorID)
     REFERENCES Translator (TranslatorID);
 
--- Reference: EmloyeeType_Employees (table: EmloyeeType)
-ALTER TABLE EmployeeType ADD CONSTRAINT EmployeeType_Employees
+-- Reference: EmloyeeType_Employees (table: EmployeeType)
+ALTER TABLE EmployeeType ADD CONSTRAINT EmloyeeType_Employees
     FOREIGN KEY (EmployeeID)
     REFERENCES Employees (EmployeeID);
 
--- Reference: FieldDetails_Field (table: FacultyStudentList)
-ALTER TABLE FacultyStudentList ADD CONSTRAINT FieldDetails_Field
+-- Reference: FieldDetails_Field (table: FieldOfStudyStudentList)
+ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldDetails_Field
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
--- Reference: FieldDetails_Students (table: FacultyStudentList)
-ALTER TABLE FacultyStudentList ADD CONSTRAINT FieldDetails_Students
+-- Reference: FieldDetails_Students (table: FieldOfStudyStudentList)
+ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldDetails_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
@@ -423,6 +344,11 @@ ALTER TABLE Interships ADD CONSTRAINT Interships_Field
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
+-- Reference: Languages_AvalibleLanguages (table: Languages)
+ALTER TABLE Languages ADD CONSTRAINT Languages_AvalibleLanguages
+    FOREIGN KEY (LanguageID)
+    REFERENCES AvalibleLanguages (LanguageID);
+
 -- Reference: Languages_Translator (table: Languages)
 ALTER TABLE Languages ADD CONSTRAINT Languages_Translator
     FOREIGN KEY (TranslatorID)
@@ -433,15 +359,10 @@ ALTER TABLE Meeting ADD CONSTRAINT Meeting_AdresDetails
     FOREIGN KEY (RoomID)
     REFERENCES LectureRoomDetails (RoomID);
 
--- Reference: Meeting_Employees (table: Meeting)
-ALTER TABLE Meeting ADD CONSTRAINT Meeting_Employees
-    FOREIGN KEY (EmployeeID)
-    REFERENCES Employees (EmployeeID);
-
--- Reference: Meeting_Languages (table: Meeting)
-ALTER TABLE Meeting ADD CONSTRAINT Meeting_Languages
+-- Reference: Meeting_AvalibleLanguages (table: Meeting)
+ALTER TABLE Meeting ADD CONSTRAINT Meeting_AvalibleLanguages
     FOREIGN KEY (LanguageID)
-    REFERENCES Languages (LanguageID);
+    REFERENCES AvalibleLanguages (LanguageID);
 
 -- Reference: Meeting_MeetingType (table: Meeting)
 ALTER TABLE Meeting ADD CONSTRAINT Meeting_MeetingType
@@ -510,7 +431,7 @@ ALTER TABLE OrderStudies ADD CONSTRAINT OrderStudies_Field
 
 -- Reference: OrderStudies_OrderDetails (table: OrderStudies)
 ALTER TABLE OrderStudies ADD CONSTRAINT OrderStudies_OrderDetails
-    FOREIGN KEY (DetailsID)
+    FOREIGN KEY (OrderDetailsID)
     REFERENCES OrderDetails (OrderDetailsID);
 
 -- Reference: OrderWebinar_OrderDetails (table: OrderWebinar)
@@ -528,20 +449,15 @@ ALTER TABLE Orders ADD CONSTRAINT Orders_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: StudentAbsence_Faculties (table: StudentAbsence)
-ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Faculties
-    FOREIGN KEY (FieldOfStudyID)
-    REFERENCES FieldOfStudy (FieldOfStudyID);
+-- Reference: StudentAbsence_Meeting (table: StudentAbsence)
+ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Meeting
+    FOREIGN KEY (MeetingID)
+    REFERENCES Meeting (MeetingID);
 
 -- Reference: StudentAbsence_Students (table: StudentAbsence)
 ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
-
--- Reference: StudentAbsence_Subjects (table: StudentAbsence)
-ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Subjects
-    FOREIGN KEY (SubjectID)
-    REFERENCES Subjects (SubjectID);
 
 -- Reference: SubjectDetails_Students (table: SubjectGrades)
 ALTER TABLE SubjectGrades ADD CONSTRAINT SubjectDetails_Students
@@ -573,15 +489,15 @@ ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarDetails_Webinar
     FOREIGN KEY (WebinarID)
     REFERENCES Webinar (WebinarID);
 
+-- Reference: Webinar_AvalibleLanguages (table: Webinar)
+ALTER TABLE Webinar ADD CONSTRAINT Webinar_AvalibleLanguages
+    FOREIGN KEY (LanguageID)
+    REFERENCES AvalibleLanguages (LanguageID);
+
 -- Reference: Webinar_Employees (table: Webinar)
 ALTER TABLE Webinar ADD CONSTRAINT Webinar_Employees
     FOREIGN KEY (EmployeeID)
     REFERENCES Employees (EmployeeID);
-
--- Reference: Webinar_Languages (table: Webinar)
-ALTER TABLE Webinar ADD CONSTRAINT Webinar_Languages
-    FOREIGN KEY (LanguageID)
-    REFERENCES Languages (LanguageID);
 
 -- Reference: Webinar_Translator (table: Webinar)
 ALTER TABLE Webinar ADD CONSTRAINT Webinar_Translator
