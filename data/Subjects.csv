@@ -1,25 +1,25 @@
-10,2,Programowanie w języku Python,"Podstawy programowania w języku Python, struktury danych, programowanie obiektowe.",15,1044
-7,2,Testowanie oprogramowania,"Metody testowania oprogramowania, testowanie jednostkowe, integracyjne, automatyczne.",13,1047
-18,4,Analiza zagrożeń w sieciach komputerowych,Metody identyfikowania i eliminowania zagrożeń w sieciach komputerowych.,13,1039
-21,5,Przetwarzanie danych w chmurze,Wykorzystanie technologii chmurowych do przechowywania i przetwarzania dużych zbiorów danych.,11,1012
-9,2,Bazy danych,"Zaawansowane techniki pracy z bazami danych, normalizacja, transakcje.",16,1048
-22,5,Hadoop i Spark,"Platformy do przetwarzania dużych danych, Hadoop, Spark, MapReduce.",14,1026
-15,3,Rozpoznawanie obrazów,"Przetwarzanie i analiza obrazów, rozpoznawanie wzorców przy użyciu sztucznej inteligencji.",9,1006
-17,4,Bezpieczeństwo systemów operacyjnych,"Zabezpieczanie systemów operacyjnych przed atakami, zarządzanie uprawnieniami.",9,1019
-20,4,Ataki i obrona w cyberprzestrzeni,"Techniki ataków i obrony przed nimi, analiza ataków DDoS, phishing.",12,1026
-23,5,Analiza dużych zbiorów danych,"Techniki analizy i przetwarzania dużych zbiorów danych, analiza statystyczna.",17,1027
-19,4,Technologie ochrony danych,"Zabezpieczanie danych przed nieautoryzowanym dostępem, zarządzanie prywatnością.",12,1037
-11,3,Uczenie maszynowe,"Metody uczenia maszynowego, algorytmy nadzorowane i nienadzorowane.",9,1024
-14,3,Algorytmy genetyczne,Wykorzystanie algorytmów inspirowanych ewolucją do rozwiązywania problemów optymalizacyjnych.,9,1003
-3,1,Podstawy baz danych,"Wprowadzenie do systemów baz danych, modelowanie danych, SQL.",8,1021
-5,1,Sieci komputerowe,"Wprowadzenie do sieci komputerowych, protokoły, topologie, bezpieczeństwo sieci.",14,1013
-24,5,Bazy danych NoSQL,"Bazy danych NoSQL, ich struktura i zastosowania w analizie dużych danych.",18,1050
-1,1,Algorytmy i struktury danych,"Nauka o algorytmach i strukturach danych, podstawy analizy algorytmów.",13,1026
-8,2,Zarządzanie projektem IT,"Metodyki zarządzania projektami IT, Agile, Scrum, Kanban.",14,1044
-2,1,Programowanie obiektowe,"Zasady programowania w paradygmacie obiektowym, język Java lub C++.",13,1036
-6,2,Projektowanie systemów informatycznych,"Projektowanie i analiza systemów informatycznych, UML, diagramy.",7,1013
-13,3,Analiza danych,"Zbieranie, przetwarzanie i analiza danych przy użyciu narzędzi analitycznych.",8,1032
-16,4,Podstawy kryptografii,"Teoria kryptografii, szyfrowanie, algorytmy kryptograficzne.",18,1044
-12,3,Sieci neuronowe,"Teoria i praktyka sieci neuronowych, ich zastosowanie w rozwiązywaniu problemów.",17,1014
-25,5,Systemy rekomendacyjne,"Tworzenie systemów rekomendacyjnych, algorytmy uczenia maszynowego w rekomendacjach.",17,1007
-4,1,Systemy operacyjne,"Podstawy działania systemów operacyjnych, zarządzanie pamięcią, procesami.",11,1050
+11,3,Uczenie maszynowe,"Metody uczenia maszynowego, algorytmy nadzorowane i nienadzorowane.",10,1036
+5,1,Sieci komputerowe,"Wprowadzenie do sieci komputerowych, protokoły, topologie, bezpieczeństwo sieci.",15,1006
+22,5,Hadoop i Spark,"Platformy do przetwarzania dużych danych, Hadoop, Spark, MapReduce.",12,1002
+16,4,Podstawy kryptografii,"Teoria kryptografii, szyfrowanie, algorytmy kryptograficzne.",7,1048
+19,4,Technologie ochrony danych,"Zabezpieczanie danych przed nieautoryzowanym dostępem, zarządzanie prywatnością.",13,1015
+24,5,Bazy danych NoSQL,"Bazy danych NoSQL, ich struktura i zastosowania w analizie dużych danych.",15,1008
+7,2,Testowanie oprogramowania,"Metody testowania oprogramowania, testowanie jednostkowe, integracyjne, automatyczne.",12,1031
+2,1,Programowanie obiektowe,"Zasady programowania w paradygmacie obiektowym, język Java lub C++.",16,1022
+14,3,Algorytmy genetyczne,Wykorzystanie algorytmów inspirowanych ewolucją do rozwiązywania problemów optymalizacyjnych.,14,1046
+23,5,Analiza dużych zbiorów danych,"Techniki analizy i przetwarzania dużych zbiorów danych, analiza statystyczna.",15,1028
+25,5,Systemy rekomendacyjne,"Tworzenie systemów rekomendacyjnych, algorytmy uczenia maszynowego w rekomendacjach.",17,1015
+13,3,Analiza danych,"Zbieranie, przetwarzanie i analiza danych przy użyciu narzędzi analitycznych.",15,1036
+15,3,Rozpoznawanie obrazów,"Przetwarzanie i analiza obrazów, rozpoznawanie wzorców przy użyciu sztucznej inteligencji.",13,1044
+18,4,Analiza zagrożeń w sieciach komputerowych,Metody identyfikowania i eliminowania zagrożeń w sieciach komputerowych.,17,1021
+10,2,Programowanie w języku Python,"Podstawy programowania w języku Python, struktury danych, programowanie obiektowe.",7,1049
+6,2,Projektowanie systemów informatycznych,"Projektowanie i analiza systemów informatycznych, UML, diagramy.",7,1047
+4,1,Systemy operacyjne,"Podstawy działania systemów operacyjnych, zarządzanie pamięcią, procesami.",7,1033
+17,4,Bezpieczeństwo systemów operacyjnych,"Zabezpieczanie systemów operacyjnych przed atakami, zarządzanie uprawnieniami.",17,1008
+1,1,Algorytmy i struktury danych,"Nauka o algorytmach i strukturach danych, podstawy analizy algorytmów.",7,1048
+21,5,Przetwarzanie danych w chmurze,Wykorzystanie technologii chmurowych do przechowywania i przetwarzania dużych zbiorów danych.,12,1023
+20,4,Ataki i obrona w cyberprzestrzeni,"Techniki ataków i obrony przed nimi, analiza ataków DDoS, phishing.",9,1031
+3,1,Podstawy baz danych,"Wprowadzenie do systemów baz danych, modelowanie danych, SQL.",13,1029
+8,2,Zarządzanie projektem IT,"Metodyki zarządzania projektami IT, Agile, Scrum, Kanban.",8,1002
+9,2,Bazy danych,"Zaawansowane techniki pracy z bazami danych, normalizacja, transakcje.",8,1008
+12,3,Sieci neuronowe,"Teoria i praktyka sieci neuronowych, ich zastosowanie w rozwiązywaniu problemów.",7,1037
