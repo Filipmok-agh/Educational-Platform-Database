@@ -55,13 +55,13 @@ ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldDetails_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: IntershipsDetails_Interships (table: IntershipsAbsence)
-ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsDetails_Interships
+-- Reference: IntershipsAbsence_Interships (table: IntershipsAbsence)
+ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Interships
     FOREIGN KEY (IntershipID)
     REFERENCES Interships (IntershipID);
 
--- Reference: IntershipsDetails_Students (table: IntershipsAbsence)
-ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsDetails_Students
+-- Reference: IntershipsAbsence_Students (table: IntershipsAbsence)
+ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 

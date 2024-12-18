@@ -71,6 +71,15 @@ CREATE TABLE Interships (
     CONSTRAINT Interships_pk PRIMARY KEY  (IntershipID)
 );
 
+-- Table: IntershipsAbsence
+create table IntershipsAbsence
+    (
+    IntershipID int not null,
+    StudentID int not null,
+    Absence datetime not null,
+    constraint IntershipsAbsence_pk Primary Key (IntershipID, StudentID, Absence)
+    );
+
 -- Table: StudentAbsence
 CREATE TABLE StudentAbsence (
     MeetingID int  NOT NULL,

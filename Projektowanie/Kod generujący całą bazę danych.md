@@ -71,6 +71,15 @@ CREATE TABLE Interships (
     CONSTRAINT Interships_pk PRIMARY KEY  (IntershipID)
 );
 
+-- Table: IntershipsAbsence
+create table IntershipsAbsence
+    (
+    IntershipID int not null,
+    StudentID int not null,
+    Absence datetime not null,
+    constraint IntershipsAbsence_pk Primary Key (IntershipID, StudentID, Absence)
+    );
+
 -- Table: StudentAbsence
 CREATE TABLE StudentAbsence (
     MeetingID int  NOT NULL,
@@ -254,13 +263,13 @@ ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldDetails_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: IntershipsDetails_Interships (table: IntershipsAbsence)
-ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsDetails_Interships
+-- Reference: IntershipsAbsence_Interships (table: IntershipsAbsence)
+ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Interships
     FOREIGN KEY (IntershipID)
     REFERENCES Interships (IntershipID);
 
 -- Reference: IntershipsDetails_Students (table: IntershipsAbsence)
-ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsDetails_Students
+ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
