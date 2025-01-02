@@ -77,18 +77,19 @@
 -- Table: Courses
 CREATE TABLE Courses (
     CourseID int NOT NULL,
+    CourseName varchar(50) NOT NULL,
     EmployeeID int NOT NULL,
     Price money NOT NULL,
     CourseType varchar(50) NOT NULL,
     Limit int NULL,
     LanguageID int NOT NULL,
     TranslatorID int NULL,
-    ModulesQuantity int NOT NULL,
     CONSTRAINT Courses_pk PRIMARY KEY (CourseID),
     CONSTRAINT chk_Courses CHECK (
         LENGTH(CourseType) >= 1 AND
         Price >= 0 AND
-        Limit >=0
+        Limit >=0 AND
+        LENGTH(CourseName) >= 1
     )
 );
 
