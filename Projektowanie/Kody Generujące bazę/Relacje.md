@@ -1,22 +1,23 @@
 ## Relacje między tabelami
 ```sql
--- Reference: CourseDetails_Courses (table: CourseModulesPassed)
-ALTER TABLE CourseModulesPassed ADD CONSTRAINT CourseDetails_Courses
+
+-- Reference: CourseModulesProgress_Courses (table: CourseModulesProgress)
+ALTER TABLE CourseModulesProgress ADD CONSTRAINT CourseModulesProgress_Courses
     FOREIGN KEY (CourseID)
     REFERENCES Courses (CourseID);
 
--- Reference: CourseDetails_Modules (table: CourseModulesPassed)
-ALTER TABLE CourseModulesPassed ADD CONSTRAINT CourseDetails_Modules
+-- Reference: CourseModulesProgress_Modules (table: CourseModulesProgress)
+ALTER TABLE CourseModulesProgress ADD CONSTRAINT CourseModulesProgress_Modules
     FOREIGN KEY (ModuleID)
     REFERENCES Modules (ModuleID);
 
--- Reference: CourseDetails_Students (table: CourseModulesPassed)
-ALTER TABLE CourseModulesPassed ADD CONSTRAINT CourseDetails_Students
+-- Reference: CourseModulesProgress_Students (table: CourseModulesProgress)
+ALTER TABLE CourseModulesProgress ADD CONSTRAINT CourseModulesProgress_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: CourseSchedule_AdresDetails (table: CourseSchedule)
-ALTER TABLE CourseSchedule ADD CONSTRAINT CourseSchedule_AdresDetails
+-- Reference: CourseSchedule_LectureRoomDetails (table: CourseSchedule)
+ALTER TABLE CourseSchedule ADD CONSTRAINT CourseSchedule_LectureRoomDetails
     FOREIGN KEY (RoomID)
     REFERENCES LectureRoomDetails (RoomID);
 
@@ -40,23 +41,23 @@ ALTER TABLE Courses ADD CONSTRAINT Courses_Translator
     FOREIGN KEY (TranslatorID)
     REFERENCES Translator (TranslatorID);
 
--- Reference: EmloyeeType_Employees (table: EmployeeType)
-ALTER TABLE EmployeeType ADD CONSTRAINT EmloyeeType_Employees
+-- Reference: EmployeeType_Employees (table: EmployeeType)
+ALTER TABLE EmployeeType ADD CONSTRAINT EmployeeType_Employees
     FOREIGN KEY (EmployeeID)
     REFERENCES Employees (EmployeeID);
 
--- Reference: FieldDetails_Field (table: FieldOfStudyStudentList)
-ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldDetails_Field
+-- Reference: FieldOfStudyStudentList_FieldOfStudy (table: FieldOfStudyStudentList)
+ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldOfStudyStudentList_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
--- Reference: FieldDetails_Students (table: FieldOfStudyStudentList)
-ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldDetails_Students
+-- Reference: FieldOfStudyStudentList_Students (table: FieldOfStudyStudentList)
+ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldOfStudyStudentList_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
 -- Reference: IntershipsAbsence_Interships (table: IntershipsAbsence)
-ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Interships
+ALTER TABLE IntershipsAbsence ADD CONSTRAINT IIntershipsAbsence_Interships
     FOREIGN KEY (IntershipID)
     REFERENCES Interships (IntershipID);
 
@@ -65,8 +66,8 @@ ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: Interships_Field (table: Interships)
-ALTER TABLE Interships ADD CONSTRAINT Interships_Field
+-- Reference: Interships_FieldOfStudy (table: Interships)
+ALTER TABLE Interships ADD CONSTRAINT Interships_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
@@ -80,8 +81,8 @@ ALTER TABLE Languages ADD CONSTRAINT Languages_Translator
     FOREIGN KEY (TranslatorID)
     REFERENCES Translator (TranslatorID);
 
--- Reference: Meeting_AdresDetails (table: Meeting)
-ALTER TABLE Meeting ADD CONSTRAINT Meeting_AdresDetails
+-- Reference: Meeting_LectureRoomDetails (table: Meeting)
+ALTER TABLE Meeting ADD CONSTRAINT Meeting_LectureRoomDetails
     FOREIGN KEY (RoomID)
     REFERENCES LectureRoomDetails (RoomID);
 
@@ -105,13 +106,13 @@ ALTER TABLE Meeting ADD CONSTRAINT Meeting_Translator
     FOREIGN KEY (TranslatorID)
     REFERENCES Translator (TranslatorID);
 
--- Reference: ModuleDetails_Modules (table: ModuleAbsence)
-ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleDetails_Modules
+-- Reference: ModuleAbsence_Modules (table: ModuleAbsence)
+ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleAbsence_Modules
     FOREIGN KEY (ModuleID)
     REFERENCES Modules (ModuleID);
 
--- Reference: ModuleDetails_Students (table: ModuleAbsence)
-ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleDetails_Students
+-- Reference: ModuleAbsence_Students (table: ModuleAbsence)
+ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleAbsence_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
@@ -119,11 +120,6 @@ ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleDetails_Students
 ALTER TABLE Modules ADD CONSTRAINT Modules_Courses
     FOREIGN KEY (CourseID)
     REFERENCES Courses (CourseID);
-
--- Reference: Modules_ModuleType (table: Modules)
-ALTER TABLE Modules ADD CONSTRAINT Modules_ModuleType
-    FOREIGN KEY (ModuleTypeID)
-    REFERENCES ModuleType (ModuleTypeID);
 
 -- Reference: OrderCourse_Courses (table: OrderCourse)
 ALTER TABLE OrderCourse ADD CONSTRAINT OrderCourse_Courses
@@ -150,8 +146,18 @@ ALTER TABLE OrderMeeting ADD CONSTRAINT OrderMeeting_OrderDetails
     FOREIGN KEY (OrderDetailsID)
     REFERENCES OrderDetails (OrderDetailsID);
 
--- Reference: OrderStudies_Field (table: OrderStudies)
-ALTER TABLE OrderStudies ADD CONSTRAINT OrderStudies_Field
+-- Reference: OrderSessionWeek_OrderDetails (table: OrderSessionWeek)
+ALTER TABLE OrderSessionWeek ADD CONSTRAINT OrderSessionWeek_OrderDetails
+    FOREIGN KEY (OrderDetailsID)
+    REFERENCES OrderDetails (OrderDetailsID);
+
+-- Reference: OrderSessionWeek_SessionWeek (table: OrderSessionWeek)
+ALTER TABLE OrderSessionWeek ADD CONSTRAINT OrderSessionWeek_SessionWeek
+    FOREIGN KEY (SessionWeekID)
+    REFERENCES SessionWeek (SessionWeekID);
+
+-- Reference: OrderStudies_FieldOfStudy (table: OrderStudies)
+ALTER TABLE OrderStudies ADD CONSTRAINT OrderStudies_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
@@ -175,9 +181,29 @@ ALTER TABLE Orders ADD CONSTRAINT Orders_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
+-- Reference: SessionWeek_FieldOfStudy (table: SessionWeek)
+ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_FieldOfStudy
+    FOREIGN KEY (FieldOfStudyID)
+    REFERENCES FieldOfStudy (FieldOfStudyID);
+
+-- Reference: SessionWeek_Meeting (table: SessionWeek)
+ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_Meeting
+    FOREIGN KEY (MeetingID)
+    REFERENCES Meeting (MeetingID);
+
+-- Reference: SessionWeek_LectureRoomDetails (table: SessionWeek)
+ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_LectureRoomDetails
+    FOREIGN KEY (RoomID)
+    REFERENCES LectureRoomDetails (RoomID);
+
 -- Reference: StudentAbsence_Meeting (table: StudentAbsence)
 ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Meeting
     FOREIGN KEY (MeetingID)
+    REFERENCES Meeting (MeetingID);
+
+-- Reference: StudentAbsence_Meeting (table: StudentAbsence)
+ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Meeting
+    FOREIGN KEY (MakeupClassID)
     REFERENCES Meeting (MeetingID);
 
 -- Reference: StudentAbsence_Students (table: StudentAbsence)
@@ -185,13 +211,13 @@ ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: SubjectDetails_Students (table: SubjectGrades)
-ALTER TABLE SubjectGrades ADD CONSTRAINT SubjectDetails_Students
+-- Reference: SubjectGrades_Students (table: SubjectGrades)
+ALTER TABLE SubjectGrades ADD CONSTRAINT SubjectGrades_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: SubjectDetails_Subjects (table: SubjectGrades)
-ALTER TABLE SubjectGrades ADD CONSTRAINT SubjectDetails_Subjects
+-- Reference: SubjectGrades_Subjects (table: SubjectGrades)
+ALTER TABLE SubjectGrades ADD CONSTRAINT SubjectGrades_Subjects
     FOREIGN KEY (SubjectID)
     REFERENCES Subjects (SubjectID);
 
@@ -200,18 +226,18 @@ ALTER TABLE Subjects ADD CONSTRAINT Subjects_Employees
     FOREIGN KEY (EmployeeID)
     REFERENCES Employees (EmployeeID);
 
--- Reference: Subjects_Field (table: Subjects)
-ALTER TABLE Subjects ADD CONSTRAINT Subjects_Field
+-- Reference: Subjects_FieldOfStudy (table: Subjects)
+ALTER TABLE Subjects ADD CONSTRAINT Subjects_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
--- Reference: WebinarDetails_Students (table: WebinarExpirationDate)
-ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarDetails_Students
+-- Reference: WebinarExpirationDate_Students (table: WebinarExpirationDate)
+ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarExpirationDate_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: WebinarDetails_Webinar (table: WebinarExpirationDate)
-ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarDetails_Webinar
+-- Reference: WebinarExpirationDate_Webinar (table: WebinarExpirationDate)
+ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarExpirationDate_Webinar
     FOREIGN KEY (WebinarID)
     REFERENCES Webinar (WebinarID);
 
@@ -229,3 +255,5 @@ ALTER TABLE Webinar ADD CONSTRAINT Webinar_Employees
 ALTER TABLE Webinar ADD CONSTRAINT Webinar_Translator
     FOREIGN KEY (TranslatorID)
     REFERENCES Translator (TranslatorID);
+
+```

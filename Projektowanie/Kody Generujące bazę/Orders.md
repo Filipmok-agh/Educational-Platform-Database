@@ -1,5 +1,18 @@
 ## Kod do generowania tabel z sekcji Orders
 ```sql
+
+-- Table: Orders
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    Paid money NULL,
+    OrderDate datetime NOT NULL,
+    StudentID int NOT NULL,
+    CONSTRAINT OrderID_pk PRIMARY KEY (OrderID),
+    CONSTRAINT chk_Orders CHECK (
+        Paid >= 0
+    )
+);
+
 -- Table: OrderCourse
 CREATE TABLE OrderCourse (
     OrderDetailsID int  NOT NULL,
@@ -10,8 +23,9 @@ CREATE TABLE OrderCourse (
 -- Table: OrderDetails
 CREATE TABLE OrderDetails (
     OrderDetailsID int  NOT NULL,
-    PaidDate datetime  NOT NULL,
+    PaidDate datetime  NULL,
     OrderID int  NOT NULL,
+    AccesGiven bit  NOT NULL,
     CONSTRAINT OrderDetails_pk PRIMARY KEY  (OrderDetailsID)
 );
 
@@ -36,11 +50,11 @@ CREATE TABLE OrderWebinar (
     CONSTRAINT OrderWebinar_pk PRIMARY KEY  (OrderDetailsID)
 );
 
--- Table: Orders
-CREATE TABLE Orders (
-    OrderID int  NOT NULL,
-    Paid money  NULL,
-    OrderDate datetime  NOT NULL,
-    StudentID int  NOT NULL,
-    CONSTRAINT OrderID PRIMARY KEY  (OrderID)
+-- Table: OrderSessionWeek
+CREATE TABLE OrderSessionWeek (
+    OrderDetailsID int  NOT NULL,
+    SessionWeekID int  NOT NULL,
+    CONSTRAINT OrderSessionWeek_pk PRIMARY KEY  (OrderDetailsID)
 );
+
+```

@@ -1,26 +1,32 @@
 ## Kod do generowania tabel z sekcji Courses
 ```sql
+
 -- Table: Courses
 CREATE TABLE Courses (
-    CourseID int  NOT NULL,
-    EmployeeID int  NOT NULL,
-    Price money  NOT NULL,
-    CourseType varchar(50)  NOT NULL,
-    Limit int  NULL,
-    LanguageID int  NOT NULL,
-    TranslatorID int  NULL,
-    ModulesQuantity int  NOT NULL,
-    CONSTRAINT Courses_pk PRIMARY KEY  (CourseID)
+    CourseID int NOT NULL,
+    EmployeeID int NOT NULL,
+    Price money NOT NULL,
+    CourseType varchar(50) NOT NULL,
+    Limit int NULL,
+    LanguageID int NOT NULL,
+    TranslatorID int NULL,
+    ModulesQuantity int NOT NULL,
+    CONSTRAINT Courses_pk PRIMARY KEY (CourseID),
+    CONSTRAINT chk_Courses CHECK (
+        LENGTH(CourseType) >= 1 AND
+        Price >= 0 AND
+        LENGTH(CourseID) >= 1 AND
+        Limit >=0
+    )
 );
 
-
--- Table: Modules
-CREATE TABLE Modules (
-    ModuleID int  NOT NULL,
+-- Table: CourseModulesProgress
+CREATE TABLE CourseModulesProgress (
     CourseID int  NOT NULL,
-    ModuleTypeID int  NOT NULL,
-    MettingsQuantity int  NOT NULL,
-    CONSTRAINT Modules_pk PRIMARY KEY  (ModuleID)
+    ModuleID int  NOT NULL,
+    StudentID int  NOT NULL,
+    Passed bit  NOT NULL,
+    CONSTRAINT CourseModulesProgress_pk PRIMARY KEY  (CourseID,ModuleID,StudentID)
 );
 
 -- Table: CourseSchedule
@@ -33,24 +39,27 @@ CREATE TABLE CourseSchedule (
     CONSTRAINT CourseSchedule_pk PRIMARY KEY  (ModuleID)
 );
 
--- Table: CourseModulesPassed
-CREATE TABLE CourseModulesPassed (
-    CourseID int  NOT NULL,
-    ModuleID int  NOT NULL,
-    StudentID int  NOT NULL,
-    CONSTRAINT CourseModulesPassed_pk PRIMARY KEY  (CourseID,ModuleID,StudentID)
+-- Table: Modules
+CREATE TABLE Modules (
+    ModuleID int NOT NULL,
+    ModuleName varchar(50) NOT NULL,
+    CourseID int NOT NULL,
+    ModuleType varchar(50) NOT NULL,
+    MettingsQuantity int NOT NULL,
+    CONSTRAINT Modules_pk PRIMARY KEY (ModuleID),
+    CONSTRAINT chk_Modules CHECK (
+        LENGTH(ModuleName) >= 1 AND
+        MettingsQuantity > 0 AND
+        LENGTH(ModuleType) >= 1
+    )
 );
 
 -- Table: ModuleAbsence
 CREATE TABLE ModuleAbsence (
     ModuleID int  NOT NULL,
     StudentID int  NOT NULL,
+    Date datetime  NOT NULL,
     CONSTRAINT ModuleAbsence_pk PRIMARY KEY  (ModuleID,StudentID)
 );
 
--- Table: ModuleType
-CREATE TABLE ModuleType (
-    ModuleTypeID int  NOT NULL,
-    Description varchar(50)  NOT NULL,
-    CONSTRAINT ModuleType_pk PRIMARY KEY  (ModuleTypeID)
-);
+```
