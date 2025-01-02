@@ -16,7 +16,6 @@ CREATE TABLE Courses (
     CONSTRAINT chk_Courses CHECK (
         LENGTH(CourseType) >= 1 AND
         Price >= 0 AND
-        LENGTH(CourseID) >= 1 AND
         Limit >=0
     )
 );
