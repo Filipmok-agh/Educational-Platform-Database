@@ -949,7 +949,7 @@ ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarExpirationDate_Webinar
     REFERENCES Webinar (WebinarID);
 
 ```
-
+## Widoki
 -- Zestawienie przychodów dla każdego szkolenia
 ```sql
 
@@ -1123,8 +1123,7 @@ SELECT [Event ID] AS 'Course Module ID', [% Frequence]
 FROM AttendanceSummary
 WHERE [Event type] = 'Course Module'
 ```
---     FUNKCJE
-<br/>
+## FUNKCJE
 
 -- funkcja zwracająca osoby zapisane na meeting po meetingID
 ```sql
