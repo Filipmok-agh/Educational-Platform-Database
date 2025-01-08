@@ -1,18 +1,20 @@
-1,1,zdalny,3,Fundamenty teoretyczne i podstawowe pojęcia
-2,1,zdalny,3,Praktyczne case studies i rozwiązania problemów
-3,1,zdalny,5,Praca z danymi wejściowymi i wyjściowymi
-4,2,stacjonarny,3,Praktyczne ćwiczenia na podstawie rzeczywistych przykładów
-5,2,stacjonarny,5,Planowanie dalszego rozwoju i nauki
-6,2,stacjonarny,2,Automatyzacja i zarządzanie procesami
-7,3,stacjonarny,3,Zaawansowane techniki i optymalizacja procesów
-8,3,stacjonarny,4,Podstawowe operacje i pierwsze kroki
-9,3,stacjonarny,2,Zrozumienie kluczowych koncepcji i zastosowań
-10,3,stacjonarny,2,Zarządzanie projektami i wersjonowanie kodu
-11,4,zdalny,4,Instalacja i konfiguracja środowiska pracy
-12,4,zdalny,4,Podsumowanie kluczowych umiejętności
-13,4,zdalny,3,Implementacja architektury projektu
-14,4,zdalny,4,Analiza problemów i strategie ich rozwiązywania
-15,5,stacjonarny,2,"Debugowanie, testowanie i poprawa jakości kodu"
-16,5,zdalny,5,Projektowanie i implementacja rozwiązań
-17,5,stacjonarny,2,Tworzenie dynamicznych komponentów i elementów
-18,5,zdalny,2,Wprowadzenie do kursu i celów nauki
+1,Analiza problemów i strategie ich rozwiązywania,1,zdalny,3
+2,Planowanie dalszego rozwoju i nauki,1,zdalny,2
+3,Instalacja i konfiguracja środowiska pracy,1,zdalny,2
+4,Projektowanie i implementacja rozwiązań,1,zdalny,5
+5,Fundamenty teoretyczne i podstawowe pojęcia,1,zdalny,3
+6,Tworzenie dynamicznych komponentów i elementów,2,zdalny,4
+7,Podstawowe operacje i pierwsze kroki,2,zdalny,5
+8,Praktyczne ćwiczenia na podstawie rzeczywistych przykładów,2,zdalny,4
+9,Integracja zewnętrznych bibliotek i narzędzi,3,zdalny,2
+10,Implementacja architektury projektu,3,zdalny,2
+11,Wprowadzenie do kursu i celów nauki,3,zdalny,4
+12,Praca z danymi wejściowymi i wyjściowymi,3,zdalny,3
+13,Zaawansowane techniki i optymalizacja procesów,3,zdalny,2
+14,Przegląd narzędzi i technologii używanych w kursie,4,zdalny,5
+15,Realizacja projektu końcowego i prezentacja wyników,4,zdalny,2
+16,"Debugowanie, testowanie i poprawa jakości kodu",4,zdalny,5
+17,Automatyzacja i zarządzanie procesami,4,zdalny,5
+18,Najlepsze praktyki w projektowaniu i wdrażaniu,5,zdalny,3
+19,Egzamin końcowy weryfikujący wiedzę,5,zdalny,5
+20,Przygotowanie dokumentacji technicznej,5,zdalny,5
