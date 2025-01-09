@@ -11,8 +11,8 @@ CREATE TABLE FieldOfStudy (
     EntryFee money NOT NULL,
     CONSTRAINT FieldOfStudy_pk PRIMARY KEY (FieldOfStudyID),
     CONSTRAINT chk_FieldOfStudy CHECK (
-        LENGTH(Name) >= 1 AND
-        LENGTH(Description) >= 1 AND
+        LEN(Name) >= 1 AND
+        LEN(Description) >= 1 AND
         EntryFee >= 0 AND
         Limit >= 0
     )
@@ -43,8 +43,8 @@ CREATE TABLE Subjects (
     Semester int NOT NULL,
     CONSTRAINT Subjects_pk PRIMARY KEY (SubjectID),
     CONSTRAINT chk_Subjects CHECK (
-        LENGTH(SubjectName) >= 1 AND
-        LENGTH(Description) >= 1 AND
+        LEN(SubjectName) >= 1 AND
+        LEN(Description) >= 1 AND
         MeetingsQuantity > 0 AND
         Semester >= 0
     )
@@ -72,6 +72,7 @@ CREATE TABLE Meeting (
     LanguageID int NOT NULL,
     TranslatorID int NULL,
     Price money NOT NULL,
+    StationaryID int NULL,
     CONSTRAINT Meeting_pk PRIMARY KEY (MeetingID),
     CONSTRAINT chk_Meeting CHECK (
         Price >= 0
@@ -80,10 +81,10 @@ CREATE TABLE Meeting (
 
 -- Table: StudentAbsence
 CREATE TABLE StudentAbsence (
-    MeetingID int  NOT NULL,
-    StudentID int  NOT NULL,
-    MakeupClassID int  NULL,
-    CONSTRAINT StudentAbsence_pk PRIMARY KEY  (MeetingID,StudentID)
+    MeetingID int NOT NULL,
+    StudentID int NOT NULL,
+    ClassRetakeID int NULL,
+    CONSTRAINT StudentAbsence_pk PRIMARY KEY (MeetingID, StudentID)
 );
 
 -- Table: Interships
@@ -95,30 +96,30 @@ CREATE TABLE Interships (
     EndDate date NOT NULL,
     CONSTRAINT Interships_pk PRIMARY KEY (IntershipID),
     CONSTRAINT chk_Interships CHECK (
-        LENGTH(IntershipName) >= 1 AND
+        LEN(IntershipName) >= 1 AND
         StartDate < EndDate
     )
 );
 
 -- Table: IntershipsAbsence
 CREATE TABLE IntershipsAbsence (
-    IntershipID int  NOT NULL,
-    StudentID int  NOT NULL,
-    Absence datetime  NOT NULL,
-    CONSTRAINT IntershipsAbsence_pk PRIMARY KEY  (IntershipID,StudentID,Absence)
+    IntershipID int NOT NULL,
+    StudentID int NOT NULL,
+    Absence datetime NOT NULL,
+    CONSTRAINT IntershipsAbsence_pk PRIMARY KEY (IntershipID, StudentID, Absence)
 );
 
--- Table: SessionWeek
-CREATE TABLE SessionWeek (
+-- Table: StationaryWeek
+CREATE TABLE StationaryWeek (
     Semester int NOT NULL,
-    RoomID int NOT NULL,
     StartDate date NOT NULL,
     EndDate date NOT NULL,
     FieldOfStudyID int NOT NULL,
-    MeetingID int NOT NULL,
-    SessionWeekID int NOT NULL,
-    CONSTRAINT SessionWeek_pk PRIMARY KEY (SessionWeekID),
-    CONSTRAINT chk_SessionWeek CHECK (
+    StationaryID int NOT NULL,
+    Price money NOT NULL,
+    Quantity int NOT NULL,
+    CONSTRAINT StationaryWeek_pk PRIMARY KEY (StationaryID),
+    CONSTRAINT chk_StationaryWeek CHECK (
         StartDate < EndDate AND
         Semester >= 0
     )
@@ -130,7 +131,7 @@ CREATE TABLE MeetingType (
     Description varchar(50) NOT NULL,
     CONSTRAINT MeetingType_pk PRIMARY KEY (MeetingTypeID),
     CONSTRAINT chk_MeetingType CHECK (
-        LENGTH(Description) >= 1
+        LEN(Description) >= 1
     )
 );
 

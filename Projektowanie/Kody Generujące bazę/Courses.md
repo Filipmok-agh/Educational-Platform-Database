@@ -13,10 +13,10 @@ CREATE TABLE Courses (
     TranslatorID int NULL,
     CONSTRAINT Courses_pk PRIMARY KEY (CourseID),
     CONSTRAINT chk_Courses CHECK (
-        LENGTH(CourseType) >= 1 AND
+        LEN(CourseType) >= 1 AND
         Price >= 0 AND
         Limit >=0 AND
-        LENGTH(CourseName) >= 1
+        LEN(CourseName)>=1
     )
 );
 
@@ -45,21 +45,21 @@ CREATE TABLE Modules (
     ModuleName varchar(50) NOT NULL,
     CourseID int NOT NULL,
     ModuleType varchar(50) NOT NULL,
-    MettingsQuantity int NOT NULL,
+    MeetingsQuantity int NOT NULL,
     CONSTRAINT Modules_pk PRIMARY KEY (ModuleID),
     CONSTRAINT chk_Modules CHECK (
-        LENGTH(ModuleName) >= 1 AND
-        MettingsQuantity > 0 AND
-        LENGTH(ModuleType) >= 1
+        LEN(ModuleName) >= 1 AND
+        MeetingsQuantity > 0 AND
+        LEN(ModuleType) >= 1
     )
 );
 
 -- Table: ModuleAbsence
 CREATE TABLE ModuleAbsence (
-    ModuleID int  NOT NULL,
-    StudentID int  NOT NULL,
-    Date datetime  NOT NULL,
-    CONSTRAINT ModuleAbsence_pk PRIMARY KEY  (ModuleID,StudentID)
+    ModuleID int NOT NULL,
+    StudentID int NOT NULL,
+    Date datetime NOT NULL,
+    CONSTRAINT ModuleAbsence_pk PRIMARY KEY (ModuleID, StudentID)
 );
 
 ```

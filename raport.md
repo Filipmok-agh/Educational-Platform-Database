@@ -374,30 +374,39 @@ ALTER TABLE OrderWebinar ADD CONSTRAINT OrderWebinar_Webinar
     REFERENCES Webinar (WebinarID);
 ```
 
--- Table: OrderSessionWeek
+-- Table: StationaryWeek
 ```sql
 
-CREATE TABLE OrderSessionWeek (
-    OrderDetailsID int  NOT NULL,
-    SessionWeekID int  NOT NULL,
-    CONSTRAINT OrderSessionWeek_pk PRIMARY KEY  (OrderDetailsID)
+CREATE TABLE StationaryWeek (
+    Semester int NOT NULL,
+    StartDate date NOT NULL,
+    EndDate date NOT NULL,
+    FieldOfStudyID int NOT NULL,
+    StationaryID int NOT NULL,
+    Price money NOT NULL,
+    Quantity int NOT NULL,
+    CONSTRAINT StationaryWeek_pk PRIMARY KEY (StationaryID),
+    CONSTRAINT chk_StationaryWeek CHECK (
+        StartDate < EndDate AND
+        Semester >= 0
+    )
 );
 ```
 
--- Reference: OrderSessionWeek_OrderDetails (table: OrderSessionWeek)
+-- Reference: OrderStationaryWeek_OrderDetails (table: OrderStationaryWeek)
 ```sql
 
-ALTER TABLE OrderSessionWeek ADD CONSTRAINT OrderSessionWeek_OrderDetails
+ALTER TABLE OrderStationaryWeek ADD CONSTRAINT OrderStationaryWeek_OrderDetails
     FOREIGN KEY (OrderDetailsID)
     REFERENCES OrderDetails (OrderDetailsID);
 ```
 
--- Reference: OrderSessionWeek_SessionWeek (table: OrderSessionWeek)
+-- Reference: OrderStationaryWeek_StationaryWeek (table: OrderStationaryWeek)
 ```sql
 
-ALTER TABLE OrderSessionWeek ADD CONSTRAINT OrderSessionWeek_SessionWeek
-    FOREIGN KEY (SessionWeekID)
-    REFERENCES SessionWeek (SessionWeekID);
+ALTER TABLE OrderStationaryWeek ADD CONSTRAINT OrderStationaryWeek_StationaryWeek
+    FOREIGN KEY (StationaryID)
+    REFERENCES StationaryWeek (StationaryID);
 ```
 
 -- Table: Translator
