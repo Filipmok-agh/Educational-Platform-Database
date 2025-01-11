@@ -834,46 +834,30 @@ ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Students
     REFERENCES Students (StudentID);
 ```
 
--- Table: SessionWeek
+-- Table: StationaryWeek
 ```sql
 
-CREATE TABLE SessionWeek (
+CREATE TABLE StationaryWeek (
     Semester int NOT NULL,
-    RoomID int NOT NULL,
     StartDate date NOT NULL,
     EndDate date NOT NULL,
     FieldOfStudyID int NOT NULL,
-    MeetingID int NOT NULL,
-    SessionWeekID int NOT NULL,
-    CONSTRAINT SessionWeek_pk PRIMARY KEY (SessionWeekID),
-    CONSTRAINT chk_SessionWeek CHECK (
+    StationaryID int NOT NULL,
+    Price money NOT NULL,
+    Quantity int NOT NULL,
+    CONSTRAINT StationaryWeek_pk PRIMARY KEY (StationaryID),
+    CONSTRAINT chk_StationaryWeek CHECK (
         StartDate < EndDate AND
         Semester >= 0
     )
 );
 ```
--- Reference: SessionWeek_FieldOfStudy (table: SessionWeek)
+-- Reference: StationaryWeek_FieldOfStudy (table: StationaryWeek)
 ```sql
 
-ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_FieldOfStudy
+ALTER TABLE StationaryWeek ADD CONSTRAINT StationaryWeek_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
-```
-
--- Reference: SessionWeek_Meeting (table: SessionWeek)
-```sql
-
-ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_Meeting
-    FOREIGN KEY (MeetingID)
-    REFERENCES Meeting (MeetingID);
-```
-
--- Reference: SessionWeek_LectureRoomDetails (table: SessionWeek)
-```sql
-
-ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_LectureRoomDetails
-    FOREIGN KEY (RoomID)
-    REFERENCES LectureRoomDetails (RoomID);
 ```
 
 -- Table: MeetingType
