@@ -526,7 +526,7 @@ BEGIN
         RAISERROR('Staże o podanym ID nie istnieje.', 16, 1);
     END
 
-    IF NOT EXISTS (SELECT 1 FROM Student WHERE StudentID = @StudentID)
+    IF NOT EXISTS (SELECT 1 FROM Students WHERE StudentID = @StudentID)
     BEGIN
         RAISERROR('Student o podanym ID nie istnieje.', 16, 1);
     END
