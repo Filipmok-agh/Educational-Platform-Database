@@ -59,7 +59,7 @@ CREATE TABLE ModuleAbsence (
     ModuleID int NOT NULL,
     StudentID int NOT NULL,
     Date datetime NOT NULL,
-    CONSTRAINT ModuleAbsence_pk PRIMARY KEY (ModuleID, StudentID)
+    CONSTRAINT ModuleAbsence_pk PRIMARY KEY (ModuleID, StudentID, Date)
 );
 
 ```
