@@ -1,4 +1,4 @@
-## Relacje między tabelami
+# Kod generujący relacje między tabelami
 ```sql
 
 -- Reference: CourseModulesProgress_Courses (table: CourseModulesProgress)
