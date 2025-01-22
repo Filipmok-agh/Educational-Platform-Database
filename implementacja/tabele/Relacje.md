@@ -1,4 +1,4 @@
-## Relacje między tabelami
+# Kod generujący relacje między tabelami
 ```sql
 
 -- Reference: CourseModulesProgress_Courses (table: CourseModulesProgress)
@@ -26,10 +26,10 @@ ALTER TABLE CourseSchedule ADD CONSTRAINT CourseSchedule_Modules
     FOREIGN KEY (ModuleID)
     REFERENCES Modules (ModuleID);
 
--- Reference: Courses_AvalibleLanguages (table: Courses)
-ALTER TABLE Courses ADD CONSTRAINT Courses_AvalibleLanguages
+-- Reference: Courses_AvailableLanguages (table: Courses)
+ALTER TABLE Courses ADD CONSTRAINT Courses_AvailableLanguages
     FOREIGN KEY (LanguageID)
-    REFERENCES AvalibleLanguages (LanguageID);
+    REFERENCES AvailableLanguages (LanguageID);
 
 -- Reference: Courses_Employees (table: Courses)
 ALTER TABLE Courses ADD CONSTRAINT Courses_Employees
@@ -57,7 +57,7 @@ ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldOfStudyStudentList_Stude
     REFERENCES Students (StudentID);
 
 -- Reference: IntershipsAbsence_Interships (table: IntershipsAbsence)
-ALTER TABLE IntershipsAbsence ADD CONSTRAINT IIntershipsAbsence_Interships
+ALTER TABLE IntershipsAbsence ADD CONSTRAINT IntershipsAbsence_Interships
     FOREIGN KEY (IntershipID)
     REFERENCES Interships (IntershipID);
 
@@ -71,10 +71,10 @@ ALTER TABLE Interships ADD CONSTRAINT Interships_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
--- Reference: Languages_AvalibleLanguages (table: Languages)
-ALTER TABLE Languages ADD CONSTRAINT Languages_AvalibleLanguages
+-- Reference: Languages_AvailableLanguages (table: Languages)
+ALTER TABLE Languages ADD CONSTRAINT Languages_AvailableLanguages
     FOREIGN KEY (LanguageID)
-    REFERENCES AvalibleLanguages (LanguageID);
+    REFERENCES AvailableLanguages (LanguageID);
 
 -- Reference: Languages_Translator (table: Languages)
 ALTER TABLE Languages ADD CONSTRAINT Languages_Translator
@@ -86,10 +86,10 @@ ALTER TABLE Meeting ADD CONSTRAINT Meeting_LectureRoomDetails
     FOREIGN KEY (RoomID)
     REFERENCES LectureRoomDetails (RoomID);
 
--- Reference: Meeting_AvalibleLanguages (table: Meeting)
-ALTER TABLE Meeting ADD CONSTRAINT Meeting_AvalibleLanguages
+-- Reference: Meeting_AvailableLanguages (table: Meeting)
+ALTER TABLE Meeting ADD CONSTRAINT Meeting_AvailableLanguages
     FOREIGN KEY (LanguageID)
-    REFERENCES AvalibleLanguages (LanguageID);
+    REFERENCES AvailableLanguages (LanguageID);
 
 -- Reference: Meeting_MeetingType (table: Meeting)
 ALTER TABLE Meeting ADD CONSTRAINT Meeting_MeetingType
@@ -105,6 +105,11 @@ ALTER TABLE Meeting ADD CONSTRAINT Meeting_Subjects
 ALTER TABLE Meeting ADD CONSTRAINT Meeting_Translator
     FOREIGN KEY (TranslatorID)
     REFERENCES Translator (TranslatorID);
+
+-- Reference: Meeting_StationaryWeek (table: Meeting)
+ALTER TABLE Meeting ADD CONSTRAINT Meeting_StationaryWeek
+    FOREIGN KEY (StationaryID)
+    REFERENCES StationaryWeek (StationaryID);
 
 -- Reference: ModuleAbsence_Modules (table: ModuleAbsence)
 ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleAbsence_Modules
@@ -146,15 +151,15 @@ ALTER TABLE OrderMeeting ADD CONSTRAINT OrderMeeting_OrderDetails
     FOREIGN KEY (OrderDetailsID)
     REFERENCES OrderDetails (OrderDetailsID);
 
--- Reference: OrderSessionWeek_OrderDetails (table: OrderSessionWeek)
-ALTER TABLE OrderSessionWeek ADD CONSTRAINT OrderSessionWeek_OrderDetails
+-- Reference: OrderStationaryWeek_OrderDetails (table: OrderStationaryWeek)
+ALTER TABLE OrderStationaryWeek ADD CONSTRAINT OrderStationaryWeek_OrderDetails
     FOREIGN KEY (OrderDetailsID)
     REFERENCES OrderDetails (OrderDetailsID);
 
--- Reference: OrderSessionWeek_SessionWeek (table: OrderSessionWeek)
-ALTER TABLE OrderSessionWeek ADD CONSTRAINT OrderSessionWeek_SessionWeek
-    FOREIGN KEY (SessionWeekID)
-    REFERENCES SessionWeek (SessionWeekID);
+-- Reference: OrderStationaryWeek_StationaryWeek (table: OrderStationaryWeek)
+ALTER TABLE OrderStationaryWeek ADD CONSTRAINT OrderStationaryWeek_StationaryWeek
+    FOREIGN KEY (StationaryID)
+    REFERENCES StationaryWeek (StationaryID);
 
 -- Reference: OrderStudies_FieldOfStudy (table: OrderStudies)
 ALTER TABLE OrderStudies ADD CONSTRAINT OrderStudies_FieldOfStudy
@@ -181,29 +186,14 @@ ALTER TABLE Orders ADD CONSTRAINT Orders_Students
     FOREIGN KEY (StudentID)
     REFERENCES Students (StudentID);
 
--- Reference: SessionWeek_FieldOfStudy (table: SessionWeek)
-ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_FieldOfStudy
+-- Reference: StationaryWeek_FieldOfStudy (table: StationaryWeek)
+ALTER TABLE StationaryWeek ADD CONSTRAINT StationaryWeek_FieldOfStudy
     FOREIGN KEY (FieldOfStudyID)
     REFERENCES FieldOfStudy (FieldOfStudyID);
 
--- Reference: SessionWeek_Meeting (table: SessionWeek)
-ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_Meeting
-    FOREIGN KEY (MeetingID)
-    REFERENCES Meeting (MeetingID);
-
--- Reference: SessionWeek_LectureRoomDetails (table: SessionWeek)
-ALTER TABLE SessionWeek ADD CONSTRAINT SessionWeek_LectureRoomDetails
-    FOREIGN KEY (RoomID)
-    REFERENCES LectureRoomDetails (RoomID);
-
 -- Reference: StudentAbsence_Meeting (table: StudentAbsence)
 ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Meeting
     FOREIGN KEY (MeetingID)
-    REFERENCES Meeting (MeetingID);
-
--- Reference: StudentAbsence_Meeting (table: StudentAbsence)
-ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Meeting
-    FOREIGN KEY (MakeupClassID)
     REFERENCES Meeting (MeetingID);
 
 -- Reference: StudentAbsence_Students (table: StudentAbsence)
@@ -241,10 +231,10 @@ ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarExpirationDate_Webinar
     FOREIGN KEY (WebinarID)
     REFERENCES Webinar (WebinarID);
 
--- Reference: Webinar_AvalibleLanguages (table: Webinar)
-ALTER TABLE Webinar ADD CONSTRAINT Webinar_AvalibleLanguages
+-- Reference: Webinar_AvailableLanguages (table: Webinar)
+ALTER TABLE Webinar ADD CONSTRAINT Webinar_AvailableLanguages
     FOREIGN KEY (LanguageID)
-    REFERENCES AvalibleLanguages (LanguageID);
+    REFERENCES AvailableLanguages (LanguageID);
 
 -- Reference: Webinar_Employees (table: Webinar)
 ALTER TABLE Webinar ADD CONSTRAINT Webinar_Employees
