@@ -77,7 +77,7 @@
 ```sql
 
 CREATE TABLE Courses (
-    CourseID int NOT NULL,
+    CourseID int IDENTITY(1,1) NOT NULL,
     CourseName varchar(50) NOT NULL,
     EmployeeID int NOT NULL,
     Price money NOT NULL,
@@ -178,7 +178,7 @@ ALTER TABLE CourseSchedule ADD CONSTRAINT CourseSchedule_Modules
 ```sql
 
 CREATE TABLE Modules (
-    ModuleID int NOT NULL,
+    ModuleID int NOT NULL IDENTITY(1,1),
     ModuleName varchar(50) NOT NULL,
     CourseID int NOT NULL,
     ModuleType varchar(50) NOT NULL,
@@ -231,7 +231,7 @@ ALTER TABLE ModuleAbsence ADD CONSTRAINT ModuleAbsence_Students
 ```sql
 
 CREATE TABLE Orders (
-    OrderID int NOT NULL,
+    OrderID int NOT NULL IDENTITY(1,1),
     Paid money NULL,
     OrderDate datetime NOT NULL,
     StudentID int NOT NULL,
@@ -280,7 +280,7 @@ ALTER TABLE OrderCourse ADD CONSTRAINT OrderCourse_OrderDetails
 ```sql
 
 CREATE TABLE OrderDetails (
-    OrderDetailsID int NOT NULL,
+    OrderDetailsID int NOT NULL IDENTITY(1,1),
     PaidDate datetime NULL,
     OrderID int NOT NULL,
     AccessGiven bit NOT NULL,
@@ -401,7 +401,7 @@ ALTER TABLE OrderStationaryWeek ADD CONSTRAINT OrderStationaryWeek_StationaryWee
 ```sql
 
 CREATE TABLE Translator (
-    TranslatorID int NOT NULL,
+    TranslatorID int NOT NULL IDENTITY(1,1),
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     DateOfBirth date NOT NULL,
@@ -428,7 +428,7 @@ CREATE TABLE Translator (
 ```sql
 
 CREATE TABLE Employees (
-    EmployeeID int NOT NULL IDENTITY,
+    EmployeeID int NOT NULL IDENTITY(1,1),
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     DateOfBirth date NOT NULL,
@@ -476,7 +476,7 @@ ALTER TABLE EmployeeType ADD CONSTRAINT EmployeeType_Employees
 ```sql
 
 CREATE TABLE Students (
-    StudentID int NOT NULL IDENTITY,
+    StudentID int NOT NULL IDENTITY(1,1),
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     DateOfBirth date NOT NULL,
@@ -504,7 +504,7 @@ CREATE TABLE Students (
 ```sql
 
 CREATE TABLE LectureRoomDetails (
-    RoomID int NOT NULL,
+    RoomID int NOT NULL IDENTITY(1,1),
     BuildingNr varchar(10) NOT NULL,
     Floor int NOT NULL,
     ClassNumber int NOT NULL,
@@ -546,7 +546,7 @@ ALTER TABLE Languages ADD CONSTRAINT Languages_Translator
 ```sql
 
 CREATE TABLE AvailableLanguages (
-    LanguageID int NOT NULL,
+    LanguageID int NOT NULL IDENTITY(1,1),
     Language varchar(50) NOT NULL,
     CONSTRAINT AvailableLanguages_pk PRIMARY KEY (LanguageID),
     CONSTRAINT chk_AvailableLanguages CHECK (
@@ -559,7 +559,7 @@ CREATE TABLE AvailableLanguages (
 ```sql
 
 CREATE TABLE FieldOfStudy (
-    FieldOfStudyID int NOT NULL,
+    FieldOfStudyID int NOT NULL IDENTITY(1,1),
     Name varchar(50) NOT NULL,
     Description varchar(50) NOT NULL,
     Limit int NOT NULL,
@@ -583,7 +583,7 @@ CREATE TABLE FieldOfStudyStudentList (
     Semester int NOT NULL,
     StartDate date NOT NULL,
     EndDate date NULL,
-    CONSTRAINT FieldOfStudyStudentList_pk PRIMARY KEY (StudentID, FieldOfStudyID),
+    CONSTRAINT FieldOfStudyStudentList_pk PRIMARY KEY (StudentID, FieldOfStudyID, Semester),
     CONSTRAINT chk_FieldOfStudyStudentList CHECK (
         Semester >= 0 AND
         (EndDate IS NULL OR StartDate < EndDate)
@@ -611,7 +611,7 @@ ALTER TABLE FieldOfStudyStudentList ADD CONSTRAINT FieldOfStudyStudentList_Stude
 ```sql
 
 CREATE TABLE Subjects (
-    SubjectID int NOT NULL,
+    SubjectID int NOT NULL IDENTITY(1,1),
     FieldOfStudyID int NOT NULL,
     SubjectName varchar(50) NOT NULL,
     Description varchar(50) NOT NULL,
@@ -679,7 +679,7 @@ ALTER TABLE SubjectGrades ADD CONSTRAINT SubjectGrades_Subjects
 ```sql
 
 CREATE TABLE Meeting (
-    MeetingID int NOT NULL,
+    MeetingID int NOT NULL IDENTITY(1,1),
     MeetingTypeID int NOT NULL,
     SubjectID int NOT NULL,
     Meeting_date datetime NOT NULL,
@@ -773,7 +773,7 @@ ALTER TABLE StudentAbsence ADD CONSTRAINT StudentAbsence_Students
 ```sql
 
 CREATE TABLE Interships (
-    IntershipID int NOT NULL,
+    IntershipID int NOT NULL IDENTITY(1,1),
     FieldOfStudyID int NOT NULL,
     IntershipName varchar(50) NOT NULL,
     StartDate date NOT NULL,
@@ -829,7 +829,7 @@ CREATE TABLE StationaryWeek (
     StartDate date NOT NULL,
     EndDate date NOT NULL,
     FieldOfStudyID int NOT NULL,
-    StationaryID int NOT NULL,
+    StationaryID int NOT NULL IDENTITY(1,1),
     Price money NOT NULL,
     Quantity int NOT NULL,
     CONSTRAINT StationaryWeek_pk PRIMARY KEY (StationaryID),
@@ -851,7 +851,7 @@ ALTER TABLE StationaryWeek ADD CONSTRAINT StationaryWeek_FieldOfStudy
 ```sql
 
 CREATE TABLE MeetingType (
-    MeetingTypeID int NOT NULL,
+    MeetingTypeID int NOT NULL IDENTITY(1,1),
     Description varchar(50) NOT NULL,
     CONSTRAINT MeetingType_pk PRIMARY KEY (MeetingTypeID),
     CONSTRAINT chk_MeetingType CHECK (
@@ -864,7 +864,7 @@ CREATE TABLE MeetingType (
 ```sql
 
 CREATE TABLE Webinar (
-    WebinarID int NOT NULL,
+    WebinarID int NOT NULL IDENTITY(1,1),
     WebinarName varchar(50) NOT NULL,
     Price money NOT NULL,
     Webinar_date datetime NOT NULL,
@@ -929,8 +929,8 @@ ALTER TABLE WebinarExpirationDate ADD CONSTRAINT WebinarExpirationDate_Webinar
     REFERENCES Webinar (WebinarID);
 
 ```
-## Widoki
--- Zestawienie przychodów dla każdego szkolenia
+# Widoki
+## Zestawienie przychodów dla każdego szkolenia
 ```sql
 
 CREATE VIEW FinancialReport AS
@@ -963,14 +963,14 @@ SELECT s.FieldOfStudyID AS ID, s.Name AS Name, 'Study' AS Type, s.EntryFee *
        WHERE sb.FieldOfStudyID = s.FieldOfStudyID) AS Income
 FROM FieldOfStudy s
 ```
--- Zestawienie przychodów dla każdego webinaru
+## Zestawienie przychodów dla każdego webinaru
 ```sql
 CREATE VIEW WebinarsFinancialReport AS
 SELECT ID AS 'Webinar ID', Name, Income
 FROM FinancialReport
 WHERE Type = 'Webinar'
 ```
--- Zestawienie przychodów dla każdego kursu
+## Zestawienie przychodów dla każdego kursu
 ```sql
 
 CREATE VIEW CoursesFinancialReport AS
@@ -979,7 +979,7 @@ FROM FinancialReport
 WHERE Type = 'Course'
 ```
 
--- Zestawienie przychodów dla każdego studium
+## Zestawienie przychodów dla każdego studium
 ```sql
 
 CREATE VIEW StudiesFinancialReport AS
@@ -988,7 +988,7 @@ FROM FinancialReport
 WHERE Type = 'Study'
 ```
 
--- Lista dłużników
+## Lista dłużników
 ```sql
 
 CREATE VIEW DebtorsList AS
@@ -1003,10 +1003,10 @@ FROM
         JOIN Orders O ON S.StudentID = O.StudentID
         JOIN OrderDetails OD ON O.OrderID = OD.OrderID
 WHERE
-    OD.PaidDate IS NULL;
+    OD.PaidDate IS NULL
 ```
 
--- Raport o liczbie zapisanych osób na przyszłe wydarzenia
+## Raport o liczbie zapisanych osób na przyszłe wydarzenia
 ```sql
 
 CREATE VIEW NumberOfPeopleRegisteredForFutureEvents AS
@@ -1040,7 +1040,7 @@ WHERE  m.Meeting_date > getdate()
 GROUP BY m.MeetingID, mt.Description, s.SubjectName
 ```
 
--- Raport o liczbie zapisanych osób na przyszłe spotkania studyjne
+## Raport o liczbie zapisanych osób na przyszłe spotkania studyjne
 ```sql
 
 CREATE VIEW NumberOfPeopleRegisteredForFutureStudyMeetings AS
@@ -1049,7 +1049,7 @@ FROM NumberOfPeopleRegisteredForFutureEvents
 WHERE Type = 'Study Meeting'
 ```
 
--- Raport o liczbie zapisanych osób na przyszłe moduły w ramach kursów
+## Raport o liczbie zapisanych osób na przyszłe moduły w ramach kursów
 ```sql
 
 CREATE VIEW NumberOfPeopleRegisteredForFutureCourseModules AS
@@ -1057,7 +1057,7 @@ SELECT ID AS 'CourseModuleID', NumberOfParticipants
 FROM NumberOfPeopleRegisteredForFutureEvents
 WHERE Type = 'Course Module'
 ```
--- Raport o liczbie zapisanych osób na przyszłe webinary
+## Raport o liczbie zapisanych osób na przyszłe webinary
 ```sql
 
 CREATE VIEW NumberOfPeopleRegisteredForFutureWebinars AS
@@ -1065,7 +1065,7 @@ SELECT ID AS 'WebinarID', NumberOfParticipants
 FROM NumberOfPeopleRegisteredForFutureEvents
 WHERE Type = 'Webinar'
 ```
--- Frekwencja na zakończonych wydarzeniach
+## Frekwencja na zakończonych wydarzeniach
 ```sql
 
 CREATE VIEW AttendanceSummary AS
@@ -1098,9 +1098,9 @@ UNION ALL
 SELECT EventID,
        (TotalAttendees - TotalAbsences) * 100.0 / TotalAttendees AS FrequencePercentage,
        EventType
-FROM ModuleAttendance;
+FROM ModuleAttendance
 ```
--- Frekwencja na zakończonych spotkaniach studyjnych
+## Frekwencja na zakończonych spotkaniach studyjnych
 ```sql
 
 CREATE VIEW StudyMeetingsAttendanceSummary AS
@@ -1108,7 +1108,7 @@ SELECT EventID AS 'StudyMeetingID', FrequencePercentage
 FROM AttendanceSummary
 WHERE Eventtype = 'Study Meeting'
 ```
--- Frekwencja na zakończonych modułach kursów
+## Frekwencja na zakończonych modułach kursów
 ```sql
 
 CREATE VIEW CourseModulesAttendanceSummary AS
@@ -1116,7 +1116,7 @@ SELECT EventID AS 'CourseModuleID', FrequencePercentage
 FROM AttendanceSummary
 WHERE Eventtype = 'Course Module'
 ```
--- Lista obecności na każdy meeting
+## Lista obecności na każdy meeting
 ```sql
 CREATE VIEW MeetingPresenceList AS
 SELECT
@@ -1134,9 +1134,9 @@ FROM
         CROSS APPLY GetAttendeesByMeetingID(M.MeetingID) A
         LEFT JOIN StudentAbsence SA ON M.MeetingID = SA.MeetingID AND A.StudentID = SA.StudentID
 WHERE
-    M.Meeting_date < GETDATE();
+    M.Meeting_date < GETDATE()
 ```
--- Lista obecności na każdy moduł kursu
+## Lista obecności na każdy moduł kursu
 
 ```sql
 CREATE VIEW AttendanceListForModules AS
@@ -1156,10 +1156,10 @@ FROM
         CROSS APPLY GetAttendeesByModuleID(M.ModuleID) A
         LEFT JOIN ModuleAbsence MA ON M.ModuleID = MA.ModuleID AND A.StudentID = MA.StudentID
 WHERE
-    CS.Course_date < GETDATE();
+    CS.Course_date < GETDATE()
 ```
 
--- Lista osób zapisanych na co najmniej 2 przyszłe szkolenia, które kolidują ze sobą czasowo
+## Lista osób zapisanych na co najmniej 2 przyszłe szkolenia, które kolidują ze sobą czasowo
 
 ```sql
 CREATE VIEW ConflictingFutureEventRegistrations AS
@@ -1225,7 +1225,7 @@ Conflicts AS (
     FROM
         AllEvents E1
         JOIN AllEvents E2 ON E1.StudentID = E2.StudentID
-            AND E1.EventID <> E2.EventID
+            AND E1.EventID < E2.EventID
             AND E1.EventDate = E2.EventDate
 )
 SELECT DISTINCT
@@ -1239,7 +1239,7 @@ SELECT DISTINCT
     EventID2,
     EventDate2
 FROM
-    Conflicts;
+    Conflicts
 ```
 # FUNKCJE
 
@@ -1284,7 +1284,7 @@ CREATE FUNCTION GetAttendeesByMeetingID(@MeetingID INT)
 
         UNION ALL
 
-        SELECT
+        SELECT DISTINCT
             M.MeetingID,
             FSL.StudentID,
             S.FirstName,
@@ -1296,7 +1296,7 @@ CREATE FUNCTION GetAttendeesByMeetingID(@MeetingID INT)
                 JOIN Subjects SB ON FSL.FieldOfStudyID = SB.FieldOfStudyID
                 JOIN Meeting M ON SB.SubjectID = M.SubjectID
         WHERE
-            M.MeetingID = @MeetingID;
+            M.MeetingID = @MeetingID
 ```
 
 ## funkcja zwracająca osoby zapisane na moduł po moduleID
@@ -1319,7 +1319,7 @@ CREATE FUNCTION GetAttendeesByModuleID(@ModuleID INT)
                 JOIN Modules M ON C.CourseID = M.CourseID
                 JOIN Students S ON O.StudentID = S.StudentID
         WHERE
-            M.ModuleID = @ModuleID;
+            M.ModuleID = @ModuleID
 ```
 
 ## funkcja zwracająca osoby zapisane na webinar po webinarID
@@ -1340,7 +1340,7 @@ CREATE FUNCTION GetAttendeesByWebinarID(@WebinarID INT)
                 JOIN Webinar W ON OW.WebinarID = W.WebinarID
                 JOIN Students S ON O.StudentID = S.StudentID
         WHERE
-            W.WebinarID = @WebinarID;
+            W.WebinarID = @WebinarID
 ```
 ## funkcja zwracająca osoby zapisane na kurs po CourseID
 ```sql
@@ -1360,7 +1360,7 @@ CREATE FUNCTION GetAttendeesByCourseID(@CourseID INT)
                 JOIN Courses C ON OC.CourseID = C.CourseID
                 JOIN Students S ON O.StudentID = S.StudentID
         WHERE
-            C.CourseID = @CourseID;
+            C.CourseID = @CourseID
 ```
 
 ## Nieobecności danego studenta na studiach/kursach/stażu
@@ -1399,7 +1399,7 @@ CREATE FUNCTION GetAbsencesByStudentID(@StudentID INT)
         FROM
             IntershipsAbsence IA
         WHERE
-            IA.StudentID = @StudentID;
+            IA.StudentID = @StudentID
 ```
 ## Harmonogram danego kierunku studiów
 ```sql
@@ -1419,7 +1419,7 @@ CREATE FUNCTION GetStudySchedule(@FieldOfStudyID INT, @StartDate DATE, @EndDate 
                 JOIN Meeting M ON SB.SubjectID = M.SubjectID
         WHERE
             SB.FieldOfStudyID = @FieldOfStudyID
-        AND M.Meeting_date > @StartDate AND M.Meeting_date < @EndDate;
+        AND M.Meeting_date > @StartDate AND M.Meeting_date < @EndDate
 ```
 ## Harmonogram danego kursu
 ```sql
@@ -1439,7 +1439,7 @@ CREATE FUNCTION GetCourseSchedule(@CourseID INT, @StartDate DATE, @EndDate DATE)
                 JOIN Courses C ON MO.CourseID = C.CourseID
         WHERE
             MO.CourseID = @CourseID
-        AND CS.Course_date > @StartDate AND CS.Course_date < @EndDate;
+        AND CS.Course_date > @StartDate AND CS.Course_date < @EndDate
 ```
 ## Harmonogram zajęć dla studenta
 ```sql
@@ -1506,7 +1506,7 @@ CREATE FUNCTION GetStudentSchedule(@StudentID INT, @StartDate DATE, @EndDate DAT
             JOIN Employees E ON E.EmployeeID = W.EmployeeID
         WHERE
             O.StudentID = @StudentID
-        AND W.Webinar_date > @StartDate AND W.Webinar_date < @EndDate;
+        AND W.Webinar_date > @StartDate AND W.Webinar_date < @EndDate
 ```
 
 ## Obliczanie łącznej wartości zamówienia
@@ -1568,7 +1568,7 @@ BEGIN
         );
 
     RETURN @TotalValue;
-END;
+END
 ```
 ## Sprawdzanie czy student odbył wszystkie praktyki, które powinien odbyć:
 ```sql
@@ -1577,17 +1577,16 @@ CREATE FUNCTION CheckInternshipAbsences(@StudentID INT)
     RETURNS TABLE
         AS
         RETURN
-        SELECT
+        SELECT DISTINCT
             I.IntershipID,
             I.IntershipName,
             IA.Absence AS AbsenceDate
         FROM
             FieldOfStudyStudentList FSL
                 JOIN Interships I ON FSL.FieldOfStudyID = I.FieldOfStudyID
-                LEFT JOIN IntershipsAbsence IA ON I.IntershipID = IA.IntershipID AND IA.StudentID = FSL.StudentID
+                JOIN IntershipsAbsence IA ON I.IntershipID = IA.IntershipID AND IA.StudentID = FSL.StudentID
         WHERE
             FSL.StudentID = @StudentID
-          AND IA.Absence IS NOT NULL;
 ```
 ##  funkcja wyświetlająca listę zjazdów do zapłaty przez studenta
 ```sql
@@ -1606,7 +1605,52 @@ CREATE FUNCTION GetUnpaidStationaryWeeks(@StudentID INT)
             JOIN OrderDetails ON OrderStationaryWeek.OrderDetailsID = OrderDetails.OrderDetailsID
             JOIN Orders ON OrderDetails.OrderID = Orders.OrderID AND Orders.StudentID = @StudentID
         WHERE
-            StartDate > GETDATE();
+            StartDate > GETDATE()
+```
+
+# Triggery
+
+## trigger ustawiający datę wygaśnięcia webinaru po jego zakupie
+```sql
+CREATE TRIGGER trg_AddWebinarExpirationDate
+ON OrderWebinar
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @OrderDetailID INT, @WebinarID INT, @StudentID INT, @WebinarDate DATETIME, @PaidDate DATETIME;
+
+    -- Pobieramy dane z tabeli inserted
+    SELECT @OrderDetailID = OrderDetailsID, @WebinarID = WebinarID
+    FROM inserted;
+
+    -- Znajdź datę odbycia się webinaru
+    SELECT @WebinarDate = Webinar_date
+    FROM Webinar
+    WHERE WebinarID = @WebinarID;
+
+    -- Pobierz datę zakupu (PaidDate) z tabeli OrderDetails
+    SELECT @PaidDate = PaidDate
+    FROM OrderDetails
+    WHERE OrderDetailsID = @OrderDetailID;
+
+    -- Pobierz ID studenta z OrderDetails
+    SELECT @StudentID = StudentID
+    FROM Orders
+    WHERE OrderID = (SELECT OrderID FROM OrderDetails WHERE OrderDetailsID = @OrderDetailID);
+
+    -- Jeżeli webinar się jeszcze nie odbył, ustawiamy datę wygaśnięcia na 30 dni po webinarze
+    IF @WebinarDate > GETDATE()
+    BEGIN
+        INSERT INTO WebinarExpirationDate (WebinarID, StudentID, expr_date)
+        VALUES (@WebinarID, @StudentID, DATEADD(DAY, 30, @WebinarDate));
+    END
+    -- Jeżeli webinar już się odbył, ustawiamy datę wygaśnięcia na 30 dni po dacie zakupu
+    ELSE
+    BEGIN
+        INSERT INTO WebinarExpirationDate (WebinarID, StudentID, expr_date)
+        VALUES (@WebinarID, @StudentID, DATEADD(DAY, 30, @PaidDate));
+    END
+END;
 ```
 
 # Procedury
@@ -2146,6 +2190,7 @@ BEGIN
     VALUES (@IntershipID, @StudentID, @Absence);
 END;
 ```
+
 # Orders
 ## dodawanie zamówienia
 ```sql
@@ -2156,12 +2201,12 @@ create procedure AddOrder
 as
 begin
     set nocount on;
-
+-- Sprawdź, czy istnieje student o podanym StudentID
     if not exists (select 1 from Students where StudentID = @StudentID)
         begin
             raiserror('Student o podanym ID nie istnieje.', 16, 1);
         end
-
+-- Wstaw nowe zamówienie do tabeli Orders
     insert into Orders (OrderID, StudentID, Paid, OrderDate)
     values (@OrderID, @StudentID, @Paid, getdate());
     print 'Zamówienie dodane pomyślnie.';
@@ -2171,147 +2216,164 @@ end;
 ## dodawanie szczegółów zamówienia
 ```sql
 CREATE PROCEDURE AddOrderDetails
-@OrderDetailID int,
-@OrderID int,
-@PaidDate datetime = null,
-@WebinarID int = null,
-@CourseID int = null,
-@StudiesID int = null,
-@MeetingID int = null
-as
-begin
-    set nocount on;
-    if @PaidDate is null
-        begin
-            set @PaidDate = getdate();
-        end
+    @OrderDetailID int,
+    @OrderID int,
+    @PaidDate datetime = null,
+    @WebinarID int = null,
+    @CourseID int = null,
+    @StudiesID int = null,
+    @MeetingID int = null,
+    @StudentID int = null
+AS
+BEGIN
+    SET NOCOUNT ON;
 
-    if not exists (select 1 from Orders where OrderID = @OrderID)
-        begin
-            raiserror('Zamówienie o podanym ID nie istnieje.', 16, 1);
-        end
-
-    IF @WebinarID IS NOT NULL AND EXISTS (
-        SELECT StudentID
-        FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM GetAttendeesByWebinarID(@WebinarID)
-        )
-    )
+    BEGIN TRY
+        -- Sprawdź, czy istnieje zamówienie o podanym OrderID
+        IF NOT EXISTS (SELECT 1 FROM Orders WHERE OrderID = @OrderID)
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na ten webinar.', 16, 1);
+            RAISERROR('Zamówienie o podanym ID nie istnieje.', 16, 1);
         END
 
-    ELSE IF @CourseID IS NOT NULL AND EXISTS (
-        SELECT StudentID
+        SELECT @OrderDetailID = ISNULL(MAX(OrderDetailsID), 0) + 1
+        FROM OrderDetails;
+
+        -- Znajdź ID studenta składającego zamówienie
+        SELECT @StudentID = StudentID
         FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM GetAttendeesByCourseID(@CourseID)
-        )
-    )
+        WHERE OrderID = @OrderID;
+
+        -- TRANSAKCJA: Dodanie webinaru
+        IF @WebinarID IS NOT NULL
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na ten kurs.', 16, 1);
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                EXEC CheckResources @OrderID, @WebinarID, 'Webinar';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderWebinar (OrderDetailsID, WebinarID)
+                VALUES (@OrderDetailID, @WebinarID);
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Webinar).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
         END
 
-    ELSE IF @StudiesID IS NOT NULL AND EXISTS (
-        SELECT StudentID
-        FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM FieldOfStudy
-            WHERE FieldOfStudyID = @StudiesID
-        )
-    )
+        -- TRANSAKCJA: Dodanie kursu
+        IF @CourseID IS NOT NULL
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na te studia.', 16, 1);
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                SELECT 1 FROM OrderCourse WITH (TABLOCKX);
+                EXEC CheckResources @OrderID, @CourseID, 'Course';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderCourse (OrderDetailsID, CourseID)
+                VALUES (@OrderDetailID, @CourseID);
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Course).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
         END
-    ELSE IF @MeetingID IS NOT NULL AND EXISTS (
-        SELECT StudentID
-        FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM GetAttendeesByMeetingID(@MeetingID)
-        )
-    )
+
+        -- TRANSAKCJA: Dodanie studiów
+        IF @StudiesID IS NOT NULL
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na to spotkanie studyjne.', 16, 1);
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                SELECT 1 FROM OrderStudies WITH (TABLOCKX);
+                EXEC CheckResources @OrderID, @StudiesID, 'Studies';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderStudies (OrderDetailsID, FieldOfStudyID)
+                VALUES (@OrderDetailID, @StudiesID);
+                EXEC AddStudentToFieldOfStudy @StudentId = @StudentId, @FieldOfStudyId = @StudiesID;
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Studies).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
+        END
+
+        -- TRANSAKCJA: Dodanie spotkania
+        IF @MeetingID IS NOT NULL
+        BEGIN
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                SELECT 1 FROM OrderMeeting WITH (TABLOCKX);
+                EXEC CheckResources @OrderID, @MeetingID, 'Meeting';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderMeeting (OrderDetailsID, MeetingID)
+                VALUES (@OrderDetailID, @MeetingID);
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Meeting).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
         END
 
 
-    if @PaidDate is not null
-        begin
-            insert into OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
-            values (@OrderDetailID, @OrderID, @PaidDate, 1);
-        end
-    else
-        begin
-            insert into OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
-            values (@OrderDetailID, @OrderID, @PaidDate, 0);
-        end
-
-    if @WebinarID is not null and not exists (select 1 from Webinar where WebinarID = @WebinarID)
-        begin
-            raiserror('Webinar o podanym ID nie istnieje.', 16, 1);
-        end
-
-    else if @WebinarID is not null and exists (select 1 from Webinar where WebinarID = @WebinarID)
-        begin
-            insert into OrderWebinar (OrderDetailsID, WebinarID)
-            values (@OrderDetailID, @WebinarID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
-
-    if @CourseID is not null and not exists (select 1 from Courses where CourseID = @CourseID)
-        begin
-            raiserror('Kurs o podanym ID nie istnieje.', 16, 1);
-        end
-    else if @CourseID is not null and (Select Limit from Courses) > (Select count(*) from GetAttendeesByCourseID(@CourseID))
-        begin
-            raiserror('Kurs o podanym ID nie ma wolnych miejsc.', 16, 1);
-        end
-
-    else if @CourseID is not null and exists (select 1 from Courses where CourseID = @CourseID)
-        begin
-
-            insert into OrderCourse (OrderDetailsID, CourseID)
-            values (@OrderDetailID, @CourseID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
-
-    if @StudiesID is not null and not exists (select 1 from FieldOfStudy where FieldOfStudyID = @StudiesID)
-        begin
-            raiserror('Studia o podanym ID nie istnieją.', 16, 1);
-        end
-    else if @StudiesID is not null and (Select Limit from Courses) > (Select count(*) from FieldOfStudyStudentList where FieldOfStudyID = @StudiesID)
-        begin
-            raiserror('Studia o podanym ID nie mają wolnych miejsc.', 16, 1);
-        end
-    else if @StudiesID is not null and exists (select 1 from Studies where StudiesID = @StudiesID)
-        begin
-            insert into OrderStudies (OrderDetailsID, FieldOfStudyID)
-            values (@OrderDetailID, @StudiesID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
-
-    if @MeetingID is not null and not exists (select 1 from Meeting where MeetingID = @MeetingID)
-        begin
-            raiserror('Spotkanie o podanym ID nie istnieje.', 16, 1);
-        end
-    else if @MeetingID is not null and exists (select 1 from Meeting where MeetingID = @MeetingID)
-        begin
-            insert into OrderMeeting (OrderDetailsID, MeetingID)
-            values (@OrderDetailID, @MeetingID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
+    END TRY
+    BEGIN CATCH
+        -- Globalny błąd, gdyby coś poszło nie tak poza transakcjami
+        DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT, @ErrorState INT;
+        SELECT @ErrorMessage = ERROR_MESSAGE(), @ErrorSeverity = ERROR_SEVERITY(), @ErrorState = ERROR_STATE();
+        RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH
 END;
 ```
