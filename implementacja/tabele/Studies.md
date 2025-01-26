@@ -17,7 +17,7 @@ Przechowuje informacje o dziedzinach nauki.
 
 ```sql
 CREATE TABLE FieldOfStudy (
-    FieldOfStudyID int NOT NULL,
+    FieldOfStudyID int NOT NULL IDENTITY(1,1),
     Name varchar(50) NOT NULL,
     Description varchar(50) NOT NULL,
     Limit int NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE FieldOfStudyStudentList (
     Semester int NOT NULL,
     StartDate date NOT NULL,
     EndDate date NULL,
-    CONSTRAINT FieldOfStudyStudentList_pk PRIMARY KEY (StudentID, FieldOfStudyID),
+    CONSTRAINT FieldOfStudyStudentList_pk PRIMARY KEY (StudentID, FieldOfStudyID, Semester),
     CONSTRAINT chk_FieldOfStudyStudentList CHECK (
         Semester >= 0 AND
         (EndDate IS NULL OR StartDate < EndDate)
@@ -79,9 +79,8 @@ Przechowuje informacje o przedmiotach w danej dziedzinie nauki.
     - Numer semestru jest większy lub równy 0.
 
 ```sql
--- Table: Subjects
 CREATE TABLE Subjects (
-    SubjectID int NOT NULL,
+    SubjectID int NOT NULL IDENTITY(1,1),
     FieldOfStudyID int NOT NULL,
     SubjectName varchar(50) NOT NULL,
     Description varchar(50) NOT NULL,
@@ -141,7 +140,7 @@ Przechowuje informacje o spotkaniach związanych z przedmiotami.
 
 ```sql
 CREATE TABLE Meeting (
-    MeetingID int NOT NULL,
+    MeetingID int NOT NULL IDENTITY(1,1),
     MeetingTypeID int NOT NULL,
     SubjectID int NOT NULL,
     Meeting_date datetime NOT NULL,
@@ -192,7 +191,7 @@ Przechowuje informacje o praktykach związanych z dziedzinami nauki.
 
 ```sql
 CREATE TABLE Interships (
-    IntershipID int NOT NULL,
+    IntershipID int NOT NULL IDENTITY(1,1),
     FieldOfStudyID int NOT NULL,
     IntershipName varchar(50) NOT NULL,
     StartDate date NOT NULL,
@@ -245,7 +244,7 @@ CREATE TABLE StationaryWeek (
     StartDate date NOT NULL,
     EndDate date NOT NULL,
     FieldOfStudyID int NOT NULL,
-    StationaryID int NOT NULL,
+    StationaryID int NOT NULL IDENTITY(1,1),
     Price money NOT NULL,
     Quantity int NOT NULL,
     CONSTRAINT StationaryWeek_pk PRIMARY KEY (StationaryID),
@@ -268,7 +267,7 @@ Przechowuje informacje o typach spotkań.
 
 ```sql
 CREATE TABLE MeetingType (
-    MeetingTypeID int NOT NULL,
+    MeetingTypeID int NOT NULL IDENTITY(1,1),
     Description varchar(50) NOT NULL,
     CONSTRAINT MeetingType_pk PRIMARY KEY (MeetingTypeID),
     CONSTRAINT chk_MeetingType CHECK (

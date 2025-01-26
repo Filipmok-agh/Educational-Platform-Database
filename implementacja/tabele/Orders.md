@@ -14,7 +14,7 @@ Przechowuje informacje o zamówieniach składanych przez studentów.
 
 ```sql
 CREATE TABLE Orders (
-    OrderID int NOT NULL,
+    OrderID int NOT NULL IDENTITY(1,1),
     Paid money NULL,
     OrderDate datetime NOT NULL,
     StudentID int NOT NULL,
@@ -22,6 +22,26 @@ CREATE TABLE Orders (
     CONSTRAINT chk_Orders CHECK (
         Paid >= 0
     )
+);
+```
+
+## Tabela: `OrderDetails`
+Przechowuje szczegóły dotyczące zamówienia, takie jak data zapłaty i dostęp do kursów.
+
+- `OrderDetailsID` *(int, NOT NULL)*: Unikalny identyfikator szczegółów zamówienia.
+- `PaidDate` *(datetime, NULL)*: Data zapłaty za zamówienie (opcjonalnie).
+- `OrderID` *(int, NOT NULL)*: Unikalny identyfikator zamówienia (klucz obcy).
+- `AccessGiven` *(bit, NOT NULL)*: Flaga wskazująca, czy dostęp do zamówionych kursów został przyznany.
+- **Klucze i ograniczenia:**
+  - `OrderDetails_pk`: Klucz główny na kolumnie `OrderDetailsID`.
+
+```sql
+CREATE TABLE OrderDetails (
+    OrderDetailsID int NOT NULL IDENTITY(1,1),
+    PaidDate datetime NULL,
+    OrderID int NOT NULL,
+    AccessGiven bit NOT NULL,
+    CONSTRAINT OrderDetails_pk PRIMARY KEY (OrderDetailsID)
 );
 ```
 
@@ -38,26 +58,6 @@ CREATE TABLE OrderCourse (
     OrderDetailsID int NOT NULL,
     CourseID int NOT NULL,
     CONSTRAINT OrderCourse_pk PRIMARY KEY (OrderDetailsID)
-);
-```
-
-## Tabela: `OrderDetails`
-Przechowuje szczegóły dotyczące zamówienia, takie jak data zapłaty i dostęp do kursów.
-
-- `OrderDetailsID` *(int, NOT NULL)*: Unikalny identyfikator szczegółów zamówienia.
-- `PaidDate` *(datetime, NULL)*: Data zapłaty za zamówienie (opcjonalnie).
-- `OrderID` *(int, NOT NULL)*: Unikalny identyfikator zamówienia (klucz obcy).
-- `AccessGiven` *(bit, NOT NULL)*: Flaga wskazująca, czy dostęp do zamówionych kursów został przyznany.
-- **Klucze i ograniczenia:**
-  - `OrderDetails_pk`: Klucz główny na kolumnie `OrderDetailsID`.
-
-```sql
-CREATE TABLE OrderDetails (
-    OrderDetailsID int NOT NULL,
-    PaidDate datetime NULL,
-    OrderID int NOT NULL,
-    AccessGiven bit NOT NULL,
-    CONSTRAINT OrderDetails_pk PRIMARY KEY (OrderDetailsID)
 );
 ```
 

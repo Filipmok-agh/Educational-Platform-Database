@@ -19,7 +19,7 @@ Przechowuje informacje o tłumaczach.
 
 ```sql
 CREATE TABLE Translator (
-    TranslatorID int NOT NULL,
+    TranslatorID int NOT NULL IDENTITY(1,1),
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     DateOfBirth date NOT NULL,
@@ -61,7 +61,7 @@ Przechowuje informacje o pracownikach.
 
 ```sql
 CREATE TABLE Employees (
-    EmployeeID int NOT NULL IDENTITY,
+    EmployeeID int NOT NULL IDENTITY(1,1),
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     DateOfBirth date NOT NULL,
@@ -124,7 +124,7 @@ Przechowuje informacje o studentach.
 
 ```sql
 CREATE TABLE Students (
-    StudentID int NOT NULL IDENTITY,
+    StudentID int NOT NULL IDENTITY(1,1),
     FirstName varchar(50) NOT NULL,
     LastName varchar(50) NOT NULL,
     DateOfBirth date NOT NULL,
@@ -162,7 +162,7 @@ Przechowuje szczegóły dotyczące sal wykładowych.
 
 ```sql
 CREATE TABLE LectureRoomDetails (
-    RoomID int NOT NULL,
+    RoomID int NOT NULL IDENTITY(1,1),
     BuildingNr varchar(10) NOT NULL,
     Floor int NOT NULL,
     ClassNumber int NOT NULL,
@@ -202,7 +202,7 @@ Przechowuje dostępne języki w systemie.
 
 ```sql
 CREATE TABLE AvailableLanguages (
-    LanguageID int NOT NULL,
+    LanguageID int NOT NULL IDENTITY(1,1),
     Language varchar(50) NOT NULL,
     CONSTRAINT AvailableLanguages_pk PRIMARY KEY (LanguageID),
     CONSTRAINT chk_AvailableLanguages CHECK (

@@ -20,7 +20,7 @@ Przechowuje informacje o kursach.
 ```sql
 
 CREATE TABLE Courses (
-    CourseID int NOT NULL,
+    CourseID int IDENTITY(1,1) NOT NULL,
     CourseName varchar(50) NOT NULL,
     EmployeeID int NOT NULL,
     Price money NOT NULL,
@@ -91,7 +91,7 @@ Przechowuje informacje o modułach wchodzących w skład kursów.
 
 ```sql
 CREATE TABLE Modules (
-    ModuleID int NOT NULL,
+    ModuleID int NOT NULL IDENTITY(1,1),
     ModuleName varchar(50) NOT NULL,
     CourseID int NOT NULL,
     ModuleType varchar(50) NOT NULL,

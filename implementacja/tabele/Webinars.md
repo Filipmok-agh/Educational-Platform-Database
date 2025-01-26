@@ -19,7 +19,7 @@ Przechowuje informacje o webinarach.
 
 ```sql
 CREATE TABLE Webinar (
-    WebinarID int NOT NULL,
+    WebinarID int NOT NULL IDENTITY(1,1),
     WebinarName varchar(50) NOT NULL,
     Price money NOT NULL,
     Webinar_date datetime NOT NULL,
