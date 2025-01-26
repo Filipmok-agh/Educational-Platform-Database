@@ -41,7 +41,7 @@ CREATE FUNCTION GetAttendeesByMeetingID(@MeetingID INT)
 
         UNION ALL
 
-        SELECT
+        SELECT DISTINCT
             M.MeetingID,
             FSL.StudentID,
             S.FirstName,
@@ -53,7 +53,7 @@ CREATE FUNCTION GetAttendeesByMeetingID(@MeetingID INT)
                 JOIN Subjects SB ON FSL.FieldOfStudyID = SB.FieldOfStudyID
                 JOIN Meeting M ON SB.SubjectID = M.SubjectID
         WHERE
-            M.MeetingID = @MeetingID;
+            M.MeetingID = @MeetingID
 ```
 
 ## funkcja zwracająca osoby zapisane na moduł po moduleID
@@ -76,7 +76,7 @@ CREATE FUNCTION GetAttendeesByModuleID(@ModuleID INT)
                 JOIN Modules M ON C.CourseID = M.CourseID
                 JOIN Students S ON O.StudentID = S.StudentID
         WHERE
-            M.ModuleID = @ModuleID;
+            M.ModuleID = @ModuleID
 ```
 
 ## funkcja zwracająca osoby zapisane na webinar po webinarID
@@ -97,7 +97,7 @@ CREATE FUNCTION GetAttendeesByWebinarID(@WebinarID INT)
                 JOIN Webinar W ON OW.WebinarID = W.WebinarID
                 JOIN Students S ON O.StudentID = S.StudentID
         WHERE
-            W.WebinarID = @WebinarID;
+            W.WebinarID = @WebinarID
 ```
 ## funkcja zwracająca osoby zapisane na kurs po CourseID
 ```sql
@@ -117,7 +117,7 @@ CREATE FUNCTION GetAttendeesByCourseID(@CourseID INT)
                 JOIN Courses C ON OC.CourseID = C.CourseID
                 JOIN Students S ON O.StudentID = S.StudentID
         WHERE
-            C.CourseID = @CourseID;
+            C.CourseID = @CourseID
 ```
 
 ## Nieobecności danego studenta na studiach/kursach/stażu
@@ -156,7 +156,7 @@ CREATE FUNCTION GetAbsencesByStudentID(@StudentID INT)
         FROM
             IntershipsAbsence IA
         WHERE
-            IA.StudentID = @StudentID;
+            IA.StudentID = @StudentID
 ```
 ## Harmonogram danego kierunku studiów
 ```sql
@@ -176,7 +176,7 @@ CREATE FUNCTION GetStudySchedule(@FieldOfStudyID INT, @StartDate DATE, @EndDate 
                 JOIN Meeting M ON SB.SubjectID = M.SubjectID
         WHERE
             SB.FieldOfStudyID = @FieldOfStudyID
-        AND M.Meeting_date > @StartDate AND M.Meeting_date < @EndDate;
+        AND M.Meeting_date > @StartDate AND M.Meeting_date < @EndDate
 ```
 ## Harmonogram danego kursu
 ```sql
@@ -196,7 +196,7 @@ CREATE FUNCTION GetCourseSchedule(@CourseID INT, @StartDate DATE, @EndDate DATE)
                 JOIN Courses C ON MO.CourseID = C.CourseID
         WHERE
             MO.CourseID = @CourseID
-        AND CS.Course_date > @StartDate AND CS.Course_date < @EndDate;
+        AND CS.Course_date > @StartDate AND CS.Course_date < @EndDate
 ```
 ## Harmonogram zajęć dla studenta
 ```sql
@@ -263,7 +263,7 @@ CREATE FUNCTION GetStudentSchedule(@StudentID INT, @StartDate DATE, @EndDate DAT
             JOIN Employees E ON E.EmployeeID = W.EmployeeID
         WHERE
             O.StudentID = @StudentID
-        AND W.Webinar_date > @StartDate AND W.Webinar_date < @EndDate;
+        AND W.Webinar_date > @StartDate AND W.Webinar_date < @EndDate
 ```
 
 ## Obliczanie łącznej wartości zamówienia
@@ -325,7 +325,7 @@ BEGIN
         );
 
     RETURN @TotalValue;
-END;
+END
 ```
 ## Sprawdzanie czy student odbył wszystkie praktyki, które powinien odbyć:
 ```sql
@@ -334,17 +334,16 @@ CREATE FUNCTION CheckInternshipAbsences(@StudentID INT)
     RETURNS TABLE
         AS
         RETURN
-        SELECT
+        SELECT DISTINCT
             I.IntershipID,
             I.IntershipName,
             IA.Absence AS AbsenceDate
         FROM
             FieldOfStudyStudentList FSL
                 JOIN Interships I ON FSL.FieldOfStudyID = I.FieldOfStudyID
-                LEFT JOIN IntershipsAbsence IA ON I.IntershipID = IA.IntershipID AND IA.StudentID = FSL.StudentID
+                JOIN IntershipsAbsence IA ON I.IntershipID = IA.IntershipID AND IA.StudentID = FSL.StudentID
         WHERE
             FSL.StudentID = @StudentID
-          AND IA.Absence IS NOT NULL;
 ```
 ##  funkcja wyświetlająca listę zjazdów do zapłaty przez studenta
 ```sql
@@ -363,5 +362,5 @@ CREATE FUNCTION GetUnpaidStationaryWeeks(@StudentID INT)
             JOIN OrderDetails ON OrderStationaryWeek.OrderDetailsID = OrderDetails.OrderDetailsID
             JOIN Orders ON OrderDetails.OrderID = Orders.OrderID AND Orders.StudentID = @StudentID
         WHERE
-            StartDate > GETDATE();
+            StartDate > GETDATE()
 ```
