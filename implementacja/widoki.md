@@ -72,7 +72,7 @@ FROM
         JOIN Orders O ON S.StudentID = O.StudentID
         JOIN OrderDetails OD ON O.OrderID = OD.OrderID
 WHERE
-    OD.PaidDate IS NULL;
+    OD.PaidDate IS NULL
 ```
 
 ## Raport o liczbie zapisanych osób na przyszłe wydarzenia
@@ -167,7 +167,7 @@ UNION ALL
 SELECT EventID,
        (TotalAttendees - TotalAbsences) * 100.0 / TotalAttendees AS FrequencePercentage,
        EventType
-FROM ModuleAttendance;
+FROM ModuleAttendance
 ```
 ## Frekwencja na zakończonych spotkaniach studyjnych
 ```sql
@@ -203,7 +203,7 @@ FROM
         CROSS APPLY GetAttendeesByMeetingID(M.MeetingID) A
         LEFT JOIN StudentAbsence SA ON M.MeetingID = SA.MeetingID AND A.StudentID = SA.StudentID
 WHERE
-    M.Meeting_date < GETDATE();
+    M.Meeting_date < GETDATE()
 ```
 ## Lista obecności na każdy moduł kursu
 
@@ -225,7 +225,7 @@ FROM
         CROSS APPLY GetAttendeesByModuleID(M.ModuleID) A
         LEFT JOIN ModuleAbsence MA ON M.ModuleID = MA.ModuleID AND A.StudentID = MA.StudentID
 WHERE
-    CS.Course_date < GETDATE();
+    CS.Course_date < GETDATE()
 ```
 
 ## Lista osób zapisanych na co najmniej 2 przyszłe szkolenia, które kolidują ze sobą czasowo
@@ -294,7 +294,7 @@ Conflicts AS (
     FROM
         AllEvents E1
         JOIN AllEvents E2 ON E1.StudentID = E2.StudentID
-            AND E1.EventID <> E2.EventID
+            AND E1.EventID < E2.EventID
             AND E1.EventDate = E2.EventDate
 )
 SELECT DISTINCT
@@ -308,5 +308,5 @@ SELECT DISTINCT
     EventID2,
     EventDate2
 FROM
-    Conflicts;
+    Conflicts
 ```
