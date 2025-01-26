@@ -1,3 +1,4 @@
+MeetingID,MeetingTypeID,SubjectID,Meeting_date,Link,LanguageID,TranslatorID,Price,StationaryID,RoomID
 478,2,20,2025-01-04 14:45:00,https://teams.microsoft.com/l/meetup-join/x2da4lwotf3n8l23syb1,3,103,49.99,,
 224,2,6,2024-10-09 13:00:00,https://teams.microsoft.com/l/meetup-join/fgwmp5rq0fc4f8o8mfwg,6,,29.99,,
 412,2,16,2023-12-05 10:00:00,https://teams.microsoft.com/l/meetup-join/cia9ey3b10yvly796zgu,6,,29.99,,

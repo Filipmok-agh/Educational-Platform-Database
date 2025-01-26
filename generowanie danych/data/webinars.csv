@@ -1,3 +1,4 @@
+WebinarID,Price,Webinar_date,LanguageID,TranslatorID,EmployeeID,OnlineLink,VideoLink,WebinarName
 1001,149,2024-12-28 16:45:00,6,,1065,https://teams.microsoft.com/l/meetup-join/i8jc29ngat24h5t09adf,https://vimeo.com/wyc5tuoebi3yhu42b3kalwkc3d3cg67841q35uvb,Głębokie zanurzenie w struktury danych i algorytmy
 1002,29.99,2025-01-04 16:45:00,6,,1073,https://teams.microsoft.com/l/meetup-join/qdcqfgyhgqtl4wkihas0,https://vimeo.com/gbgyjmea17mbh7tisouowe0eqm1tlqdz30gn4hff,Podstawy Kubernetes i Docker - jak zaczynać?
 1003,99,2025-02-07 20:15:00,2,104,1085,https://teams.microsoft.com/l/meetup-join/lfmjbqv4u64t1422mpyl,,Wprowadzenie do inżynierii danych i procesów ETL
