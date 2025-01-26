@@ -535,8 +535,9 @@ BEGIN
     VALUES (@IntershipID, @StudentID, @Absence);
 END;
 ```
+
 # Orders
--- dodawanie zamówienia
+## dodawanie zamówienia
 ```sql
 create procedure AddOrder
 @OrderID int,
@@ -545,162 +546,179 @@ create procedure AddOrder
 as
 begin
     set nocount on;
-
+-- Sprawdź, czy istnieje student o podanym StudentID
     if not exists (select 1 from Students where StudentID = @StudentID)
         begin
             raiserror('Student o podanym ID nie istnieje.', 16, 1);
         end
-
+-- Wstaw nowe zamówienie do tabeli Orders
     insert into Orders (OrderID, StudentID, Paid, OrderDate)
     values (@OrderID, @StudentID, @Paid, getdate());
     print 'Zamówienie dodane pomyślnie.';
 end;
 ```
 
--- dodawanie szczegółów zamówienia
+## dodawanie szczegółów zamówienia
 ```sql
 CREATE PROCEDURE AddOrderDetails
-@OrderDetailID int,
-@OrderID int,
-@PaidDate datetime = null,
-@WebinarID int = null,
-@CourseID int = null,
-@StudiesID int = null,
-@MeetingID int = null
-as
-begin
-    set nocount on;
-    if @PaidDate is null
-        begin
-            set @PaidDate = getdate();
-        end
+    @OrderDetailID int,
+    @OrderID int,
+    @PaidDate datetime = null,
+    @WebinarID int = null,
+    @CourseID int = null,
+    @StudiesID int = null,
+    @MeetingID int = null,
+    @StudentID int = null
+AS
+BEGIN
+    SET NOCOUNT ON;
 
-    if not exists (select 1 from Orders where OrderID = @OrderID)
-        begin
-            raiserror('Zamówienie o podanym ID nie istnieje.', 16, 1);
-        end
-
-    IF @WebinarID IS NOT NULL AND EXISTS (
-        SELECT StudentID
-        FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM GetAttendeesByWebinarID(@WebinarID)
-        )
-    )
+    BEGIN TRY
+        -- Sprawdź, czy istnieje zamówienie o podanym OrderID
+        IF NOT EXISTS (SELECT 1 FROM Orders WHERE OrderID = @OrderID)
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na ten webinar.', 16, 1);
+            RAISERROR('Zamówienie o podanym ID nie istnieje.', 16, 1);
         END
 
-    ELSE IF @CourseID IS NOT NULL AND EXISTS (
-        SELECT StudentID
+        SELECT @OrderDetailID = ISNULL(MAX(OrderDetailsID), 0) + 1
+        FROM OrderDetails;
+
+        -- Znajdź ID studenta składającego zamówienie
+        SELECT @StudentID = StudentID
         FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM GetAttendeesByCourseID(@CourseID)
-        )
-    )
+        WHERE OrderID = @OrderID;
+
+        -- TRANSAKCJA: Dodanie webinaru
+        IF @WebinarID IS NOT NULL
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na ten kurs.', 16, 1);
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                EXEC CheckResources @OrderID, @WebinarID, 'Webinar';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderWebinar (OrderDetailsID, WebinarID)
+                VALUES (@OrderDetailID, @WebinarID);
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Webinar).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
         END
 
-    ELSE IF @StudiesID IS NOT NULL AND EXISTS (
-        SELECT StudentID
-        FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM FieldOfStudy
-            WHERE FieldOfStudyID = @StudiesID
-        )
-    )
+        -- TRANSAKCJA: Dodanie kursu
+        IF @CourseID IS NOT NULL
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na te studia.', 16, 1);
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                SELECT 1 FROM OrderCourse WITH (TABLOCKX);
+                EXEC CheckResources @OrderID, @CourseID, 'Course';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderCourse (OrderDetailsID, CourseID)
+                VALUES (@OrderDetailID, @CourseID);
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Course).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
         END
-    ELSE IF @MeetingID IS NOT NULL AND EXISTS (
-        SELECT StudentID
-        FROM Orders
-        WHERE @OrderId = Orders.OrderID
-          AND StudentID IN (
-            SELECT DISTINCT StudentID
-            FROM GetAttendeesByMeetingID(@MeetingID)
-        )
-    )
+
+        -- TRANSAKCJA: Dodanie studiów
+        IF @StudiesID IS NOT NULL
         BEGIN
-            RAISERROR('Student o podanym ID jest już zapisany na to spotkanie studyjne.', 16, 1);
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                SELECT 1 FROM OrderStudies WITH (TABLOCKX);
+                EXEC CheckResources @OrderID, @StudiesID, 'Studies';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderStudies (OrderDetailsID, FieldOfStudyID)
+                VALUES (@OrderDetailID, @StudiesID);
+                EXEC AddStudentToFieldOfStudy @StudentId = @StudentId, @FieldOfStudyId = @StudiesID;
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Studies).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
+        END
+
+        -- TRANSAKCJA: Dodanie spotkania
+        IF @MeetingID IS NOT NULL
+        BEGIN
+            BEGIN TRANSACTION;
+            BEGIN TRY
+                SELECT 1 FROM OrderMeeting WITH (TABLOCKX);
+                EXEC CheckResources @OrderID, @MeetingID, 'Meeting';
+                
+                IF @PaidDate IS NOT NULL
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 1);
+                    END
+                ELSE
+                    BEGIN
+                        INSERT INTO OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
+                        VALUES (@OrderDetailID, @OrderID, @PaidDate, 0);
+                    END
+
+                INSERT INTO OrderMeeting (OrderDetailsID, MeetingID)
+                VALUES (@OrderDetailID, @MeetingID);
+                    
+                COMMIT;
+                PRINT 'Szczegół zamówienia dodany pomyślnie (Meeting).';
+            END TRY
+            BEGIN CATCH
+                ROLLBACK;
+                THROW;
+            END CATCH
         END
 
 
-    if @PaidDate is not null
-        begin
-            insert into OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
-            values (@OrderDetailID, @OrderID, @PaidDate, 1);
-        end
-    else
-        begin
-            insert into OrderDetails (OrderDetailsID, OrderID, PaidDate, AccessGiven)
-            values (@OrderDetailID, @OrderID, @PaidDate, 0);
-        end
-
-    if @WebinarID is not null and not exists (select 1 from Webinar where WebinarID = @WebinarID)
-        begin
-            raiserror('Webinar o podanym ID nie istnieje.', 16, 1);
-        end
-
-    else if @WebinarID is not null and exists (select 1 from Webinar where WebinarID = @WebinarID)
-        begin
-            insert into OrderWebinar (OrderDetailsID, WebinarID)
-            values (@OrderDetailID, @WebinarID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
-
-    if @CourseID is not null and not exists (select 1 from Courses where CourseID = @CourseID)
-        begin
-            raiserror('Kurs o podanym ID nie istnieje.', 16, 1);
-        end
-    else if @CourseID is not null and (Select Limit from Courses) > (Select count(*) from GetAttendeesByCourseID(@CourseID))
-        begin
-            raiserror('Kurs o podanym ID nie ma wolnych miejsc.', 16, 1);
-        end
-
-    else if @CourseID is not null and exists (select 1 from Courses where CourseID = @CourseID)
-        begin
-
-            insert into OrderCourse (OrderDetailsID, CourseID)
-            values (@OrderDetailID, @CourseID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
-
-    if @StudiesID is not null and not exists (select 1 from FieldOfStudy where FieldOfStudyID = @StudiesID)
-        begin
-            raiserror('Studia o podanym ID nie istnieją.', 16, 1);
-        end
-    else if @StudiesID is not null and (Select Limit from Courses) > (Select count(*) from FieldOfStudyStudentList where FieldOfStudyID = @StudiesID)
-        begin
-            raiserror('Studia o podanym ID nie mają wolnych miejsc.', 16, 1);
-        end
-    else if @StudiesID is not null and exists (select 1 from Studies where StudiesID = @StudiesID)
-        begin
-            insert into OrderStudies (OrderDetailsID, FieldOfStudyID)
-            values (@OrderDetailID, @StudiesID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
-
-    if @MeetingID is not null and not exists (select 1 from Meeting where MeetingID = @MeetingID)
-        begin
-            raiserror('Spotkanie o podanym ID nie istnieje.', 16, 1);
-        end
-    else if @MeetingID is not null and exists (select 1 from Meeting where MeetingID = @MeetingID)
-        begin
-            insert into OrderMeeting (OrderDetailsID, MeetingID)
-            values (@OrderDetailID, @MeetingID);
-            print 'Szczegół zamówienia dodany pomyślnie.';
-            return;
-        end
+    END TRY
+    BEGIN CATCH
+        -- Globalny błąd, gdyby coś poszło nie tak poza transakcjami
+        DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT, @ErrorState INT;
+        SELECT @ErrorMessage = ERROR_MESSAGE(), @ErrorSeverity = ERROR_SEVERITY(), @ErrorState = ERROR_STATE();
+        RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH
 END;
 ```
