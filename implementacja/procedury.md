@@ -309,7 +309,7 @@ AS
 BEGIN
     IF NOT EXISTS (SELECT 1 FROM FieldOfStudy WHERE FieldOfStudyID = @FieldOfStudyID)
     BEGIN
-        RAISERROR('Pole studiów o podanym ID nie istnieje.', 16, 1);
+        RAISERROR('Kierunek studiów o podanym ID nie istnieje.', 16, 1);
     END
 
     IF NOT EXISTS (SELECT 1 FROM Employees WHERE EmployeeID = @EmployeeID)
@@ -539,23 +539,35 @@ END;
 # Orders
 ## dodawanie zamówienia
 ```sql
-create procedure AddOrder
-@OrderID int,
-@StudentID int,
-@Paid money
-as
-begin
-    set nocount on;
--- Sprawdź, czy istnieje student o podanym StudentID
-    if not exists (select 1 from Students where StudentID = @StudentID)
-        begin
-            raiserror('Student o podanym ID nie istnieje.', 16, 1);
-        end
--- Wstaw nowe zamówienie do tabeli Orders
-    insert into Orders (OrderID, StudentID, Paid, OrderDate)
-    values (@OrderID, @StudentID, @Paid, getdate());
-    print 'Zamówienie dodane pomyślnie.';
-end;
+CREATE PROCEDURE AddOrder
+    @StudentID INT,
+    @Paid MONEY,
+    @NewOrderID INT OUTPUT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    -- Sprawdzenie, czy student istnieje
+    IF NOT EXISTS (SELECT 1 FROM Students WHERE StudentID = @StudentID)
+    BEGIN
+        RAISERROR('Student o podanym ID nie istnieje.', 16, 1);
+        RETURN;  -- Zatrzymanie procedury
+    END
+
+    BEGIN TRY
+        -- Wstawienie nowego zamówienia
+        INSERT INTO Orders (StudentID, Paid, OrderDate)
+        VALUES (@StudentID, @Paid, GETDATE());
+
+        -- Pobranie ID nowego zamówienia
+        SET @NewOrderID = SCOPE_IDENTITY();
+    END TRY
+    BEGIN CATCH
+        -- Obsługa błędów
+        DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
+        RAISERROR(@ErrorMessage, 16, 1);
+    END CATCH
+END;
+
 ```
 
 ## dodawanie szczegółów zamówienia
@@ -670,7 +682,6 @@ BEGIN
 
                 INSERT INTO OrderStudies (OrderDetailsID, FieldOfStudyID)
                 VALUES (@OrderDetailID, @StudiesID);
-                EXEC AddStudentToFieldOfStudy @StudentId = @StudentId, @FieldOfStudyId = @StudiesID;
                     
                 COMMIT;
                 PRINT 'Szczegół zamówienia dodany pomyślnie (Studies).';
@@ -721,4 +732,105 @@ BEGIN
         RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
     END CATCH
 END;
+```
+## Procedura pomocnicza
+```sql
+CREATE PROCEDURE CheckResources
+    @OrderID INT,
+    @ResourceID INT,
+    @ResourceType NVARCHAR(50)
+AS
+BEGIN
+    BEGIN TRY
+        DECLARE @StudentID INT;
+
+        -- Pobranie `StudentID` na podstawie `OrderID`
+        SELECT @StudentID = StudentID
+        FROM Orders
+        WHERE OrderID = @OrderID;
+
+        IF @StudentID IS NULL
+            THROW 50013, 'Nie znaleziono studenta dla danego zamówienia.', 1;
+
+        -- Weryfikacja, czy dany zasób istnieje
+        IF @ResourceType = 'Webinar' AND NOT EXISTS (
+            SELECT 1 FROM Webinar WHERE WebinarID = @ResourceID
+        )
+            THROW 50008, 'Webinar o podanym ID nie istnieje.', 1;
+
+        ELSE IF @ResourceType = 'Course' AND NOT EXISTS (
+            SELECT 1 FROM Courses WHERE CourseID = @ResourceID
+        )
+            THROW 50009, 'Kurs o podanym ID nie istnieje.', 1;
+
+        ELSE IF @ResourceType = 'Studies' AND NOT EXISTS (
+            SELECT 1 FROM FieldOfStudy WHERE FieldOfStudyID = @ResourceID
+        )
+            THROW 50010, 'Studia o podanym ID nie istnieją.', 1;
+
+        ELSE IF @ResourceType = 'Meeting' AND NOT EXISTS (
+            SELECT 1 FROM Meeting WHERE MeetingID = @ResourceID
+        )
+            THROW 50011, 'Spotkanie o podanym ID nie istnieje.', 1;
+
+        -- Weryfikacja, czy student jest już zapisany na dany zasób
+        IF @ResourceType = 'Webinar' AND EXISTS (
+            SELECT 1 FROM GetAttendeesByWebinarID(@ResourceID) WHERE StudentID = @StudentID
+        )
+            THROW 50001, 'Student jest już zapisany na ten webinar.', 1;
+
+        ELSE IF @ResourceType = 'Course' AND EXISTS (
+            SELECT 1 FROM GetAttendeesByCourseID(@ResourceID) WHERE StudentID = @StudentID
+        )
+            THROW 50002, 'Student jest już zapisany na ten kurs.', 1;
+
+        ELSE IF @ResourceType = 'Studies' AND EXISTS (
+            SELECT 1 FROM FieldOfStudyStudentList 
+            WHERE FieldOfStudyID = @ResourceID AND StudentID = @StudentID
+        )
+            THROW 50003, 'Student jest już zapisany na te studia.', 1;
+
+        ELSE IF @ResourceType = 'Meeting' AND EXISTS (
+            SELECT 1 FROM GetAttendeesByMeetingID(@ResourceID) WHERE StudentID = @StudentID
+        )
+            THROW 50004, 'Student jest już zapisany na to spotkanie.', 1;
+
+        -- Weryfikacja wolnych miejsc
+        IF @ResourceType = 'Course' AND EXISTS (
+            SELECT 1 FROM Courses
+            WHERE CourseID = @ResourceID
+              AND Limit <= (SELECT COUNT(*) FROM GetAttendeesByCourseID(@ResourceID))
+        )
+            THROW 50006, 'Brak wolnych miejsc na kurs.', 1;
+
+        ELSE IF @ResourceType = 'Studies' AND EXISTS (
+            SELECT 1 FROM FieldOfStudy
+            WHERE FieldOfStudyID = @ResourceID
+              AND Limit <= (
+                  SELECT COUNT(*) 
+                  FROM FieldOfStudyStudentList 
+                  WHERE FieldOfStudyID = @ResourceID AND EndDate IS NULL
+              )
+        )
+            THROW 50007, 'Brak wolnych miejsc na studiach.', 1;
+
+        ELSE IF @ResourceType = 'Meeting' AND EXISTS (
+            SELECT 1
+            FROM Meeting m
+            JOIN Subjects s ON s.SubjectID = m.SubjectID
+            JOIN FieldOfStudy f ON f.FieldOfStudyID = s.FieldOfStudyID
+            WHERE m.MeetingID = @ResourceID
+              AND f.Limit <= (
+                  SELECT COUNT(*)
+                  FROM GetAttendeesByMeetingID(@ResourceID)
+              )
+        )
+            THROW 50012, 'Brak wolnych miejsc na spotkaniu.', 1;
+
+    END TRY
+    BEGIN CATCH
+        THROW;
+    END CATCH
+END;
+go
 ```
